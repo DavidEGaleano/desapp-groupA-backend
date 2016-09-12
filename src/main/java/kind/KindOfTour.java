@@ -1,0 +1,10 @@
+package kind;
+
+public enum KindOfTour{
+
+	GASOLERA,
+	WITH_FRIENDS,
+	SATURDAY_NIGHT_FEVER,
+	HALF_ORANGE,
+	SURPRISE;
+}
