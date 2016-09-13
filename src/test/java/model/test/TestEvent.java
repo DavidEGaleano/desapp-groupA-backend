@@ -14,6 +14,7 @@ public class TestEvent {
 	
 	public Event anEvent;
 	public Event anEvent2;
+	
 	@Before
 	public void setUp(){
 		//esto se debe cambiar a un Builder/Factory
@@ -30,6 +31,7 @@ public class TestEvent {
 	
 	@After
 	public void tearDown(){
-		
+		anEvent = null;
+		anEvent2 = null;
 	}
 }
