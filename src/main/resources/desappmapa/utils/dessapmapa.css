@@ -1,0 +1,39 @@
+
+div.dessapmapa{
+	width: 100%; 
+	height: 700px;
+}
+
+@media(max-height: 800px) {
+	div.dessapmapa{
+		height: 700px;
+	}
+	
+}
+
+@media (max-height: 768px) {
+	div.dessapmapa{
+		height: 640px;
+	}	
+}
+
+@media max-height: 600px) {
+	div.dessapmapa{
+		height: 525px;
+	}
+	
+}
+
+@media max-height: 450px) {
+	div.dessapmapa{
+		height: 400px;
+	}
+	
+}
+
+@media (max-height: 400px){
+	div.dessapmapa{
+		height: 350px;
+	}
+}
+

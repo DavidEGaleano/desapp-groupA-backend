@@ -1,0 +1,21 @@
+--------------------------------------------------------------------
+TAG ENTREGA 1 1.0
+--------------------------------------------------------------------
+
+NEW FEATURES:
+* Heroku deploy
+* Travis
+* Codacy
+* Modelo:  
+** Sistema de log in
+** Sistema de administracion
+** Usuarios
+* Demo Mapa
+* Mock Ventanas https://classic.moqups.com/degnexo@gmail.com/udh2yjFy
+
+NOTES:
+* Falta funcionalidad de las Busquedas
+* Falta Testing
+
+KNOWN ISSUES:
+*

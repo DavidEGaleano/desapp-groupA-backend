@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo Map</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+<link rel="stylesheet" href="utils/dessapmapa.css" />
+<link rel="stylesheet" href="utils/plugins/routing/leaflet-routing-machine.css" />
+
+</head>
+<body class= content>
+	<div id="map" class= "dessapmapa"></div>
+	<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+	<script src="data/points_arg.js"></script>
+	<script src="utils/mainScript.js"></script>
+	<script src="utils/plugins/routing/leaflet-routing-machine.js"></script>
+	<script>
+	
+		var cy = -59.52;
+		var cx = -34.384;
+		var mapa = initmap('map', cx, cy, 4, 25);
+		
+		L.Routing.control({
+		    waypoints: [
+		        L.latLng(-34.6198670938776, -58.4253477673469),
+		        L.latLng(-34.5827241404255,-58.4327330468085)
+		    ],
+		}).addTo(mapa);
+		
+		
+	</script>
+
+</body>
+</html>
