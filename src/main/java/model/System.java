@@ -6,13 +6,13 @@ import java.util.Date;
 import kind.DayMoment;
 import kind.KindOfTour;
 
-public class Sistem {
+public class System {
 	
 	public ArrayList<User> users;
 	public ArrayList<Event> allEvents;
 	public LogSistem logSistem;
 	
-	public Sistem(LogSistem logSistem){
+	public System(LogSistem logSistem){
 		this.users = new ArrayList<User>();
 		this.allEvents = new ArrayList<Event>();
 		this.logSistem = logSistem;

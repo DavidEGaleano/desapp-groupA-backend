@@ -1,6 +1,5 @@
 package builders;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -11,10 +10,6 @@ import model.Event;
 
 public class EventBuilder {
 	
-	public static EventBuilder anEvent(){
-		return new EventBuilder();
-	}
-	
 	private ArrayList<Kind> types = new ArrayList<Kind>();
 	private Date date = createDate();
 	private DayMoment scheduler = DayMoment.NIGHT;
@@ -22,6 +17,11 @@ public class EventBuilder {
 	private int amount = 1000;
 	private int limitOfPersons = 3;
 	private ArrayList<Event> suggestions = new ArrayList<Event>();
+	
+	public static EventBuilder anEvent(){
+		return new EventBuilder();
+	}
+	
 	
 	private Date createDate(){
 		Calendar calendar = Calendar.getInstance();

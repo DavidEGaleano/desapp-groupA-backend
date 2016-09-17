@@ -15,11 +15,11 @@ public class User {
 	public ArrayList<Tour> tours;
 	public ArrayList<Event> events;
 	public ArrayList<User> friends;
-	public Sistem sistem; 
+	public System sistem; 
 	public ArrayList<User> friendsRequests;
 	public Boolean logged;
 	
-	public User(Sistem sistem, String userName, String password, String mail){
+	public User(System sistem, String userName, String password, String mail){
 		this.userName = userName;
 		this.password = password;
 		this.mail = mail;
@@ -123,7 +123,7 @@ public class User {
 		return events;
 	}
 
-	public Sistem getSistem() {
+	public System getSistem() {
 		return sistem;
 	}
 	
