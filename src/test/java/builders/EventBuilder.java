@@ -3,6 +3,7 @@ package builders;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import kind.DayMoment;
 import kind.Kind;
@@ -10,13 +11,13 @@ import model.Event;
 
 public class EventBuilder {
 	
-	private ArrayList<Kind> types = new ArrayList<Kind>();
+	private List<Kind> types = new ArrayList<Kind>();
 	private Date date = createDate();
 	private DayMoment scheduler = DayMoment.NIGHT;
 	private String address = "an address";
 	private int amount = 1000;
 	private int limitOfPersons = 3;
-	private ArrayList<Event> suggestions = new ArrayList<Event>();
+	private List<Event> suggestions = new ArrayList<Event>();
 	
 	public static EventBuilder anEvent(){
 		return new EventBuilder();
@@ -36,7 +37,7 @@ public class EventBuilder {
 		return event;
 	}
 	
-	public EventBuilder withTypes(ArrayList<Kind> pTypes){
+	public EventBuilder withTypes(List<Kind> pTypes){
 		types = pTypes;
 		return this;
 	}
@@ -66,7 +67,7 @@ public class EventBuilder {
 		return this;
 	}
 	
-	public EventBuilder withSuggestion(ArrayList<Event> anSuggestions){
+	public EventBuilder withSuggestion(List<Event> anSuggestions){
 		suggestions = anSuggestions;
 		return this;
 	}

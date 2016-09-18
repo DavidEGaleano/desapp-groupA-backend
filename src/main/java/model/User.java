@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import kind.DayMoment;
 import kind.KindOfTour;
@@ -12,11 +13,11 @@ public class User {
 	public String password;
 	public String mail;
 	public Profile profile;
-	public ArrayList<Tour> tours;
-	public ArrayList<Event> events;
-	public ArrayList<User> friends;
-	public System sistem; 
-	public ArrayList<User> friendsRequests;
+	public List<Tour> tours;
+	public List<Event> events;
+	public List<User> friends;
+	public System system; 
+	public List<User> friendsRequests;
 	public Boolean logged;
 	
 	public User(System sistem, String userName, String password, String mail){
@@ -27,7 +28,7 @@ public class User {
 		this.tours = new ArrayList<Tour>();
 		this.events = new ArrayList<Event>();
 		this.friends = new ArrayList<User>();
-		this.sistem = sistem;
+		this.system = sistem;
 		this.friendsRequests = new ArrayList<User>();
 		this.logged = false;
 	}
@@ -44,8 +45,8 @@ public class User {
 		this.events.add(event);
 	}
 
-	public void newTour(KindOfTour kindOfTour, Date date, DayMoment scheduler, int limitAmount, ArrayList<User> friends){
-		this.tours.add(this.sistem.newTour(kindOfTour, date, scheduler, limitAmount, friends));
+	public void newTour(KindOfTour kindOfTour, Date date, DayMoment scheduler, int limitAmount, List<User> friends){
+		this.tours.add(this.system.newTour(kindOfTour, date, scheduler, limitAmount, friends));
 	}
 
 	public void acceptTour(Tour tour){
@@ -62,7 +63,7 @@ public class User {
 	}
 	
 	public User searchFriend(User user) throws Exception{
-		return this.sistem.searchFriend(user);
+		return this.system.searchFriend(user);
 	}
 	
 	public void sendFriendRequest(User friend){
@@ -87,20 +88,12 @@ public class User {
 	//Login Methods
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public void logIn(String userName, String password) throws Exception{
-		this.sistem.logIn(userName, password);
-	}
-
-	public void logOut(String userName) throws Exception{
-		this.sistem.logOut(userName);
-	}
-	
 	public boolean isLogged(){
 		return !this.logged;
 	}
 	
 	public void changePassword(String userName, String oldPassword, String newPassword)throws Exception{
-		this.sistem.changePassword(userName, oldPassword, newPassword);
+		this.system.changePassword(userName, oldPassword, newPassword);
 	}
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -115,23 +108,23 @@ public class User {
 		return this.userName;
 	}
 	
-	public ArrayList<Tour> getTours() {
+	public List<Tour> getTours() {
 		return tours;
 	}
 	
-	public ArrayList<Event> getEvents() {
+	public List<Event> getEvents() {
 		return events;
 	}
 
 	public System getSistem() {
-		return sistem;
+		return system;
 	}
 	
-	public ArrayList<User> getFriends(){
+	public List<User> getFriends(){
 		return this.friends;
 	}
 
-	public ArrayList<User> getFriendsRequests() {
+	public List<User> getFriendsRequests() {
 		return friendsRequests;
 	}
 	
@@ -143,19 +136,19 @@ public class User {
 		this.profile = profile;
 	}
 	
-	public void setTours(ArrayList<Tour> tours) {
+	public void setTours(List<Tour> tours) {
 		this.tours = tours;
 	}
 	
-	public void setEvents(ArrayList<Event> events) {
+	public void setEvents(List<Event> events) {
 		this.events = events;
 	}
 
-	public void setFriendsRequests(ArrayList<User> friendsRequests) {
+	public void setFriendsRequests(List<User> friendsRequests) {
 		this.friendsRequests = friendsRequests;
 	}
 
-	public void setFriends(ArrayList<User> friends) {
+	public void setFriends(List<User> friends) {
 		this.friends = friends;
 	}
 	

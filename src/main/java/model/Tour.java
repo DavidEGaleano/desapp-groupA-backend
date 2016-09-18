@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import kind.DayMoment;
 import kind.KindOfTour;
@@ -13,13 +14,13 @@ public class Tour {
 	public DayMoment scheduler;
 	public int amount;
 	public int limitAmount;
-	public ArrayList<User> friends;
-	public ArrayList<Event> eventOptions1;
-	public ArrayList<Event> eventOptions2;
+	public List<User> friends;
+	public List<Event> eventOptions1;
+	public List<Event> eventOptions2;
 	public Event event1;
 	public Event event2;
 	
-	public Tour(KindOfTour typeOfTour, Date date, DayMoment scheduler, int limitAmount, ArrayList<User> friends){
+	public Tour(KindOfTour typeOfTour, Date date, DayMoment scheduler, int limitAmount, List<User> friends){
 		this.type = typeOfTour;
 		this.date = date;
 		this.scheduler = scheduler;
@@ -62,7 +63,7 @@ public class Tour {
 		return this.limitAmount;
 	}	
 	
-	public ArrayList<User> getFriends() {
+	public List<User> getFriends() {
 		return friends;
 	}
 
@@ -78,19 +79,19 @@ public class Tour {
 		return scheduler;
 	}
 
-	public ArrayList<Event> getEventOptions1() {
+	public List<Event> getEventOptions1() {
 		return eventOptions1;
 	}
 	
-	public ArrayList<Event> getEventOptions2(){
+	public List<Event> getEventOptions2(){
 		return this.eventOptions2;
 	}
 	
-	public void setEventOptions1(ArrayList<Event> events){
+	public void setEventOptions1(List<Event> events){
 		this.eventOptions1 = events;
 	}
 	
-	public void setEventOptions2(ArrayList<Event> events){
+	public void setEventOptions2(List<Event> events){
 		this.eventOptions2 = events;
 	}
 

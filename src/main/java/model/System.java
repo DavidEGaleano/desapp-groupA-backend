@@ -2,50 +2,45 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import kind.DayMoment;
 import kind.KindOfTour;
 
 public class System {
 	
-	public ArrayList<User> users;
-	public ArrayList<Event> allEvents;
-	public LogSistem logSistem;
+	public List<User> users;
+	public List<Event> allEvents;
+	public LogSystem logSystem;
 	
-	public System(LogSistem logSistem){
+	public System(LogSystem logSistem){
 		this.users = new ArrayList<User>();
 		this.allEvents = new ArrayList<Event>();
-		this.logSistem = logSistem;
+		this.logSystem = logSistem;
 	}
 	
 
-	public User searchFriend(User user) throws Exception{
-		this.existsUser(user);
-		User usuario = null;
+	public User searchFriend(User user){
+		User ret = null;
 		for (User u  : users){
 			if(users.contains(u))
-				usuario = u;
+				ret = u;
 		}
-		return usuario;
+		return ret;
 	}
 
 	public void addEvent(Event event){
 		this.allEvents.add(event);
 	}
 	
-	public boolean existsUser(User user){
-		return !this.users.contains(user);
-	}
-	
-	public Tour newTour(KindOfTour KindOfTour, Date date, DayMoment dayMoment, int limitAmount, ArrayList<User> friends){
+	public Tour newTour(KindOfTour KindOfTour, Date date, DayMoment dayMoment, int limitAmount, List<User> friends){
 		Tour tour = new Tour(KindOfTour, date, dayMoment, limitAmount, friends);
 		this.generateEventOptions(tour);
 		return tour;
 	}
 
 	public void generateEventOptions(Tour tour){
-	//Deberia hacer una query que traiga los eventos para una fecha, horario, limite de personas y monto indicados
-		ArrayList<Event> events = new ArrayList<Event>();
+		List<Event> events = new ArrayList<Event>();
 		for(Event event: this.allEvents){
 			if(this.conditionA(event, tour) && this.conditionB(event, tour) && this.conditionC(event, tour) && this.conditionD(event, tour)){
 				events.add(event);
@@ -60,7 +55,7 @@ public class System {
 	}
 	
 	private Boolean conditionB(Event event, Tour tour){
-		return event.getScheduler().equals(tour.getScheduler());
+		return event.getDayMoment().equals(tour.getScheduler());
 	}
 	
 	private Boolean conditionC(Event event, Tour tour){
@@ -82,7 +77,7 @@ public class System {
 	}
 	
 	private void refreshEvents2(Tour tour) {
-		ArrayList<Event> result = new ArrayList<Event>();
+		List<Event> result = new ArrayList<Event>();
 		for(Event event: tour.getEventOptions2()){
 			if(this.conditionE(event, tour)){
 				result.add(event);
@@ -95,15 +90,15 @@ public class System {
 		return event.getAmount() <= (tour.getLimitAmount() - tour.getEvent1().getAmount());
 	}
 	
-	public void registerNewUser(String userName, String password, String mail) throws Exception{
-		this.logSistem.newUser(userName, password);
+	public void registerNewUser(String userName, String password, String mail){
+		this.logSystem.newUser(userName, password);
 		User user = new User(this, userName, password, mail);
 		this.users.add(user);
-		this.logSistem.users.put(userName, password);
+		this.logSystem.users.put(userName, password);
 	}
 	
-	public void changePassword(String userName, String oldPassword, String newPassword)throws Exception{
-		this.logSistem.changePassword(userName, oldPassword, newPassword);
+	public void changePassword(String userName, String oldPassword, String newPassword){
+		this.logSystem.changePassword(userName, oldPassword, newPassword);
 		this.obtainUser(userName).setPassword(newPassword);
 	}
 	
@@ -114,14 +109,5 @@ public class System {
 			}
 		}
 		return null;
-	}
-	
-	public void logIn(String userName, String password) throws Exception{
-		this.logSistem.logIn(userName, password);
-		this.obtainUser(userName).setLogged(true);
-	}
-
-	public void logOut(String userName) throws Exception{
-		this.obtainUser(userName).setLogged(false);
 	}
 }

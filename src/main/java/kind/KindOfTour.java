@@ -2,7 +2,7 @@ package kind;
 
 public enum KindOfTour{
 
-	GASOLERA,
+	CHEAPER,
 	WITH_FRIENDS,
 	SATURDAY_NIGHT_FEVER,
 	HALF_ORANGE,

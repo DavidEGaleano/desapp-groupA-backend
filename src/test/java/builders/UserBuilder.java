@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import kind.Kind;
 import model.Event;
-import model.LogSistem;
+import model.LogSystem;
 import model.Profile;
 import model.System;
 import model.Tour;
@@ -15,8 +15,8 @@ public class UserBuilder {
 	private String userName = "aName";
 	private String password = "aPassword";
 	private String mail = "aMail";
-	private System system = new System(new LogSistem()); 
-	private Profile profile = new Profile(Kind.COMEDY,Kind.NO_MUSIC,Kind.SUSHI,1000);
+	private System system = new System(new LogSystem()); 
+	private Profile profile = new Profile(Kind.COMEDY,Kind.CLASSIC,Kind.SUSHI,1000);
 	private ArrayList<Tour> tours = new ArrayList<Tour>();
 	private ArrayList<Event> events = new ArrayList <Event>();
 	private ArrayList<User> friends = new ArrayList<User>();

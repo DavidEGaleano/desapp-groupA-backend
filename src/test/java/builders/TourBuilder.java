@@ -13,7 +13,7 @@ import model.User;
 public class TourBuilder {
 	
 	private EventBuilder anEvent = new EventBuilder();
-	public KindOfTour type = KindOfTour.GASOLERA;
+	public KindOfTour type = KindOfTour.CHEAPER;
 	public Date date = createDate() ;
 	public DayMoment scheduler = DayMoment.NIGHT;
 	public int amount = 4;

@@ -2,23 +2,25 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import kind.Kind;
 import kind.DayMoment;
 
 public class Event {
 
-	public ArrayList<Kind> types;
+	public List<Kind> types;
 	public Date date;
-	public DayMoment scheduler;
+	public DayMoment dayMoment;
 	public String address;
 	public int amount;
 	public int limitOfPersons;
-	public ArrayList<Event> suggestions;
+	public List<Event> suggestions;
 	
-	public Event(ArrayList<Kind> types, Date date, DayMoment scheduler, String address, int amount, int limitOfPersons){
+	public Event(List<Kind> types, Date date, DayMoment dayMoment, String address, int amount, int limitOfPersons){
 		this.types = types;
 		this.date = date;
-		this.scheduler = scheduler;
+		this.dayMoment = dayMoment;
 		this.address = address;
 		this.amount = amount;
 		this.limitOfPersons = limitOfPersons;
@@ -45,15 +47,15 @@ public class Event {
 		return this.date;
 	}
 	
-	public DayMoment getScheduler(){
-		return this.scheduler;
+	public DayMoment getDayMoment(){
+		return this.dayMoment;
 	}
 
 	public int getLimitOfPersons(){
 		return this.limitOfPersons;
 	}
 	
-	public void setSuggestions(ArrayList<Event> suggestions) {
+	public void setSuggestions(List<Event> suggestions) {
 		this.suggestions = suggestions;
 	}
 }

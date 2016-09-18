@@ -7,8 +7,7 @@ public enum Kind {
 	ADVENTURE,
 	FANTASY,
 	COMEDY,
-	ACTION,
-	NO_FILM,
+	ACTION,	
 	
 	//Type of Music:
 	ELECTRONIC,
@@ -16,13 +15,11 @@ public enum Kind {
 	CLASSIC,
 	ROCK,
 	REGGAETON,
-	NO_MUSIC,
 	
 	//Type of Food:
 	PASTA,
 	FAST_FOOD,
 	PIZZA,
 	SUSHI,
-	GRILL,
-	NO_FOOD;
+	GRILL;
 }
