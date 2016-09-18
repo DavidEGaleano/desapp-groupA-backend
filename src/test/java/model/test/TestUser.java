@@ -10,8 +10,8 @@ import model.User;
 
 public class TestUser {
 	
-	User aUser;
-	User aFriend;
+	private User aUser;
+	private User aFriend;
 	
 	@Before
 	public void setUp(){

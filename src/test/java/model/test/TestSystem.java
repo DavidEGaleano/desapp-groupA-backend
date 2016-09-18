@@ -41,7 +41,7 @@ public class TestSystem {
 	
 	
 	@After
-	public void TearDown(){
+	public void tearDown(){
 		aSystem = null;
 		aEvent = null;
 	}
