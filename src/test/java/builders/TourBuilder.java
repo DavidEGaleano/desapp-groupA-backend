@@ -31,7 +31,7 @@ public class TourBuilder {
         return date;
 	}
 	
-	public Tour Build(){
+	public Tour build(){
 		Tour aTour = new Tour(type, date, scheduler, limitAmount, friends);
 		aTour.setAmount(amount);
 		aTour.setEvent1(event1);

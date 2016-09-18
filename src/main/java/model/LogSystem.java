@@ -6,12 +6,13 @@ import java.util.Map;
 public class LogSystem {
 
 	public Map<String, String> users;
+	//¿un solo usuario logeado?
 	public User userLogged;
 
 	public LogSystem() {
 		this.users = new HashMap<String, String>();
 	}
-
+	
 	public void newUser(String userName, String password) {
 		if (this.notExistUser(userName) && this.correctPaswordSize(password)) {
 			users.put(userName, password);
@@ -23,7 +24,7 @@ public class LogSystem {
 	}
 
 	public boolean correctPaswordSize(String password) {
-		return (password.length() > 4 || password.length() < 12);
+		return (password.length() > 4 && password.length() < 12);
 	}
 
 	public void logIn(String userName, String password) {
@@ -44,5 +45,9 @@ public class LogSystem {
 	
 	public void logOut(){
 		this.userLogged = null;
+	}
+	
+	public Map<String, String> getUsers(){
+		return this.users;
 	}
 }

@@ -19,7 +19,7 @@ public class System {
 		this.logSystem = logSistem;
 	}
 	
-
+	//es mas un searchUser, simil "obtainUser"
 	public User searchFriend(User user){
 		User ret = null;
 		for (User u  : users){
@@ -33,12 +33,13 @@ public class System {
 		this.allEvents.add(event);
 	}
 	
+	//?
 	public Tour newTour(KindOfTour KindOfTour, Date date, DayMoment dayMoment, int limitAmount, List<User> friends){
 		Tour tour = new Tour(KindOfTour, date, dayMoment, limitAmount, friends);
 		this.generateEventOptions(tour);
 		return tour;
 	}
-
+	
 	public void generateEventOptions(Tour tour){
 		List<Event> events = new ArrayList<Event>();
 		for(Event event: this.allEvents){
@@ -94,9 +95,10 @@ public class System {
 		this.logSystem.newUser(userName, password);
 		User user = new User(this, userName, password, mail);
 		this.users.add(user);
-		this.logSystem.users.put(userName, password);
+		//this.logSystem.users.put(userName, password);
 	}
 	
+	//Exception
 	public void changePassword(String userName, String oldPassword, String newPassword){
 		this.logSystem.changePassword(userName, oldPassword, newPassword);
 		this.obtainUser(userName).setPassword(newPassword);

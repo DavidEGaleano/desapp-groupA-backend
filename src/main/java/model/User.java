@@ -62,7 +62,10 @@ public class User {
 		this.friends.add(friend);
 	}
 	
-	public User searchFriend(User user) throws Exception{
+	//Deberia tirar Exception en un futuro
+	//¿Es necesario que usuario tenga buscar amigo, si lo delega a system?
+	//si es "search friend" mejor que sea a si mismo, si tiene los amigos.
+	public User searchFriend(User user){
 		return this.system.searchFriend(user);
 	}
 	
@@ -76,8 +79,9 @@ public class User {
 	}
 	
 	public void acceptFriend(User friend){
-		this.friends.add(friend);
-		friend.getFriends().add(this);
+		this.friendsRequests.remove(friend);
+		this.addFriend(friend);
+		friend.addFriend(this);
 	}
 	
 	public void cancelFriend(User friend){
