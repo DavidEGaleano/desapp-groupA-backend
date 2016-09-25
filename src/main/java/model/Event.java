@@ -50,6 +50,10 @@ public class Event {
 	public DayMoment getDayMoment(){
 		return this.dayMoment;
 	}
+	
+	public List<Kind> getTypes(){
+		return this.types;
+	}
 
 	public int getLimitOfPersons(){
 		return this.limitOfPersons;

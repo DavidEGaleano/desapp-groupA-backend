@@ -8,7 +8,7 @@ import kind.DayMoment;
 import kind.KindOfTour;
 
 public class User {
-	
+	//unique
 	public String userName;
 	public String password;
 	public String mail;
