@@ -7,11 +7,13 @@ import java.util.List;
 import kind.DayMoment;
 import kind.KindOfTour;
 
+
 public class User {
 	//unique
 	public String userName;
 	public String password;
 	public String mail;
+	public User couple;
 	public Profile profile;
 	public List<Tour> tours;
 	public List<Event> events;
@@ -28,6 +30,7 @@ public class User {
 		this.tours = new ArrayList<Tour>();
 		this.events = new ArrayList<Event>();
 		this.friends = new ArrayList<User>();
+		this.couple = null;
 		this.system = sistem;
 		this.friendsRequests = new ArrayList<User>();
 		this.logged = false;
@@ -73,6 +76,14 @@ public class User {
 		this.friendsRequests.add(friend);
 	}
 	
+	public void addCouple(User couple){
+		this.couple = couple;
+	}
+	
+	public void deleteCouple(){
+		this.couple = null;
+	}
+	
 	public void deleteFriend(User friend){
 		this.friends.remove(friend);
 		friend.getFriends().remove(this);
@@ -103,6 +114,10 @@ public class User {
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//Getters & Setters
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public User getCouple(){
+		return this.couple;
+	}
 	
 	public Profile getProfile() {
 		return profile;

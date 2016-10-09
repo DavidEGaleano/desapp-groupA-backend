@@ -11,7 +11,7 @@ public class EconomicSearch extends SearchStrategy {
 	@Override
 	public ArrayList<Event> search() {
 		//Abrir conexion con la base
-		//int limit = this.user.getProfile.getLimitAmount();
+		//int limit = this.user.getProfile().getLimitAmount();
 		//ArrayList<Event> events = bd.getEconomicEvents(limit);
 		//cerrar conexion
 		//return events

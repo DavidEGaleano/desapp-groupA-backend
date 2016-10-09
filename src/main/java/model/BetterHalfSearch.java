@@ -10,8 +10,12 @@ public class BetterHalfSearch extends SearchStrategy {
 
 	@Override
 	public ArrayList<Event> search() {
-		//esta busqueda va a necesitar especificar a la pareja en el usuario (discutir);
-		return new ArrayList<Event>();
+		//Abrir conexion con la base
+		//ArrayList<Event> events = bd.getEventsForTypes(typeMusic,typeFilm,typeFood);
+		ArrayList<Event> events = this.userEventPreferences(this.user, this.events);
+		//cerrar conexion
+		events = this.userEventPreferences(this.user.getCouple(), events);
+		return events;
 	}
 
 }

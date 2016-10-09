@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class SearchMode {
 
 	protected SearchStrategy mode;
@@ -24,8 +26,12 @@ public class SearchMode {
 		this.mode = new SurpriseMeSearch(user);
 	}
 	
-	public void doSearch(){
-		mode.search();
+	public void setEvents(ArrayList<Event> event){
+		mode.setEvents(event);
+	}
+	
+	public ArrayList<Event> doSearch(){
+		return mode.search();
 	}
 
 }

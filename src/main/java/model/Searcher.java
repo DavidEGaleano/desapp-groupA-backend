@@ -9,6 +9,7 @@ public class Searcher {
 		this.system = system;
 		this.search = search;
 	}
+	
 	//todos retornan void ya que falta la parte de persistencia.
 	public void economicTour(String userName){
 		search.economicMode(this.system.obtainUser(userName));

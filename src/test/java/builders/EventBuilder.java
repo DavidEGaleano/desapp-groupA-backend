@@ -37,7 +37,7 @@ public class EventBuilder {
 		return event;
 	}
 	
-	public EventBuilder withTypes(List<Kind> pTypes){
+	public EventBuilder withTypes(ArrayList<Kind> pTypes){
 		types = pTypes;
 		return this;
 	}
