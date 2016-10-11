@@ -11,10 +11,9 @@
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 	<!-- lo que esta comentado deberia de estar descomentado, es para que pueda transformar
 	     un objeto a json, desde el servicio, usa de ejemplo a Profile como salida -->
-	<!--  <bean id='jacksonProvider' class='org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider' /> -->
+	 <bean id='jacksonProvider' class='org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider' />
 
 	<bean id="probablyPrimeService" class="service.testcxf.prime.service.ProbablyPrimeService"/>
-	<!-- <bean id="Profile" class="model.Profile"/> -->
 	
 		<jaxrs:server id="restContainer" address="/">
 			<jaxrs:serviceBeans>
@@ -24,7 +23,7 @@
 				<entry key="json" value="application/json" />
 			</jaxrs:extensionMappings>
 			<jaxrs:providers>
-				<!--<ref bean="jacksonProvider" /> -->
+				<ref bean="jacksonProvider" />
 			</jaxrs:providers>			
 		</jaxrs:server>
 	
