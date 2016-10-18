@@ -15,13 +15,6 @@ import model.Profile;
 public class WebServiceProfileRest {
 	
 	@GET
-	@Path("/{number}")
-	@Produces("text/plain")
-	public boolean isPrime(@PathParam("number") int number){
-		return true;
-	}
-	
-	@GET
 	@Path("/{name}")
 	@Produces("application/json")
 	public Profile getProfile(@PathParam("name") String name){
