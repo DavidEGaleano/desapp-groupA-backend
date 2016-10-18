@@ -95,7 +95,6 @@ public class System {
 		this.logSystem.newUser(userName, password);
 		User user = new User(this, userName, password, mail);
 		this.users.add(user);
-		//this.logSystem.users.put(userName, password);
 	}
 	
 	//Exception

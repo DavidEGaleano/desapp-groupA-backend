@@ -8,10 +8,10 @@ import kind.Kind;
 public abstract class SearchStrategy {
 	
 	protected User user;
+	protected ArrayList<Kind> types;
 	//Temporal hasta que se tenga que trabajar
 	//con la BD. (solo para testeo).
 	protected ArrayList<Event> events;
-	protected ArrayList<Kind> types;
 	
 	public SearchStrategy(User user){
 		this.user = user;

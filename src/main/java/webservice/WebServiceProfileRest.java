@@ -1,4 +1,4 @@
-package service.testcxf.prime.service;
+package webservice;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -8,14 +8,12 @@ import javax.ws.rs.Produces;
 import org.springframework.stereotype.Service;
 
 import kind.Kind;
-import model.LogSystem;
 import model.Profile;
-import model.User;
 
-@Service("probablyPrimeService")
-@Path("/prime")
-public class ProbablyPrimeService {
-
+@Service("WebServiceProfileRest")
+@Path("/profile")
+public class WebServiceProfileRest {
+	
 	@GET
 	@Path("/{number}")
 	@Produces("text/plain")
@@ -24,9 +22,17 @@ public class ProbablyPrimeService {
 	}
 	
 	@GET
-	@Path("/profile/{name}")
+	@Path("/{name}")
 	@Produces("application/json")
 	public Profile getProfile(@PathParam("name") String name){
+		Profile profile = new Profile(Kind.ACTION,Kind.ROCK, Kind.FAST_FOOD, 1000);
+		return profile;
+	}
+	
+	@GET
+	@Path("/create/{username}")
+	@Produces("application/json")
+	public Profile setProfile(@PathParam("name") String name){
 		Profile profile = new Profile(Kind.ACTION,Kind.ROCK, Kind.FAST_FOOD, 1000);
 		return profile;
 	}
