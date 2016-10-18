@@ -14,10 +14,12 @@
 	 <bean id='jacksonProvider' class='org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider' />
 
 	<bean id="WebServiceProfileRest" class="webservice.WebServiceProfileRest"/>
+	<bean id="WebServiceEventRest" class="webservice.WebServiceEventRest"/>
 	
 		<jaxrs:server id="restContainer" address="/">
 			<jaxrs:serviceBeans>
 				<ref bean="WebServiceProfileRest" />
+				<ref bean="WebServiceEventRest" />
 			</jaxrs:serviceBeans>
 			<jaxrs:extensionMappings>
 				<entry key="json" value="application/json" />
