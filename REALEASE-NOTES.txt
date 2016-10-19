@@ -17,5 +17,31 @@ NOTES:
 * Falta funcionalidad de las Busquedas
 * Falta Testing
 
-KNOWN ISSUES:
-*
+--------------------------------------------------------------------
+TAG ENTREGA 2 1.0
+--------------------------------------------------------------------
+
+NEW FEATURES:
+* Heroku frontend deploy
+* Modelo:
+** Sistema de busquedas
+
+* Service:
+** WebServiceProfileREST Basico
+** WebServiceEventREST Basico
+
+* Persistencia:
+** Agregada la funcionalidad de la persistencia, basado en el ejemplo de hibernate.
+** Profile Repository 
+** Profile Service
+
+* Agregados los Tests
+* Agregado un test básico para comprobar la funcionalidad básica de la persistencia
+* Builders para los tests
+* Readme.md actualizado con los links al proyecto frontend y links a heroku.
+
+NOTES:
+* Falta WebServices REST para Perfiles con mas funcionalidad (CRUD/LIST).
+* Falta WebServices REST para Eventos con mas funcionalidad (CRUD/LIST).
+* Falta una batería de datos para la persistencia.
+

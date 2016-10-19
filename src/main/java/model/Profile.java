@@ -8,6 +8,11 @@ public class Profile {
 	public Kind typeOfMusic;
 	public Kind typeOfFood;
 	public int limitAmount;
+	public int id;
+	
+	public Profile(){
+		
+	}
 	
 	public Profile(Kind typeOfFilm, Kind typeOfMusic, Kind typeOfFood, int limitAmount){
 		this.typeOfFilm = typeOfFilm;
