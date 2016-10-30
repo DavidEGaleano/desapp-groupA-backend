@@ -10,6 +10,7 @@ import kind.KindOfTour;
 
 public class User {
 	//unique
+	public int id;
 	public String userName;
 	public String password;
 	public String mail;
@@ -21,6 +22,8 @@ public class User {
 	public System system; 
 	public List<User> friendsRequests;
 	public Boolean logged;
+	
+	public User(){}
 	
 	public User(System sistem, String userName, String password, String mail){
 		this.userName = userName;

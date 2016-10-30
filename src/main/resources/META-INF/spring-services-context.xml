@@ -9,9 +9,20 @@
 	<!-- beans de spring -->
 	<bean id="services.general" class="persistance.services.GeneralService">
 		<property name="profileService" ref="services.profile" />
+		<property name="eventService" ref="services.event" />
+		<property name="userService" ref="services.user" />
 	</bean>
 
 	<bean id="services.profile" class="persistance.services.ProfileService">
 		<property name="repository" ref="persistence.profilerepository" />
 	</bean>
+	
+	<bean id="services.event" class="persistance.services.EventService">
+		<property name="repository" ref="persistence.eventrepository" />
+	</bean>
+	
+	<bean id="services.user" class="persistance.services.UserService">
+		<property name="repository" ref="persistence.userrepository" />
+	</bean>
+	
 </beans>

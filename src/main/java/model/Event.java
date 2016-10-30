@@ -8,7 +8,8 @@ import kind.Kind;
 import kind.DayMoment;
 
 public class Event {
-
+	
+	public int id;
 	public List<Kind> types;
 	public Date date;
 	public DayMoment dayMoment;
@@ -16,6 +17,10 @@ public class Event {
 	public int amount;
 	public int limitOfPersons;
 	public List<Event> suggestions;
+	
+	public Event(){
+		
+	}
 	
 	public Event(List<Kind> types, Date date, DayMoment dayMoment, String address, int amount, int limitOfPersons){
 		this.types = types;
