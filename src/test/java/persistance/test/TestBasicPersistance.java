@@ -1,5 +1,6 @@
 package persistance.test;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +11,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import builders.EventBuilder;
 import builders.UserBuilder;
 import kind.Kind;
-import model.Event;
 import model.Profile;
 import persistance.services.EventService;
 import persistance.services.ProfileService;
@@ -29,12 +29,28 @@ public class TestBasicPersistance {
 	private UserService userService;
 	
     @Test
-    public void testSave() {
+    public void testSaveService() {
     	profileService.save(new Profile(Kind.ACTION, Kind.ELECTRONIC, Kind.FAST_FOOD, 1000));
-    	eventService.save(new EventBuilder().build());
-    	userService.save(new UserBuilder().build());
-        Assert.assertEquals(1, profileService.retriveAll().size());
-        Assert.assertEquals(1, eventService.retriveAll().size());
-        Assert.assertEquals(1,userService.retriveAll().size());
+    	Assert.assertEquals(1, profileService.retriveAll().size());
     }
+    
+    @Test
+    public void testSaveEvent() {
+    	eventService.save(new EventBuilder().build());
+    	Assert.assertEquals(1, eventService.retriveAll().size());
+    }
+    
+    @Test
+    public void testSaveUser() {
+    	userService.save(new UserBuilder().build());
+    	Assert.assertEquals(1,userService.retriveAll().size());
+    }
+	
+    @After
+    public void drop(){
+    	profileService.deleteAll();
+    	userService.deleteAll();
+    	eventService.deleteAll();
+    }
+   
 }

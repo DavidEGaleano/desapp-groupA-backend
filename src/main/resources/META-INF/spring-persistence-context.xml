@@ -79,9 +79,7 @@
 		</property>
 		<property name="mappingLocations">
 			<list>
-				<value>classpath*:mappings/Profile.hbm.xml</value>
-				<value>classpath*:mappings/Event.hbm.xml</value>
-				<value>classpath*:mappings/User.hbm.xml</value>
+				<value>classpath*:mappings/*.hbm.xml</value>
 			</list>
 		</property>
 

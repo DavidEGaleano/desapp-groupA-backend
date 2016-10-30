@@ -1,6 +1,7 @@
 package kind;
 
 public enum Kind {
+
 	
 	//Type of Film:
 	HORROR,
@@ -22,4 +23,6 @@ public enum Kind {
 	PIZZA,
 	SUSHI,
 	GRILL;
+	
+	int id;
 }

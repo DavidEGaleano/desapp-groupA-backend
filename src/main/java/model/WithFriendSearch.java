@@ -3,8 +3,6 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-import kind.Kind;
-
 public class WithFriendSearch extends SearchStrategy {
 	
 	public WithFriendSearch(User user) {

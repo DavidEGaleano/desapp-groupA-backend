@@ -7,8 +7,32 @@
 		<id column="ID" name="id">
 			<generator class="native" />
 		</id>
+		
 		<property name="address" column="address" type="string"/>
+		
+  		<bag name="types" table="types" inverse="true">
+    		<key column="ID" />
+    		<!-- revisar esto -->
+    		<one-to-many class="org.hibernate.type.EnumType" entity-name="kind.Kind"/>
+  		</bag>
+  		
+  		<property name="date" column="date" type="java.util.Date"/>
+  		
+  		<property name="dayMoment" column="day_moment">
+  			<type name="org.hibernate.type.EnumType">
+        		<param name="enumClass">kind.DayMoment</param>
+    		</type>
+  		</property>
+  		
 		<property name="amount" column="amount" type="int"/>
+		
 		<property name="limitOfPersons" column="limit_of_persons" type="int"/>	
+		
+		 <bag name="suggestions" table="suggestions" inverse="true">
+    		<key column="ID" />
+    		<!-- revisar esto -->
+    		<one-to-many class="model.Event"/>
+  		</bag>
+  		
 	</class>
 </hibernate-mapping>
