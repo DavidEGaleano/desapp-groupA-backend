@@ -37,6 +37,7 @@ public class TestBasicPersistance {
     	Assert.assertEquals(1, profileService.retriveAll().size());
     }
     
+    //si se descomenta una linea de estas falla la persistencia.
     @Test
     public void testSaveEvent() {
     	ArrayList<Kind> types = new ArrayList<Kind>();
