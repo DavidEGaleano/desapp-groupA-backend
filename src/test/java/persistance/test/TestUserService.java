@@ -1,19 +1,12 @@
 package persistance.test;
 
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import builders.UserBuilder;
-import junit.framework.Assert;
-import model.User;
-import persistance.services.UserService;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
+
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class TestUserService {
-	@Autowired
+	/*@Autowired
     private UserService userService;
 	
     //@Test
@@ -48,4 +41,5 @@ public class TestUserService {
     public void drop(){
     	userService.deleteAll();
     }
+    */
 }

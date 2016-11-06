@@ -1,30 +1,11 @@
 package persistance.test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import builders.EventBuilder;
-import builders.UserBuilder;
-import kind.Kind;
-import model.Event;
-import model.Profile;
-import persistance.services.EventService;
-import persistance.services.ProfileService;
-import persistance.services.UserService;
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class TestBasicPersistance {
-	
+	/*
 	@Autowired
     private ProfileService profileService;
 	@Autowired
@@ -62,5 +43,5 @@ public class TestBasicPersistance {
     	userService.deleteAll();
     	eventService.deleteAll();
     }
-   
+   */
 }
