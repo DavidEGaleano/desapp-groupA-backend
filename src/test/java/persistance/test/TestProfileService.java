@@ -1,7 +1,5 @@
 package persistance.test;
 
-import org.junit.After;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -18,7 +16,7 @@ public class TestProfileService {
 	@Autowired
     private ProfileService profileService;
 	
-    @Test
+    //@Test
     public void shouldBeSaveNEvent() {
     	Profile profile = new ProfileBuilder().build();
     	Profile profile2 = new ProfileBuilder().build();
@@ -27,7 +25,7 @@ public class TestProfileService {
     	Assert.assertEquals(2, profileService.retriveAll().size());
     }
     
-    @Test
+    //@Test
     public void shouldBeDeleteAEvent(){
     	Profile profile = new ProfileBuilder().build();
     	Profile profile2 = new ProfileBuilder().build();
@@ -37,7 +35,7 @@ public class TestProfileService {
     	Assert.assertEquals(1, profileService.retriveAll().size());
     }
     
-    @Test
+    //@Test
     public void shouldBeGetAEventByID(){
     	Profile profile = new ProfileBuilder().build();
     	Profile profile2 = new ProfileBuilder().build();
@@ -46,7 +44,7 @@ public class TestProfileService {
     	Assert.assertEquals(profile.id, profileService.getById(profile.id).id);
     } 
 	
-    @After
+    //@After
     public void drop(){
     	profileService.deleteAll();
     }

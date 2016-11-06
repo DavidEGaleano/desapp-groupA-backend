@@ -32,14 +32,14 @@ public class TestBasicPersistance {
 	@Autowired
 	private UserService userService;
 	
-    @Test
+    //@Test
     public void testSaveProfile() {
     	profileService.save(new Profile(Kind.ACTION, Kind.ELECTRONIC, Kind.FAST_FOOD, 1000));
     	Assert.assertEquals(1, profileService.retriveAll().size());
     	
     }
     
-    @Test
+    //@Test
     public void testSaveEvent() {
     	ArrayList<Kind> types = new ArrayList<Kind>();
     	//types.add(Kind.ELECTRONIC);
@@ -50,13 +50,13 @@ public class TestBasicPersistance {
     	Assert.assertEquals(1, eventService.retriveAll().size());
     }
     
-    @Test
+    //@Test
     public void testSaveUser() {
     	userService.save(new UserBuilder().build());
     	Assert.assertEquals(1,userService.retriveAll().size());
     }
 	
-    @After
+    //@After
     public void drop(){
     	profileService.deleteAll();
     	userService.deleteAll();
