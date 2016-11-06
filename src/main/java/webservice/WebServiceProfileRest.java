@@ -1,32 +1,74 @@
 package webservice;
 
+import java.util.List;
+
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 
 import kind.Kind;
 import model.Profile;
+import persistance.services.ProfileService;
 
-@Service("WebServiceProfileRest")
+
 @Path("/profile")
+@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class WebServiceProfileRest {
+	@Autowired
+	private ProfileService profileService;
+	
+
+	public ProfileService getProfileService() {
+		return profileService;
+	}
+	
+	public void setProfileService(final ProfileService profileService) {
+		this.profileService = profileService;
+	}
+
 	
 	@GET
-	@Path("/{name}")
+	@Path("/profiletest")
 	@Produces("application/json")
-	public Profile getProfile(@PathParam("name") String name){
-		Profile profile = new Profile(Kind.ACTION,Kind.ROCK, Kind.FAST_FOOD, 1000);
-		return profile;
+	public List<Profile> profileTest() {
+		this.getProfileService().save(new Profile(Kind.ACTION, Kind.ELECTRONIC, Kind.FAST_FOOD, 1000));
+		return this.profileService.retriveAll();
+
 	}
 	
 	@GET
-	@Path("/create/{username}")
+	@Path("/profiles")
 	@Produces("application/json")
-	public Profile setProfile(@PathParam("name") String name){
-		Profile profile = new Profile(Kind.ACTION,Kind.ROCK, Kind.FAST_FOOD, 1000);
-		return profile;
+	public List<Profile> profile() {
+
+		return this.getProfileService().retriveAll();
+
 	}
+	
+	@DELETE
+	@Path("/deleteprofile/{id}")
+	@Produces("application/json")
+	public String deleteProfile(@PathParam("id") final Integer id) {
+
+		try {
+			Profile toDelete = this.getProfileService().getById(id);
+			this.getProfileService().delete(toDelete);
+		} catch (Exception e) {
+			return "Profile Id not found";
+		}
+		return "Profile Deleted";
+	}
+	
+	@GET
+	@Path("/getEvent/{id}")
+	@Produces("application/json")
+	public Profile getProfile(@PathParam("id") final Integer id) {
+		return this.getProfileService().getById(id);
+	}
+
 }

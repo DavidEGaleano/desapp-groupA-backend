@@ -48,6 +48,11 @@ public class GenericService<T> implements Serializable {
     		this.delete(values.get(i));
     	}
     }
+    
+    @Transactional
+    public T getById(final Integer id){
+    	return this.getRepository().findById(id);
+    }
 
 }
 

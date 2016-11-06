@@ -1,6 +1,7 @@
 package persistance.test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -32,17 +33,17 @@ public class TestBasicPersistance {
 	private UserService userService;
 	
     @Test
-    public void testSaveService() {
+    public void testSaveProfile() {
     	profileService.save(new Profile(Kind.ACTION, Kind.ELECTRONIC, Kind.FAST_FOOD, 1000));
     	Assert.assertEquals(1, profileService.retriveAll().size());
+    	
     }
     
-    //si se descomenta una linea de estas falla la persistencia.
     @Test
     public void testSaveEvent() {
     	ArrayList<Kind> types = new ArrayList<Kind>();
     	//types.add(Kind.ELECTRONIC);
-    	//types.add(Kind.FAST_FOOD);
+    	//types.add(Kind.CLASSIC);
     	//types.add(Kind.ACTION);
     	Event event = new EventBuilder().withTypes(types).build();
     	eventService.save(event);
