@@ -17,9 +17,8 @@ import persistance.services.ProfileService;
 
 
 @Path("/profile")
-@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class WebServiceProfileRest {
-	@Autowired
+
 	private ProfileService profileService;
 	
 
@@ -45,7 +44,7 @@ public class WebServiceProfileRest {
 	@Path("/profiles")
 	@Produces("application/json")
 	public List<Profile> profile() {
-
+		String algo = "breakpoint";
 		return this.getProfileService().retriveAll();
 
 	}

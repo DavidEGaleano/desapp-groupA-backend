@@ -16,9 +16,8 @@ import model.Event;
 import persistance.services.EventService;
 
 @Path("/event")
-@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class WebServiceEventRest {
-	@Autowired
+
 	public EventService eventService;
 
 	public EventService getEventService() {
