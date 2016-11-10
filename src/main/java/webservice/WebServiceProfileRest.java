@@ -12,7 +12,7 @@ import model.Profile;
 import persistance.services.ProfileService;
 
 
-
+@Path("/profile")
 public class WebServiceProfileRest {
 
 	private ProfileService profileService;
