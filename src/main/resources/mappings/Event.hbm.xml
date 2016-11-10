@@ -3,6 +3,10 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping default-access="field"
 	default-cascade="save-update">
+	<typedef name="kind" class="org.hibernate.type.EnumType">
+  		<param name="enumClass">kind.Kind</param>
+  		<param name="type">12</param>
+	</typedef>
 	<class name="model.Event">
 		<id column="ID" name="id">
 			<generator class="native" />
@@ -10,11 +14,18 @@
 		
 		<property name="address" column="address" type="string"/>
 		
-  		<bag name="types" table="types" inverse="true">
-    		<key column="ID" />
-    		<!-- revisar esto -->
+		<bag name="types" table="types" lazy="false" cascade="all">
+        	<key column="ID_types" />
+        	<element column="enum_ID" type="kind"/>
+    	</bag>
+		
+		
+		<!--
+  		<bag name="types" table="types" lazy="false">
+    		<key column="ID_types" />
     		<one-to-many class="org.hibernate.type.EnumType" entity-name="kind.Kind"/>
   		</bag>
+		 -->
   		
   		<property name="date" column="date" type="java.util.Date"/>
   		
@@ -23,16 +34,21 @@
         		<param name="enumClass">kind.DayMoment</param>
     		</type>
   		</property>
+  		<!-- 
+  		 -->
   		
 		<property name="amount" column="amount" type="int"/>
 		
 		<property name="limitOfPersons" column="limit_of_persons" type="int"/>	
-		
-		 <bag name="suggestions" table="suggestions" inverse="true">
-    		<key column="ID" />
-    		<!-- revisar esto -->
+				
+		<bag name="suggestions" table="suggestions" lazy="false" cascade="all">
+    		<key column="ID_event" />
+    		<!--  
+    		 revisar esto 
+    		-->
     		<one-to-many class="model.Event"/>
   		</bag>
+
   		
 	</class>
 </hibernate-mapping>

@@ -37,14 +37,12 @@ public class WebServiceProfileRest {
 	public List<Profile> profileTest() {
 		this.getProfileService().save(new Profile(Kind.ACTION, Kind.ELECTRONIC, Kind.FAST_FOOD, 1000));
 		return this.profileService.retriveAll();
-
 	}
 	
 	@GET
 	@Path("/profiles")
 	@Produces("application/json")
 	public List<Profile> profile() {
-		String algo = "breakpoint";
 		return this.getProfileService().retriveAll();
 
 	}

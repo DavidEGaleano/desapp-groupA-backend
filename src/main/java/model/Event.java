@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import kind.Kind;
 import kind.DayMoment;
+import kind.Kind;
 
 public class Event {
 	

@@ -11,8 +11,6 @@
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 	
 	<bean id='jacksonProvider' class='org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider' />
-	<bean id="WebServiceProfileRest" class="webservice.WebServiceProfileRest"/>
-	<bean id="WebServiceEventRest" class="webservice.WebServiceEventRest"/>
 	
 		<jaxrs:server id="restContainer" address="/">
 			<jaxrs:serviceBeans>

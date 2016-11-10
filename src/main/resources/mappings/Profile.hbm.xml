@@ -7,7 +7,6 @@
 		<id column="ID" name="id">
 			<generator class="native" />
 		</id>
-		
 		<property name="typeOfFilm" column="type_of_film">
     		<type name="org.hibernate.type.EnumType">
         		<param name="enumClass">kind.Kind</param>
@@ -25,6 +24,8 @@
         		<param name="enumClass">kind.Kind</param>
     		</type>
 		</property>
+		<!-- 
+		 -->
 		
 		<property name="limitAmount" column="limit_amount" type="int"/>	
 			

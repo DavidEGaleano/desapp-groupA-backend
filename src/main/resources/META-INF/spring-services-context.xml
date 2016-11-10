@@ -25,14 +25,12 @@
 		<property name="repository" ref="persistence.userrepository" />
 	</bean>
 	
-	<bean id="profile.rest" class="webservice.WebServiceProfileRest">
+	<bean id="WebServiceProfileRest" class="webservice.WebServiceProfileRest">
 		<property name="profileService" ref="services.profile" />
 	</bean>
 	
-	<bean id="event.rest" class="webservice.WebServiceEventRest">
+	<bean id="WebServiceEventRest" class="webservice.WebServiceEventRest">
 		<property name="eventService" ref="services.event" />
 	</bean>
-	
-	
 	
 </beans>

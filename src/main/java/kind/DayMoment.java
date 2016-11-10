@@ -1,8 +1,8 @@
 package kind;
 
-public enum DayMoment {
+public enum  DayMoment {
 
 	MORNING,
 	AFTERNOON,
-	NIGHT;
+	NIGHT
 }

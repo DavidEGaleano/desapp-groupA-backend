@@ -1,5 +1,6 @@
 package webservice;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.DELETE;
@@ -12,7 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
 import builders.EventBuilder;
+import kind.Kind;
 import model.Event;
+import model.Profile;
 import persistance.services.EventService;
 
 @Path("/event")
@@ -33,16 +36,19 @@ public class WebServiceEventRest {
 	@Path("/{address}")
 	@Produces("application/json")
 	public Event getProfile(@PathParam("address") String address){
-		Event event = new EventBuilder().withAddress(address).build();
-		return event;
+		//Event event = new EventBuilder().withAddress(address).build();
+		return null;
 	}
 	
 	@GET
 	@Path("/create/{address}")
 	@Produces("application/json")
-	public String setProfile(@PathParam("address") String address){
-		//Event event = new EventBuilder().withAddress(address).build();
-		return "{event created}";
+	public Event setProfile(@PathParam("address") String address){
+		ArrayList<Event> suggestions = new ArrayList<Event>();
+		suggestions.add(new EventBuilder().build());
+		Event event = new EventBuilder().withAddress(address).withSuggestion(suggestions).build();
+		this.getEventService().save(event);
+		return this.getEventService().getById(event.id);
 	}
 	
 	@GET

@@ -25,4 +25,5 @@ public enum Kind {
 	GRILL;
 	
 	int id;
+	
 }

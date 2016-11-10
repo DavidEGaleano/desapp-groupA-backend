@@ -18,24 +18,25 @@
 		<one-to-one name="couple" class="model.User" cascade="save-update"/>
 		
 		<one-to-one name="profile" class="model.Profile" cascade="save-update"/>
-		
+		<!-- 
 		<bag name="events" table="events" inverse="true">
     		<key column="ID" />
-    		<!-- revisar esto -->
+    		revisar esto 
     		<one-to-many class="model.Event"/>
   		</bag>
   		
   		<bag name="friends" table="friends" inverse="true">
     		<key column="ID" />
-    		<!-- revisar esto -->
+    		 revisar esto 
     		<one-to-many class="model.User"/>
   		</bag>
   		
   		<bag name="friendsRequests" table="friend_requests" inverse="true">
     		<key column="ID" />
-    		<!-- revisar esto -->
+    		revisar esto 
     		<one-to-many class="model.User"/>
   		</bag>
+		 -->
   		
   		<property name="logged" column="logged" type="boolean"/>
 	</class>
