@@ -17,17 +17,6 @@ import persistance.services.ProfileService;
 public class TestProfileService {
 	@Autowired
     private ProfileService profileService;
-	
-    
-    @Test
-    public void shouldBeDeleteAProfile(){
-    	Profile profile = new ProfileBuilder().build();
-    	Profile profile2 = new ProfileBuilder().build();
-    	profileService.save(profile);
-    	profileService.save(profile2);
-    	profileService.delete(profile2);
-    	Assert.assertEquals(1, profileService.retriveAll().size());
-    }
     
     @Test
     public void shouldBeGetAEventByID(){

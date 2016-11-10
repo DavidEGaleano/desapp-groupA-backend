@@ -6,11 +6,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import builders.ProfileBuilder;
 import builders.UserBuilder;
 import junit.framework.Assert;
-import model.Profile;
 import model.User;
 import persistance.services.UserService;
 
@@ -20,16 +17,6 @@ public class TestUserService {
 	
 	@Autowired
     private UserService userService;
-    
-    @Test
-    public void shouldBeDeleteAUser(){
-    	User anUser = new UserBuilder().build();
-    	User anUser2 = new UserBuilder().build();
-    	userService.save(anUser);
-    	userService.save(anUser2);
-    	userService.delete(anUser2);
-    	Assert.assertEquals(1, userService.retriveAll().size());
-    }
     
     @Test
     public void shouldBeGetAUserByID(){

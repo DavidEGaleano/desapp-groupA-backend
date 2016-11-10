@@ -10,11 +10,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import builders.EventBuilder;
+import builders.ProfileBuilder;
 import builders.UserBuilder;
 import junit.framework.Assert;
 import kind.Kind;
 import model.Event;
 import model.Profile;
+import model.User;
 import persistance.services.EventService;
 import persistance.services.ProfileService;
 import persistance.services.UserService;
@@ -32,9 +34,9 @@ public class TestBasicPersistance {
 	
     @Test
     public void testSaveProfile() {
-    	profileService.save(new Profile(Kind.ACTION, Kind.ELECTRONIC, Kind.FAST_FOOD, 1000));
-    	Assert.assertEquals(1, profileService.retriveAll().size());
-    	
+    	Profile profile = new ProfileBuilder().build();
+    	profileService.save(profile);
+    	Assert.assertEquals(profile.id, profileService.getById(profile.id).id);
     }
     
     @Test
@@ -45,13 +47,14 @@ public class TestBasicPersistance {
     	types.add(Kind.ACTION);
     	Event event = new EventBuilder().withTypes(types).build();
     	eventService.save(event);
-    	Assert.assertEquals(1, eventService.retriveAll().size());
+    	Assert.assertEquals(event.id, eventService.getById(event.id).id);
     }
     
     @Test
     public void testSaveUser() {
-    	userService.save(new UserBuilder().build());
-    	Assert.assertEquals(1,userService.retriveAll().size());
+    	User user = new UserBuilder().build();
+    	userService.save(user);
+    	Assert.assertEquals(user.id,userService.getById(user.id).id);
     }
 	
     @After

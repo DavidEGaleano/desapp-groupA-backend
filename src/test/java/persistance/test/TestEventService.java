@@ -31,16 +31,6 @@ public class TestEventService {
     }
     
     @Test
-    public void shouldBeDeleteAEvent(){
-    	Event event = new EventBuilder().build();
-    	Event event2 = new EventBuilder().build();
-    	eventService.save(event);
-    	eventService.save(event2);
-    	eventService.delete(event2);
-    	Assert.assertEquals(1, eventService.retriveAll().size());
-    }
-    
-    @Test
     public void shouldBeGetAEventByID(){
     	Event event = new EventBuilder().build();
     	Event event2 = new EventBuilder().build();
