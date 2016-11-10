@@ -1,21 +1,14 @@
 package webservice;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-
 import builders.EventBuilder;
-import kind.Kind;
 import model.Event;
-import model.Profile;
 import persistance.services.EventService;
 
 @Path("/event")
@@ -33,35 +26,30 @@ public class WebServiceEventRest {
 	
 	
 	@GET
-	@Path("/{address}")
+	@Path("/create")
 	@Produces("application/json")
-	public Event getProfile(@PathParam("address") String address){
-		//Event event = new EventBuilder().withAddress(address).build();
-		return null;
-	}
-	
-	@GET
-	@Path("/create/{address}")
-	@Produces("application/json")
-	public Event setProfile(@PathParam("address") String address){
-		ArrayList<Event> suggestions = new ArrayList<Event>();
-		suggestions.add(new EventBuilder().build());
-		Event event = new EventBuilder().withAddress(address).withSuggestion(suggestions).build();
-		this.getEventService().save(event);
-		return this.getEventService().getById(event.id);
+	public String setProfile(@PathParam("address") String address){
+		Event event = new EventBuilder().build();
+		try {
+			this.getEventService().save(event);
+		}catch(Exception e){
+			return "{Error: Can't create Event,"
+					+ "Status: FAIL}";
+		}
+		return "{Action:"+"Event Created"+","
+				+"ID:"+ event.id+","
+				+"Status"+": "+"OK"+"}";
 	}
 	
 	@GET
 	@Path("/events")
 	@Produces("application/json")
 	public List<Event> events() {
-
 		return this.getEventService().retriveAll();
-
 	}
 
-	@DELETE
-	@Path("/deleteevent/{id}")
+	@GET
+	@Path("/delete/{id}")
 	@Produces("application/json")
 	public String deleteProfile(@PathParam("id") final Integer id) {
 
@@ -69,16 +57,23 @@ public class WebServiceEventRest {
 			Event toDelete = this.getEventService().getById(id);
 			this.getEventService().delete(toDelete);
 		} catch (Exception e) {
-			return "Id not found";
+			return "{Error: Can't delete Event or invalid ID ,"
+					+ "Status: FAIL}";
 		}
-		return "Delete Ok";
+		return "{Action:"+"Event Deleted"+","
+		+"ID:"+id+","
+		+"Status"+": "+"OK"+"}";
 	}
 	
 	@GET
 	@Path("/getEvent/{id}")
 	@Produces("application/json")
 	public Event getEvent(@PathParam("id") final Integer id) {
-		return this.getEventService().getById(id);
+		try {
+			return this.getEventService().getById(id);
+		} catch (Exception e) {
+			return null;
+		}
 	}
 	
 

@@ -14,13 +14,13 @@ import builders.EventBuilder;
 import model.Event;
 import persistance.services.EventService;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class TestEventService {
 	
 	@Autowired
     private EventService eventService;
-    //@Test
+    @Test
     public void shouldBeSaveNEvent() {
     	Event event = new EventBuilder().build();
     	Event event2 = new EventBuilder().build();
@@ -29,7 +29,7 @@ public class TestEventService {
     	Assert.assertEquals(2, eventService.retriveAll().size());
     }
     
-    //@Test
+    @Test
     public void shouldEventGetOneSuggestion() {
     	ArrayList<Event> suggestions = new ArrayList<Event>();
     	suggestions.add(new EventBuilder().build());
@@ -38,7 +38,7 @@ public class TestEventService {
     	Assert.assertEquals(eventService.getById(event.id).suggestions.size(),1);
     }
     
-    //@Test
+    @Test
     public void shouldBeDeleteAEvent(){
     	Event event = new EventBuilder().build();
     	Event event2 = new EventBuilder().build();
@@ -48,7 +48,7 @@ public class TestEventService {
     	Assert.assertEquals(1, eventService.retriveAll().size());
     }
     
-    //@Test
+    @Test
     public void shouldBeGetAEventByID(){
     	Event event = new EventBuilder().build();
     	Event event2 = new EventBuilder().build();
@@ -57,7 +57,7 @@ public class TestEventService {
     	Assert.assertEquals(event.id, eventService.getById(event.id).id);
     } 
 	
-    //@After
+    @After
     public void drop(){
     	eventService.deleteAll();
     }

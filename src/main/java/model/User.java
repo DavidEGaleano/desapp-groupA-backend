@@ -9,7 +9,7 @@ import kind.KindOfTour;
 
 
 public class User {
-	//unique
+	
 	public int id;
 	public String userName;
 	public String password;

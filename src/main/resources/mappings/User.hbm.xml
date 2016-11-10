@@ -3,9 +3,8 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping default-access="field"
 	default-cascade="save-update">
-	<class name="model.User">
-	
-		<id column="ID" name="id">
+	<class name="model.User">	
+		<id column="ID_user" name="id">
 			<generator class="native" />
 		</id>
 		
@@ -15,28 +14,24 @@
 		
 		<property name="mail" column="mail" type="string"/>	
 		
-		<one-to-one name="couple" class="model.User" cascade="save-update"/>
+		<!-- <one-to-one name="couple" class="model.User" foreign-key="ID_couple" lazy="false"/> -->
 		
-		<one-to-one name="profile" class="model.Profile" cascade="save-update"/>
-		<!-- 
-		<bag name="events" table="events" inverse="true">
-    		<key column="ID" />
-    		revisar esto 
+		<one-to-one name="profile" class="model.Profile" foreign-key="ID_user_profile" lazy="false"/>
+	
+		<bag name="events" table="events" lazy="false">
+    		<key column="ID_events" />
     		<one-to-many class="model.Event"/>
   		</bag>
   		
-  		<bag name="friends" table="friends" inverse="true">
-    		<key column="ID" />
-    		 revisar esto 
+  		<bag name="friends" table="friends" lazy="false">
+    		<key column="ID_friends" />
     		<one-to-many class="model.User"/>
   		</bag>
   		
-  		<bag name="friendsRequests" table="friend_requests" inverse="true">
-    		<key column="ID" />
-    		revisar esto 
+  		<bag name="friendsRequests" table="friend_requests" lazy="false">
+    		<key column="ID_friends_request" />
     		<one-to-many class="model.User"/>
   		</bag>
-		 -->
   		
   		<property name="logged" column="logged" type="boolean"/>
 	</class>

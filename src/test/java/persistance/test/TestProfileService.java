@@ -12,13 +12,13 @@ import junit.framework.Assert;
 import model.Profile;
 import persistance.services.ProfileService;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class TestProfileService {
 	@Autowired
     private ProfileService profileService;
 	
-    //@Test
+    @Test
     public void shouldBeSaveNEvent() {
     	Profile profile = new ProfileBuilder().build();
     	Profile profile2 = new ProfileBuilder().build();
@@ -27,7 +27,7 @@ public class TestProfileService {
     	Assert.assertEquals(2, profileService.retriveAll().size());
     }
     
-    //@Test
+    @Test
     public void shouldBeDeleteAEvent(){
     	Profile profile = new ProfileBuilder().build();
     	Profile profile2 = new ProfileBuilder().build();
@@ -37,7 +37,7 @@ public class TestProfileService {
     	Assert.assertEquals(1, profileService.retriveAll().size());
     }
     
-    //@Test
+    @Test
     public void shouldBeGetAEventByID(){
     	Profile profile = new ProfileBuilder().build();
     	Profile profile2 = new ProfileBuilder().build();
@@ -46,7 +46,7 @@ public class TestProfileService {
     	Assert.assertEquals(profile.id, profileService.getById(profile.id).id);
     } 
 	
-    //@After
+    @After
     public void drop(){
     	profileService.deleteAll();
     }

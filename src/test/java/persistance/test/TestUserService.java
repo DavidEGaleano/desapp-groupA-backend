@@ -7,19 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import builders.ProfileBuilder;
 import builders.UserBuilder;
 import junit.framework.Assert;
+import model.Profile;
 import model.User;
 import persistance.services.UserService;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class TestUserService {
+	
 	@Autowired
     private UserService userService;
 	
-    //@Test
-    public void shouldBeSaveNEvent() {
+    @Test
+    public void shouldBeSaveNUser() {
     	User anUser = new UserBuilder().build();
     	User anUser2 = new UserBuilder().build();
     	userService.save(anUser);
@@ -27,8 +30,8 @@ public class TestUserService {
     	Assert.assertEquals(2, userService.retriveAll().size());
     }
     
-    //@Test
-    public void shouldBeDeleteAEvent(){
+    @Test
+    public void shouldBeDeleteAUser(){
     	User anUser = new UserBuilder().build();
     	User anUser2 = new UserBuilder().build();
     	userService.save(anUser);
@@ -37,8 +40,8 @@ public class TestUserService {
     	Assert.assertEquals(1, userService.retriveAll().size());
     }
     
-    //@Test
-    public void shouldBeGetAEventByID(){
+    @Test
+    public void shouldBeGetAUserByID(){
     	User anUser = new UserBuilder().build();
     	User anUser2 = new UserBuilder().build();
     	userService.save(anUser);
@@ -46,9 +49,10 @@ public class TestUserService {
     	Assert.assertEquals(anUser.id, userService.getById(anUser.id).id);
     } 
 	
-    //@After
+    @After
     public void drop(){
     	userService.deleteAll();
     }
     
 }
+

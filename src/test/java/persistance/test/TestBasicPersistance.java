@@ -19,8 +19,8 @@ import persistance.services.EventService;
 import persistance.services.ProfileService;
 import persistance.services.UserService;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
 public class TestBasicPersistance {
 	
 	@Autowired
@@ -30,14 +30,14 @@ public class TestBasicPersistance {
 	@Autowired
 	private UserService userService;
 	
-    //@Test
+    @Test
     public void testSaveProfile() {
     	profileService.save(new Profile(Kind.ACTION, Kind.ELECTRONIC, Kind.FAST_FOOD, 1000));
     	Assert.assertEquals(1, profileService.retriveAll().size());
     	
     }
     
-    //@Test
+    @Test
     public void testSaveEvent() {
     	ArrayList<Kind> types = new ArrayList<Kind>();
     	types.add(Kind.ELECTRONIC);
@@ -45,17 +45,16 @@ public class TestBasicPersistance {
     	types.add(Kind.ACTION);
     	Event event = new EventBuilder().withTypes(types).build();
     	eventService.save(event);
-    	Event bdevent = eventService.retriveAll().get(0);
     	Assert.assertEquals(1, eventService.retriveAll().size());
     }
     
-    //@Test
+    @Test
     public void testSaveUser() {
     	userService.save(new UserBuilder().build());
     	Assert.assertEquals(1,userService.retriveAll().size());
     }
 	
-    //@After
+    @After
     public void drop(){
     	profileService.deleteAll();
     	userService.deleteAll();

@@ -3,8 +3,10 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping default-access="field"
 	default-cascade="save-update">
+	
+	
 	<class name="model.Profile">
-		<id column="ID" name="id">
+		<id column="ID_profile" name="id">
 			<generator class="native" />
 		</id>
 		<property name="typeOfFilm" column="type_of_film">
@@ -24,8 +26,6 @@
         		<param name="enumClass">kind.Kind</param>
     		</type>
 		</property>
-		<!-- 
-		 -->
 		
 		<property name="limitAmount" column="limit_amount" type="int"/>	
 			

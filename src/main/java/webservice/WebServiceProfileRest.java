@@ -2,21 +2,17 @@ package webservice;
 
 import java.util.List;
 
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-
-import kind.Kind;
+import builders.ProfileBuilder;
 import model.Profile;
 import persistance.services.ProfileService;
 
 
-@Path("/profile")
+
 public class WebServiceProfileRest {
 
 	private ProfileService profileService;
@@ -32,11 +28,19 @@ public class WebServiceProfileRest {
 
 	
 	@GET
-	@Path("/profiletest")
+	@Path("/create")
 	@Produces("application/json")
-	public List<Profile> profileTest() {
-		this.getProfileService().save(new Profile(Kind.ACTION, Kind.ELECTRONIC, Kind.FAST_FOOD, 1000));
-		return this.profileService.retriveAll();
+	public String profileTest() {
+		Profile profile = new ProfileBuilder().build();
+		try {
+			this.getProfileService().save(profile);
+		}catch(Exception e){
+			return "{Error: Can't create a profile ,"
+					+ "Status: FAIL}";
+		}
+		return "{Action:"+"Profile Created"+","
+				+"ID:"+ profile.id+","
+				+"Status"+": "+"OK"+"}";
 	}
 	
 	@GET
@@ -47,8 +51,8 @@ public class WebServiceProfileRest {
 
 	}
 	
-	@DELETE
-	@Path("/deleteprofile/{id}")
+	@GET
+	@Path("/delete/{id}")
 	@Produces("application/json")
 	public String deleteProfile(@PathParam("id") final Integer id) {
 
@@ -56,13 +60,16 @@ public class WebServiceProfileRest {
 			Profile toDelete = this.getProfileService().getById(id);
 			this.getProfileService().delete(toDelete);
 		} catch (Exception e) {
-			return "Profile Id not found";
+			return "{Error: Can't delete profile or invalid ID,"
+					+ "Status: FAIL}";
 		}
-		return "Profile Deleted";
+		return "{Action:"+"Profile Deleted"+","
+				+"ID:"+id+","
+				+"Status"+": "+"OK"+"}";
 	}
 	
 	@GET
-	@Path("/getEvent/{id}")
+	@Path("/getProfile/{id}")
 	@Produces("application/json")
 	public Profile getProfile(@PathParam("id") final Integer id) {
 		return this.getProfileService().getById(id);
