@@ -20,15 +20,6 @@ public class TestUserService {
 	
 	@Autowired
     private UserService userService;
-	
-    @Test
-    public void shouldBeSaveNUser() {
-    	User anUser = new UserBuilder().build();
-    	User anUser2 = new UserBuilder().build();
-    	userService.save(anUser);
-    	userService.save(anUser2);
-    	Assert.assertEquals(2, userService.retriveAll().size());
-    }
     
     @Test
     public void shouldBeDeleteAUser(){

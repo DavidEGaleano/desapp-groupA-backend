@@ -20,14 +20,6 @@ public class TestEventService {
 	
 	@Autowired
     private EventService eventService;
-    @Test
-    public void shouldBeSaveNEvent() {
-    	Event event = new EventBuilder().build();
-    	Event event2 = new EventBuilder().build();
-    	eventService.save(event);
-    	eventService.save(event2);
-    	Assert.assertEquals(2, eventService.retriveAll().size());
-    }
     
     @Test
     public void shouldEventGetOneSuggestion() {
