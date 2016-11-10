@@ -25,7 +25,6 @@ public class WebServiceProfileRest {
 	public void setProfileService(final ProfileService profileService) {
 		this.profileService = profileService;
 	}
-
 	
 	@GET
 	@Path("/create")
@@ -57,8 +56,8 @@ public class WebServiceProfileRest {
 	public String deleteProfile(@PathParam("id") final Integer id) {
 
 		try {
-			Profile toDelete = this.getProfileService().getById(id);
-			this.getProfileService().delete(toDelete);
+			Profile profile = this.getProfileService().getById(id);
+			this.getProfileService().delete(profile);
 		} catch (Exception e) {
 			return "{Error: Can't delete profile or invalid ID,"
 					+ "Status: FAIL}";
@@ -66,6 +65,23 @@ public class WebServiceProfileRest {
 		return "{Action:"+"Profile Deleted"+","
 				+"ID:"+id+","
 				+"Status"+": "+"OK"+"}";
+	}
+	
+	@GET
+	@Path("/update/limitamount/{profile_id}/{amount}")
+	@Produces("application/json")
+	public String updateUserEmail(@PathParam("profile_id") final Integer id, @PathParam("amount") final Integer amount){
+		try{
+			Profile profile = this.getProfileService().getById(id);
+			profile.setLimitAmount(amount);
+			this.getProfileService().update(profile);
+		}catch (Exception e){
+			return "{Error: Can't update profile or invalid ID,"
+					+ "Status: FAIL}";
+		}
+		return "{Action:"+"profile limitAmount changed"+","
+		+"ID:"+id+","
+		+"Status"+": "+"OK"+"}";
 	}
 	
 	@GET

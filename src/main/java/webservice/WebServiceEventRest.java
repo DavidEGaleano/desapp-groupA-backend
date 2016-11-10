@@ -2,13 +2,16 @@ package webservice;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import builders.EventBuilder;
 import model.Event;
+import model.User;
 import persistance.services.EventService;
 
 @Path("/event")
@@ -54,13 +57,64 @@ public class WebServiceEventRest {
 	public String deleteProfile(@PathParam("id") final Integer id) {
 
 		try {
-			Event toDelete = this.getEventService().getById(id);
-			this.getEventService().delete(toDelete);
+			Event event = this.getEventService().getById(id);
+			this.getEventService().delete(event);
 		} catch (Exception e) {
 			return "{Error: Can't delete Event or invalid ID ,"
 					+ "Status: FAIL}";
 		}
 		return "{Action:"+"Event Deleted"+","
+		+"ID:"+id+","
+		+"Status"+": "+"OK"+"}";
+	}
+	
+	@GET
+	@Path("/update/address/{event_id}/{address}")
+	@Produces("application/json")
+	public String updateAddress(@PathParam("event_id") final Integer id, @PathParam("address") final String address){
+		try{
+			Event event = this.getEventService().getById(id);
+			event.setAddress(address);
+			this.getEventService().update(event);
+		}catch (Exception e){
+			return "{Error: Can't update user address or invalid ID,"
+					+ "Status: FAIL}";
+		}
+		return "{Action:"+"Event address changed"+","
+		+"ID:"+id+","
+		+"Status"+": "+"OK"+"}";
+	}
+	
+	@GET
+	@Path("/update/limitofpersons/{event_id}/{limit}")
+	@Produces("application/json")
+	public String updateLimitOfPersons(@PathParam("event_id") final Integer id, @PathParam("limit") final Integer limit){
+		try{
+			Event event = this.getEventService().getById(id);
+			event.setLimitOfPersons(limit);
+			this.getEventService().update(event);
+		}catch (Exception e){
+			return "{Error: Can't update event limit of persons or invalid ID,"
+					+ "Status: FAIL}";
+		}
+		return "{Action:"+"Event limit of persons changed"+","
+		+"ID:"+id+","
+		+"Status"+": "+"OK"+"}";
+	}
+	
+	@GET
+	@Path("/update/amount/{event_id}/{amount}")
+	@Produces("application/json")
+	public String updateAmount(@PathParam("event_id") final Integer id, @PathParam("amount") final Integer amount){
+		try{
+			Event event = this.getEventService().getById(id);
+			event.setAmount(amount);
+			this.getEventService().update(event);
+		}catch (Exception e){
+			return "{Error: Can't update event amount or invalid ID,"
+					+ "Status: FAIL}";
+		}
+		return "{Action:"+"Event amount changed"+","
 		+"ID:"+id+","
 		+"Status"+": "+"OK"+"}";
 	}

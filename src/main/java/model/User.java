@@ -177,4 +177,21 @@ public class User {
 	public void setLogged(Boolean logged){
 		this.logged = logged;
 	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setCouple(User couple) {
+		this.couple = couple;
+	}
 }

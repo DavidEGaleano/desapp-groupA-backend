@@ -40,4 +40,8 @@ public class Profile {
 	public int getLimitAmount(){
 		return limitAmount;
 	}
+	
+	public void setLimitAmount(int limit){
+		this.limitAmount = limit;
+	}
 }

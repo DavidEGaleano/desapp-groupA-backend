@@ -57,8 +57,8 @@ public class WebServiceUserRest {
 	public String deleteProfile(@PathParam("id") final Integer id) {
 
 		try {
-			User toDelete = this.getUserService().getById(id);
-			this.getUserService().delete(toDelete);
+			User user = this.getUserService().getById(id);
+			this.getUserService().delete(user);
 		} catch (Exception e) {
 			return "{Error: Can't delete user or invalid ID,"
 					+ "Status: FAIL}";
@@ -67,6 +67,42 @@ public class WebServiceUserRest {
 				+"ID:"+id+","
 				+"Status"+": "+"OK"+"}";
 	}
+	
+	@GET
+	@Path("/update/password/{user_id}/{password}")
+	@Produces("application/json")
+	public String updateUserPassword(@PathParam("user_id") final Integer id, @PathParam("password") final String password){
+		try{
+			User user = this.getUserService().getById(id);
+			user.setPassword(password);
+			this.getUserService().update(user);
+		}catch (Exception e){
+			return "{Error: Can't update user or invalid ID,"
+					+ "Status: FAIL}";
+		}
+		return "{Action:"+"User Password changed"+","
+		+"ID:"+id+","
+		+"Status"+": "+"OK"+"}";
+	}
+	
+	
+	@GET
+	@Path("/update/email/{user_id}/{email}")
+	@Produces("application/json")
+	public String updateUserEmail(@PathParam("user_id") final Integer id, @PathParam("email") final String email){
+		try{
+			User user = this.getUserService().getById(id);
+			user.setMail(email);
+			this.getUserService().update(user);
+		}catch (Exception e){
+			return "{Error: Can't update user or invalid ID,"
+					+ "Status: FAIL}";
+		}
+		return "{Action:"+"User Password changed"+","
+		+"ID:"+id+","
+		+"Status"+": "+"OK"+"}";
+	}
+	
 	
 	@GET
 	@Path("/getUser/{id}")

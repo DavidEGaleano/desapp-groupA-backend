@@ -67,4 +67,20 @@ public class Event {
 	public void setSuggestions(List<Event> suggestions) {
 		this.suggestions = suggestions;
 	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	public void setLimitOfPersons(int limitOfPersons) {
+		this.limitOfPersons = limitOfPersons;
+	}
 }
