@@ -19,11 +19,14 @@
 	
 	<bean id="services.event" class="persistance.services.EventService">
 		<property name="repository" ref="persistence.eventrepository" />
+		<property name="eventrepository" ref="persistence.eventrepository" />
 	</bean>
 	
 	<bean id="services.user" class="persistance.services.UserService">
 		<property name="repository" ref="persistence.userrepository" />
 	</bean>
+	
+	
 	
 	<!-- WebService REST Profile -->
 	
@@ -43,6 +46,12 @@
 		<property name="userService" ref="services.user" />
 	</bean>
 	
+	<!-- WebService REST Search -->
+	
+	<bean id="WebServiceSearchRest" class="webservice.WebServiceSearchRest">
+		<property name="searcher" ref="Searcher" />
+	</bean>
+	
 	<!--  BD initializer service -->
 	
 	<bean id="BDBuilderService" class="builders.BDBuilder">
@@ -50,5 +59,16 @@
 		<property name="userservive" ref="services.user" />
 	</bean>
 	
+	<!-- Search Injections -->
+	
+	<bean id="SearchMode" class="model.SearchMode">
+		<property name="eventservice" ref="services.event" /> 
+		<property name="userservice" ref="services.user" />
+	</bean>
+	
+	<bean id="Searcher" class="model.Searcher">
+		<property name="search" ref="SearchMode" /> 
+	</bean>
+
 	
 </beans>

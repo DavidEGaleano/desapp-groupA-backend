@@ -19,22 +19,22 @@ public class ProfileBuilder {
 		return profile;
 	}
 	
-	public ProfileBuilder typeOfFilm(Kind pKind){
+	public ProfileBuilder withTypeOfFilm(Kind pKind){
 		typeOfFilm = pKind;
 		return this;
 	}
 	
-	public ProfileBuilder typeOfMusic(Kind pKind){
+	public ProfileBuilder withTypeOfMusic(Kind pKind){
 		typeOfMusic = pKind;
 		return this;
 	}
 	
-	public ProfileBuilder typeOfFood(Kind pKind){
+	public ProfileBuilder withTypeOfFood(Kind pKind){
 		typeOfFood = pKind;
 		return this;
 	}
 	
-	public ProfileBuilder limitAmount(int amount){
+	public ProfileBuilder withLimitAmount(int amount){
 		limitAmount = amount;
 		return this;
 	}

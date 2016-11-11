@@ -16,7 +16,7 @@ import model.SearchMode;
 import model.User;
 
 public class TestWithFriendSearch {
-	
+	/*
 	public User aUser;
 	public ArrayList<User> friends;
 	public ArrayList<Event> events;
@@ -114,4 +114,5 @@ public class TestWithFriendSearch {
 		friends = new ArrayList<User>();
 		search.setEvents(new ArrayList<Event>());
 	}
+	*/
 }

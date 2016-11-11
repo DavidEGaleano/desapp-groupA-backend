@@ -4,21 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kind.Kind;
+import persistance.services.EventService;
+import persistance.services.UserService;
 
 public abstract class SearchStrategy {
 	
 	protected User user;
+	protected UserService userservice;
+	protected EventService eventservice;
 	protected ArrayList<Kind> types;
 	//Temporal hasta que se tenga que trabajar
 	//con la BD. (solo para testeo).
 	protected ArrayList<Event> events;
 	
-	public SearchStrategy(User user){
+	public SearchStrategy(User user, UserService puserservice, EventService peventservice){
 		this.user = user;
+		this.userservice = puserservice;
+		this.eventservice = peventservice;
 		this.types = new ArrayList<Kind>();
 	}
 	
-	public abstract ArrayList<Event> search();
+	public abstract List<Event> search();
 	
 	private void setKindTypes(User pUser){
 		types.add(pUser.getProfile().getTypeOfFood());

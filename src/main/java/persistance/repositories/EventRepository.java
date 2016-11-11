@@ -13,14 +13,14 @@ import model.Profile;
 
 public class EventRepository extends HibernateGenericDAO<Event> implements GenericRepository<Event> {
     private static final long serialVersionUID = -4036535812105672110L;
-    //redefinir
+    
     @SuppressWarnings({ "unchecked", "rawtypes" })
-    public List<Event> filterEvent(final String pattern) {
+    public List<Event> obtainEconomicEvents(final int limit) {
         return (List<Event>) this.getHibernateTemplate().execute(new HibernateCallback() {
             
             public List<Event> doInHibernate(final Session session) throws HibernateException {
-                Criteria criteria = session.createCriteria(Profile.class);
-                criteria.add(Restrictions.like("name", "%" + pattern + "%"));
+                Criteria criteria = session.createCriteria(Event.class);
+                criteria.add(Restrictions.between("amount",0,limit));
                 return criteria.list();
             }
 
@@ -31,4 +31,5 @@ public class EventRepository extends HibernateGenericDAO<Event> implements Gener
     protected Class<Event> getDomainClass() {
         return Event.class;
     }
+
 }

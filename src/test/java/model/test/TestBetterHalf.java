@@ -16,7 +16,7 @@ import model.SearchMode;
 import model.User;
 
 public class TestBetterHalf {
-	public User aUser;
+	/* public User aUser;
 	public User aCouple;
 	public ArrayList<Event> events;
 	public SearchMode search;
@@ -120,4 +120,5 @@ public class TestBetterHalf {
 		aCouple = null;
 		search.setEvents(new ArrayList<Event>());
 	}
+	*/
 }

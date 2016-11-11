@@ -1,20 +1,23 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import persistance.services.EventService;
+import persistance.services.UserService;
 
 public class EconomicSearch extends SearchStrategy {
 
-	public EconomicSearch(User user) {
-		super(user);
+	public EconomicSearch(User user, UserService userservice,EventService eventservice) {
+		super(user,userservice,eventservice);
 	}
 
 	@Override
-	public ArrayList<Event> search() {
-		//Abrir conexion con la base
-		//int limit = this.user.getProfile().getLimitAmount();
-		//ArrayList<Event> events = bd.getEconomicEvents(limit);
-		//cerrar conexion
-		//return events
+	public List<Event> search() {
+		if(this.user != null){
+			int limit = this.user.getLimitAmount();
+			List<Event> events = this.eventservice.getEconomicEvents(limit);
+			return events;
+		}
 		return null;
 	}
 

@@ -189,7 +189,10 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
-
+	
+	public int getLimitAmount(){
+		return this.profile.getLimitAmount();
+	}
 
 	public void setCouple(User couple) {
 		this.couple = couple;

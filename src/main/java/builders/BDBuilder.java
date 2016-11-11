@@ -37,6 +37,7 @@ public class BDBuilder {
 					.withUserName("UserTestOne")
 					.withMail("UTO@test.com")
 					.withPassword("UTOpass")
+					.withProfile(new ProfileBuilder().withLimitAmount(500).build())
 					.build();
 		User user2 = new UserBuilder()
 					.withUserName("UserTestTwo")
@@ -47,6 +48,7 @@ public class BDBuilder {
 					.withUserName("UserTestThree")
 					.withMail("UTTh@test.com")
 					.withPassword("UTThpass")
+					.withProfile(new ProfileBuilder().withLimitAmount(2000).build())
 					.build();
 		
 		user2.addFriend(user1);
