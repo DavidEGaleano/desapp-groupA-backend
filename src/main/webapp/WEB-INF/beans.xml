@@ -17,6 +17,7 @@
 				<ref bean="WebServiceProfileRest" />
 				<ref bean="WebServiceEventRest" />
 				<ref bean="WebServiceUserRest" />
+				<ref bean="BDBuilderService" />
 			</jaxrs:serviceBeans>
 			<jaxrs:extensionMappings>
 				<entry key="json" value="application/json" />

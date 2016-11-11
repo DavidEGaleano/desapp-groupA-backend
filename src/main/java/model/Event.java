@@ -83,4 +83,8 @@ public class Event {
 	public void setLimitOfPersons(int limitOfPersons) {
 		this.limitOfPersons = limitOfPersons;
 	}
+	
+	public void addType(Kind type){
+		this.types.add(type);
+	}
 }

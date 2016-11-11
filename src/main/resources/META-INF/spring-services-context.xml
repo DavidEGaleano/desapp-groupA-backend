@@ -25,16 +25,30 @@
 		<property name="repository" ref="persistence.userrepository" />
 	</bean>
 	
+	<!-- WebService REST Profile -->
+	
 	<bean id="WebServiceProfileRest" class="webservice.WebServiceProfileRest">
 		<property name="profileService" ref="services.profile" />
 	</bean>
+	
+	<!-- WebService REST Event -->
 	
 	<bean id="WebServiceEventRest" class="webservice.WebServiceEventRest">
 		<property name="eventService" ref="services.event" />
 	</bean>
 	
+	<!-- WebService REST User -->
+	
 	<bean id="WebServiceUserRest" class="webservice.WebServiceUserRest">
 		<property name="userService" ref="services.user" />
 	</bean>
+	
+	<!--  BD initializer service -->
+	
+	<bean id="BDBuilderService" class="builders.BDBuilder">
+		<property name="eventservice" ref="services.event" /> 
+		<property name="userservive" ref="services.user" />
+	</bean>
+	
 	
 </beans>
