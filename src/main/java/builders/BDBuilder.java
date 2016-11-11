@@ -10,10 +10,6 @@ import persistance.services.EventService;
 import persistance.services.UserService;
 
 public class BDBuilder {
-	// crear un builder que arme una base de datos para la demo
-	// usar spring para que lo ejecute luego de que termine de armar
-	// todos los beans
-	// hacer urgente.
 	
 	EventService eventservice;
 	UserService userservive;
