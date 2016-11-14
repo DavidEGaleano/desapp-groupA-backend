@@ -37,18 +37,31 @@ public class BDBuilder {
 					.withUserName("UserTestOne")
 					.withMail("UTO@test.com")
 					.withPassword("UTOpass")
-					.withProfile(new ProfileBuilder().withLimitAmount(500).build())
+					.withProfile(new ProfileBuilder()
+						    	.withLimitAmount(500)
+						    	.withTypeOfMusic(Kind.ELECTRONIC)
+						    	.withTypeOfFood(Kind.PIZZA)
+						    	.build())
 					.build();
 		User user2 = new UserBuilder()
 					.withUserName("UserTestTwo")
 					.withMail("UTTw@test.com")
 					.withPassword("UTTpass")
+					.withProfile(new ProfileBuilder()
+					    	.withLimitAmount(1000)
+					    	.withTypeOfMusic(Kind.ELECTRONIC)
+					    	.withTypeOfFood(Kind.PIZZA)
+					    	.build())
 					.build();
 		User user3 = new UserBuilder()
 					.withUserName("UserTestThree")
 					.withMail("UTTh@test.com")
 					.withPassword("UTThpass")
-					.withProfile(new ProfileBuilder().withLimitAmount(2000).build())
+					.withProfile(new ProfileBuilder()
+								.withLimitAmount(2000)
+								.withTypeOfFilm(Kind.ACTION)
+								.withTypeOfFood(Kind.FAST_FOOD)
+								.build())
 					.build();
 		
 		user2.addFriend(user1);

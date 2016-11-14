@@ -16,7 +16,7 @@
 		
 		<bag name="types" table="types" lazy="false">
         	<key column="ID_types" />
-        	<element column="enum_ID" type="kind"/>
+        	<element column="type" type="kind"/>
     	</bag>
   		
   		<property name="date" column="date" type="java.util.Date"/>

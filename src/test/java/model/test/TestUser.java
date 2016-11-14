@@ -33,14 +33,6 @@ public class TestUser {
 		Assert.assertEquals(aUser.getFriendsRequests().size(), 1);
 	}
 	
-	//@Test
-	//Consultar metodo search
-	public void searchFriendShouldBeFoundAFriend(){
-		aFriend = new UserBuilder().build();
-		aUser.addFriend(aFriend);
-		Assert.assertEquals(aUser.searchFriend(aFriend).userName, aFriend.userName);
-	}
-	
 	@Test
 	public void shouldBeDeleteAFriend(){
 		aFriend = new UserBuilder().build();

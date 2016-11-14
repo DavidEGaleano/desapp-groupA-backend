@@ -11,6 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import builders.EventBuilder;
+import kind.Kind;
 import model.Event;
 import persistance.services.EventService;
 
@@ -31,6 +32,15 @@ public class TestEventService {
     }
     
     @Test
+    public void shouldEventGetTypes() {
+    	ArrayList<Kind> types = new ArrayList<Kind>();
+    	types.add(Kind.ACTION);
+    	Event event = new EventBuilder().withTypes(types).build();
+    	eventService.save(event);
+    	Assert.assertEquals(eventService.getById(event.id).types.size(),1);
+    }
+    
+    @Test
     public void shouldBeGetAEventByID(){
     	Event event = new EventBuilder().build();
     	Event event2 = new EventBuilder().build();
@@ -38,10 +48,21 @@ public class TestEventService {
     	eventService.save(event2);
     	Assert.assertEquals(event.id, eventService.getById(event.id).id);
     } 
+    
+    //@Test
+    public void shouldBeGetEventsByTypes(){
+    	ArrayList<Kind> types = new ArrayList<Kind>();
+    	types.add(Kind.ACTION);
+    	Event event = new EventBuilder().withTypes(types).build();
+    	eventService.save(event);
+    	Assert.assertEquals(eventService.getEventsForTypes(types).size(),3);
+    } 
 	
     @After
     public void drop(){
     	eventService.deleteAll();
     }
+    
+    
     
 }

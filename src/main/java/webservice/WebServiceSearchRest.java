@@ -30,7 +30,7 @@ public class WebServiceSearchRest {
 	@GET
 	@Path("/economic/{id_user}")
 	@Produces("application/json")
-	public List<Event> deleteProfile(@PathParam("id_user") final Integer id_user) {
+	public List<Event> searchEconomic(@PathParam("id_user") final Integer id_user) {
 		
 		List<Event> list = new ArrayList<Event>();
 		
@@ -40,6 +40,22 @@ public class WebServiceSearchRest {
 		} catch (Exception e) {
 			return list;
 		}
+	}
+	
+	//@GET
+	//@Path("/withFriends/{id_user}")
+	//@Produces("application/json")
+	public List<Event> withFriends(@PathParam("id_user") final Integer id_user) {
+		
+		List<Event> list = new ArrayList<Event>();
+		
+		try {
+			list = this.searcher.tourWithFriends(id_user);
+			return list;
+		} catch (Exception e) {
+			return list;
+		}
+		
 	}
 
 }

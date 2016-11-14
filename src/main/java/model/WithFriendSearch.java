@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import kind.Kind;
 import persistance.services.EventService;
 import persistance.services.UserService;
 
@@ -14,11 +15,14 @@ public class WithFriendSearch extends SearchStrategy {
 	
 	@Override
 	public List<Event> search() {
-		//Abrir conexion con la base
+	
 		List<User> friends = this.user.getFriends();
-		//ArrayList<Event> events = bd.getEventsForTypes(user.getProfile().getTypeOfMusic(),user.getProfile().gettypeFilm(),user.getProfile().getTypeFood());
-		ArrayList<Event> events = this.userEventPreferences(this.user, this.events);
-		//cerrar conexion
+		List<Kind> kinds = new ArrayList<Kind>();
+		kinds.add(user.getProfile().getTypeOfMusic());
+		kinds.add(user.getProfile().getTypeOfFilm());
+		kinds.add(user.getProfile().getTypeOfFood());
+		List<Event> events = this.eventservice.getEventsForTypes(kinds);
+		//ArrayList<Event> events = this.userEventPreferences(this.user, this.events);
 		if(friends.size()>0){
 			for(int i=0;i < friends.size();i++){
 				events = this.userEventPreferences(friends.get(i), events);

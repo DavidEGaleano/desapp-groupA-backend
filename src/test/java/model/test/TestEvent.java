@@ -1,13 +1,12 @@
 package model.test;
 
-import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import kind.*;
+import builders.EventBuilder;
 import model.Event;
 
 public class TestEvent {
@@ -17,9 +16,8 @@ public class TestEvent {
 	
 	@Before
 	public void setUp(){
-		//esto se debe cambiar a un Builder/Factory
-		anEvent = new Event(new ArrayList<Kind>(),null,DayMoment.AFTERNOON,"direccion",1500,4);
-		anEvent2 = new Event(new ArrayList<Kind>(),null,DayMoment.AFTERNOON,"direccion",1500,5);
+		anEvent = new EventBuilder().build();
+		anEvent2 = new EventBuilder().build();
 	}
     
 	
