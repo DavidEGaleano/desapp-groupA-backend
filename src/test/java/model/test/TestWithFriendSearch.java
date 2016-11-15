@@ -1,19 +1,19 @@
 package model.test;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+//import org.junit.After;
+//import org.junit.Assert;
+//import org.junit.Before;
+//import org.junit.Test;
 
-import builders.EventBuilder;
-import builders.UserBuilder;
-import kind.Kind;
-import model.Event;
-import model.Profile;
-import model.SearchMode;
-import model.User;
+//import builders.EventBuilder;
+//import builders.UserBuilder;
+//import kind.Kind;
+//import model.Event;
+//import model.Profile;
+//import model.SearchMode;
+//import model.User;
 
 public class TestWithFriendSearch {
 	/*

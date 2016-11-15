@@ -42,9 +42,9 @@ public class WebServiceSearchRest {
 		}
 	}
 	
-	//@GET
-	//@Path("/withFriends/{id_user}")
-	//@Produces("application/json")
+	@GET
+	@Path("/withFriends/{id_user}")
+	@Produces("application/json")
 	public List<Event> withFriends(@PathParam("id_user") final Integer id_user) {
 		
 		List<Event> list = new ArrayList<Event>();

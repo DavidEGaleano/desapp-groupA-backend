@@ -6,7 +6,6 @@ import java.util.Map;
 public class LogSystem {
 
 	public Map<String, String> users;
-	//¿un solo usuario logeado?
 	public User userLogged;
 
 	public LogSystem() {
@@ -27,11 +26,11 @@ public class LogSystem {
 		return (password.length() > 4 && password.length() < 12);
 	}
 
-	public void logIn(String userName, String password) {
+	/*public void logIn(String userName, String password) {
 		if(this.autenticateUser(userName, password)){
 			//userLogged = getUserByName(username);
 		}
-	}
+	}*/
 
 	public boolean autenticateUser(String userName, String password) {
 		return this.users.containsKey(userName) && users.get(userName).equals(password);

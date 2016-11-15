@@ -21,8 +21,9 @@ public class WithFriendSearch extends SearchStrategy {
 		kinds.add(user.getProfile().getTypeOfMusic());
 		kinds.add(user.getProfile().getTypeOfFilm());
 		kinds.add(user.getProfile().getTypeOfFood());
-		List<Event> events = this.eventservice.getEventsForTypes(kinds);
-		//ArrayList<Event> events = this.userEventPreferences(this.user, this.events);
+		List<Event> bdevents = this.eventservice.retriveAll();
+		this.events = (ArrayList<Event>)bdevents;
+		ArrayList<Event> events = this.userEventPreferences(this.user, this.events);
 		if(friends.size()>0){
 			for(int i=0;i < friends.size();i++){
 				events = this.userEventPreferences(friends.get(i), events);
