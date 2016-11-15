@@ -31,7 +31,7 @@ public class WebServiceEventRest {
 	public String setProfile(@PathParam("address") String address){
 		Event event = new EventBuilder().build();
 		try {
-			this.getEventService().save(event);
+			this.eventService.save(event);
 		}catch(Exception e){
 			return "{Error: Can't create Event,"
 					+ "Status: FAIL}";
@@ -45,7 +45,7 @@ public class WebServiceEventRest {
 	@Path("/events")
 	@Produces("application/json")
 	public List<Event> events() {
-		return this.getEventService().retriveAll();
+		return this.eventService.retriveAll();
 	}
 
 	@GET
@@ -55,7 +55,7 @@ public class WebServiceEventRest {
 
 		try {
 			Event event = this.getEventService().getById(id);
-			this.getEventService().delete(event);
+			this.eventService.delete(event);
 		} catch (Exception e) {
 			return "{Error: Can't delete Event or invalid ID ,"
 					+ "Status: FAIL}";
@@ -72,7 +72,7 @@ public class WebServiceEventRest {
 		try{
 			Event event = this.getEventService().getById(id);
 			event.setAddress(address);
-			this.getEventService().update(event);
+			this.eventService.update(event);
 		}catch (Exception e){
 			return "{Error: Can't update user address or invalid ID,"
 					+ "Status: FAIL}";
@@ -89,7 +89,7 @@ public class WebServiceEventRest {
 		try{
 			Event event = this.getEventService().getById(id);
 			event.setLimitOfPersons(limit);
-			this.getEventService().update(event);
+			this.eventService.update(event);
 		}catch (Exception e){
 			return "{Error: Can't update event limit of persons or invalid ID,"
 					+ "Status: FAIL}";
@@ -106,7 +106,7 @@ public class WebServiceEventRest {
 		try{
 			Event event = this.getEventService().getById(id);
 			event.setAmount(amount);
-			this.getEventService().update(event);
+			this.eventService.update(event);
 		}catch (Exception e){
 			return "{Error: Can't update event amount or invalid ID,"
 					+ "Status: FAIL}";
@@ -121,7 +121,7 @@ public class WebServiceEventRest {
 	@Produces("application/json")
 	public Event getEvent(@PathParam("id") final Integer id) {
 		try {
-			return this.getEventService().getById(id);
+			return this.eventService.getById(id);
 		} catch (Exception e) {
 			return null;
 		}

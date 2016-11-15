@@ -32,7 +32,7 @@ public class WebServiceProfileRest {
 	public String profileTest() {
 		Profile profile = new ProfileBuilder().build();
 		try {
-			this.getProfileService().save(profile);
+			this.profileService.save(profile);
 		}catch(Exception e){
 			return "{Error: Can't create a profile ,"
 					+ "Status: FAIL}";
@@ -46,7 +46,7 @@ public class WebServiceProfileRest {
 	@Path("/profiles")
 	@Produces("application/json")
 	public List<Profile> profile() {
-		return this.getProfileService().retriveAll();
+		return this.profileService.retriveAll();
 
 	}
 	
@@ -57,7 +57,7 @@ public class WebServiceProfileRest {
 
 		try {
 			Profile profile = this.getProfileService().getById(id);
-			this.getProfileService().delete(profile);
+			this.profileService.delete(profile);
 		} catch (Exception e) {
 			return "{Error: Can't delete profile or invalid ID,"
 					+ "Status: FAIL}";
@@ -74,7 +74,7 @@ public class WebServiceProfileRest {
 		try{
 			Profile profile = this.getProfileService().getById(id);
 			profile.setLimitAmount(amount);
-			this.getProfileService().update(profile);
+			this.profileService.update(profile);
 		}catch (Exception e){
 			return "{Error: Can't update profile or invalid ID,"
 					+ "Status: FAIL}";
@@ -88,7 +88,7 @@ public class WebServiceProfileRest {
 	@Path("/getProfile/{id}")
 	@Produces("application/json")
 	public Profile getProfile(@PathParam("id") final Integer id) {
-		return this.getProfileService().getById(id);
+		return this.profileService.getById(id);
 	}
 
 }

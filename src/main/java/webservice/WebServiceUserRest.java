@@ -33,7 +33,7 @@ public class WebServiceUserRest {
 	public String profileTest() {
 		User user = new UserBuilder().build();
 		try {
-			this.getUserService().save(user);
+			this.userService.save(user);
 		}catch(Exception e){
 			return "{Error: Can't create a user ,"
 					+ "Status: FAIL}";
@@ -47,7 +47,7 @@ public class WebServiceUserRest {
 	@Path("/users")
 	@Produces("application/json")
 	public List<User> users() {
-		return this.getUserService().retriveAll();
+		return this.userService.retriveAll();
 
 	}
 	
@@ -58,7 +58,7 @@ public class WebServiceUserRest {
 
 		try {
 			User user = this.getUserService().getById(id);
-			this.getUserService().delete(user);
+			this.userService.delete(user);
 		} catch (Exception e) {
 			return "{Error: Can't delete user or invalid ID,"
 					+ "Status: FAIL}";
@@ -75,7 +75,7 @@ public class WebServiceUserRest {
 		try{
 			User user = this.getUserService().getById(id);
 			user.setPassword(password);
-			this.getUserService().update(user);
+			this.userService.update(user);
 		}catch (Exception e){
 			return "{Error: Can't update user or invalid ID,"
 					+ "Status: FAIL}";
@@ -93,7 +93,7 @@ public class WebServiceUserRest {
 		try{
 			User user = this.getUserService().getById(id);
 			user.setMail(email);
-			this.getUserService().update(user);
+			this.userService.update(user);
 		}catch (Exception e){
 			return "{Error: Can't update user or invalid ID,"
 					+ "Status: FAIL}";
@@ -108,6 +108,6 @@ public class WebServiceUserRest {
 	@Path("/getUser/{id}")
 	@Produces("application/json")
 	public User getProfile(@PathParam("id") final Integer id) {
-		return this.getUserService().getById(id);
+		return this.userService.getById(id);
 	}
 }
