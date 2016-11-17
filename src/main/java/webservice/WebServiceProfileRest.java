@@ -2,18 +2,22 @@ package webservice;
 
 import java.util.List;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Response;
 
 import builders.ProfileBuilder;
 import model.Profile;
 import persistance.services.ProfileService;
+import utils.ResponseGenerator;
 
 
 @Path("/profile")
-public class WebServiceProfileRest {
+public class WebServiceProfileRest extends ResponseGenerator{
 
 	private ProfileService profileService;
 	
@@ -26,20 +30,20 @@ public class WebServiceProfileRest {
 		this.profileService = profileService;
 	}
 	
-	@GET
+	@POST
 	@Path("/create")
 	@Produces("application/json")
-	public String profileTest() {
+	public Response profileTest() {
 		Profile profile = new ProfileBuilder().build();
 		try {
 			this.profileService.save(profile);
 		}catch(Exception e){
-			return "{Error: Can't create a profile ,"
-					+ "Status: FAIL}";
+			return responseBadRequest("{Error: Can't create a profile ,"
+					+ "Status: FAIL}");
 		}
-		return "{Action:"+"Profile Created"+","
+		return responseOK("{Action:"+"Profile Created"+","
 				+"ID:"+ profile.id+","
-				+"Status"+": "+"OK"+"}";
+				+"Status"+": "+"OK"+"}");
 	}
 	
 	@GET
@@ -50,38 +54,38 @@ public class WebServiceProfileRest {
 
 	}
 	
-	@GET
+	@DELETE
 	@Path("/delete/{id}")
 	@Produces("application/json")
-	public String deleteProfile(@PathParam("id") final Integer id) {
+	public Response deleteProfile(@PathParam("id") final Integer id) {
 
 		try {
 			Profile profile = this.getProfileService().getById(id);
 			this.profileService.delete(profile);
 		} catch (Exception e) {
-			return "{Error: Can't delete profile or invalid ID,"
-					+ "Status: FAIL}";
+			return responseBadRequest("{Error: Can't delete profile or invalid ID,"
+					+ "Status: FAIL}");
 		}
-		return "{Action:"+"Profile Deleted"+","
+		return responseOK("{Action:"+"Profile Deleted"+","
 				+"ID:"+id+","
-				+"Status"+": "+"OK"+"}";
+				+"Status"+": "+"OK"+"}");
 	}
 	
-	@GET
+	@POST
 	@Path("/update/limitamount/{profile_id}/{amount}")
 	@Produces("application/json")
-	public String updateUserEmail(@PathParam("profile_id") final Integer id, @PathParam("amount") final Integer amount){
+	public Response updateUserEmail(@PathParam("profile_id") final Integer id, @PathParam("amount") final Integer amount){
 		try{
 			Profile profile = this.getProfileService().getById(id);
 			profile.setLimitAmount(amount);
 			this.profileService.update(profile);
 		}catch (Exception e){
-			return "{Error: Can't update profile or invalid ID,"
-					+ "Status: FAIL}";
+			return responseBadRequest("{Error: Can't update profile or invalid ID,"
+					+ "Status: FAIL}");
 		}
-		return "{Action:"+"profile limitAmount changed"+","
+		return responseOK("{Action:"+"profile limitAmount changed"+","
 		+"ID:"+id+","
-		+"Status"+": "+"OK"+"}";
+		+"Status"+": "+"OK"+"}");
 	}
 	
 	@GET
