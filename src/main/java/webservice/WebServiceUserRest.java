@@ -102,7 +102,7 @@ public class WebServiceUserRest extends ResponseGenerator{
 			this.userService.update(user);
 		}catch (Exception e){
 			return responseBadRequest("{Error: Can't update user email or invalid ID,"
-					+ "Status: FAIL}");
+									  + "Status: FAIL}");
 		}
 		return responseOK("{Action:"+"User email updated"+","
 							+"ID:"+id+","

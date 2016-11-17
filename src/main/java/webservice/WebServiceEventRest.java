@@ -29,7 +29,7 @@ public class WebServiceEventRest extends ResponseGenerator{
 	}
 	
 	
-	@GET
+	@PUT
 	@Path("/create")
 	@Produces("application/json")
 	public Response setProfile(@PathParam("address") String address){
@@ -41,8 +41,8 @@ public class WebServiceEventRest extends ResponseGenerator{
 										+ "Status: FAIL}");
 		}
 		return responseOK("{Action:"+"Event Created"+","
-						+"ID:"+ event.id+","
-						+"Status"+": "+"OK"+"}");
+						  +"ID:"+ event.id+","
+						  +"Status"+": "+"OK"+"}");
 	}
 	
 	@GET
@@ -65,8 +65,8 @@ public class WebServiceEventRest extends ResponseGenerator{
 					+ "Status: FAIL}");
 		}
 		return responseOK("{Action:"+"Event Deleted"+","
-		+"ID:"+id+","
-		+"Status"+": "+"OK"+"}");
+						  +"ID:"+id+","
+						  +"Status"+": "+"OK"+"}");
 	}
 	
 	@PUT
@@ -82,8 +82,8 @@ public class WebServiceEventRest extends ResponseGenerator{
 					+ "Status: FAIL}");
 		}
 		return responseOK("{Action:"+"Event address changed"+","
-		+"ID:"+id+","
-		+"Status"+": "+"OK"+"}");
+						  +"ID:"+id+","
+						  +"Status"+": "+"OK"+"}");
 	}
 	
 	@PUT
@@ -96,11 +96,11 @@ public class WebServiceEventRest extends ResponseGenerator{
 			this.eventService.update(event);
 		}catch (Exception e){
 			return responseBadRequest("{Error: Can't update event limit of persons or invalid ID,"
-					+ "Status: FAIL}");
+									  + "Status: FAIL}");
 		}
 		return responseOK( "{Action:"+"Event limit of persons changed"+","
-		+"ID:"+id+","
-		+"Status"+": "+"OK"+"}");
+							+"ID:"+id+","
+							+"Status"+": "+"OK"+"}");
 	}
 	
 	@PUT
@@ -113,11 +113,11 @@ public class WebServiceEventRest extends ResponseGenerator{
 			this.eventService.update(event);
 		}catch (Exception e){
 			return responseBadRequest("{Error: Can't update event amount or invalid ID,"
-					+ "Status: FAIL}");
+									  + "Status: FAIL}");
 		}
 		return responseOK("{Action:"+"Event amount changed"+","
-		+"ID:"+id+","
-		+"Status"+": "+"OK"+"}");
+							+"ID:"+id+","
+							+"Status"+": "+"OK"+"}");
 	}
 	
 	@GET
