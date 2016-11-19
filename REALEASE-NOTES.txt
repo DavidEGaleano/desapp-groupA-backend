@@ -18,7 +18,7 @@ NOTES:
 * Falta Testing
 
 --------------------------------------------------------------------
-TAG ENTREGA 2 1.0
+TAG ENTREGA 2 1.1
 --------------------------------------------------------------------
 
 NEW FEATURES:
@@ -45,3 +45,26 @@ NOTES:
 * Falta WebServices REST para Eventos con mas funcionalidad (CRUD/LIST).
 * Falta una batería de datos para la persistencia.
 
+--------------------------------------------------------------------
+TAG ENTREGA 3 1.2
+--------------------------------------------------------------------
+
+NEW FEATURES:
+*FrontEnd:
+**Paginacion Client Side de pantalla de busqueda de eventos funcionando con datos simulados.
+**Se agregó pantalla de login
+**Se agregó pantalla de Perfil de usuario
+
+*Servicios:
+**Se agregó soporte de CORS.
+**Se agregaron codigos de estado de respuesta a los servicios rest.
+**Varios refactors en los servicios de busqueda.
+
+NOTES:
+*Para la proxima entrega se intentara :
+**Implementar logs.
+**Implementar busqueda de eventos por amigos.
+**Implementar algún test de arquitectura.
+
+**Implementar login de usuario via google auth0.
+**traer eventos de las bases de datos expuestas de Buenos Aires Ciudad.
