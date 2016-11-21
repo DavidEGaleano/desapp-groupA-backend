@@ -1,6 +1,7 @@
 package model.test;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,7 +9,6 @@ import model.Event;
 import model.System;
 import builders.EventBuilder;
 import builders.SystemBuilder;
-import junit.framework.Assert;
 
 public class TestSystem {
 	

@@ -3,6 +3,7 @@ package persistance.test;
 import java.util.ArrayList;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import builders.EventBuilder;
 import builders.ProfileBuilder;
 import builders.UserBuilder;
-import junit.framework.Assert;
 import kind.Kind;
 import model.Event;
 import model.Profile;
