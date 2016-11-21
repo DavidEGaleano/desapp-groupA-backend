@@ -15,7 +15,6 @@ public class UserBuilder {
 	private String userName = "aName";
 	private String password = "aPassword";
 	private String mail = "aMail";
-	private User couple = null;
 	private System system = new System(new LogSystem()); 
 	private Profile profile = new Profile(Kind.COMEDY,Kind.CLASSIC,Kind.SUSHI,1000);
 	private ArrayList<Tour> tours = new ArrayList<Tour>();
@@ -36,7 +35,6 @@ public class UserBuilder {
 		user.setFriendsRequests(friendsRequests);
 		user.setProfile(profile);
 		user.setLogged(logged);
-		user.addCouple(couple);
 		return user;
 	}
 	
@@ -50,10 +48,6 @@ public class UserBuilder {
 		return this;
 	}
 	
-	public UserBuilder withCouple(User aCouple){
-		couple = aCouple;
-		return this;
-	}
 	
 	public UserBuilder withFriends(ArrayList<User> aFriends){
 		friends = aFriends;

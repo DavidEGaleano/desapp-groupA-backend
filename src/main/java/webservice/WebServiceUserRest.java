@@ -11,6 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import builders.UserBuilder;
+import dto.UserDTO;
 import model.User;
 import persistance.services.UserService;
 import utils.ResponseGenerator;
@@ -111,10 +112,18 @@ public class WebServiceUserRest extends ResponseGenerator{
 	
 	
 	@GET
+	@Path("/getFriends/{id}")
+	@Produces("application/json")
+	public List<UserDTO> userFriends(@PathParam("id") final Integer id) {
+		return new UserDTO().copyDataFromUsers((this.userService.getById(id).friends));		
+	}
+	
+	
+	@GET
 	@Path("/getUser/{id}")
 	@Produces("application/json")
-	public User getProfile(@PathParam("id") final Integer id) {
-		return this.userService.getById(id);
+	public UserDTO getProfile(@PathParam("id") final Integer id) {
+		return new UserDTO().copyDataFromUser(this.userService.getById(id));
 	}
 	
 	

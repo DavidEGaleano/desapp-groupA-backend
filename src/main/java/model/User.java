@@ -14,7 +14,6 @@ public class User {
 	public String userName;
 	public String password;
 	public String mail;
-	public User couple;
 	public Profile profile;
 	public List<Tour> tours;
 	public List<Event> events;
@@ -33,7 +32,6 @@ public class User {
 		this.tours = new ArrayList<Tour>();
 		this.events = new ArrayList<Event>();
 		this.friends = new ArrayList<User>();
-		this.couple = null;
 		this.system = sistem;
 		this.friendsRequests = new ArrayList<User>();
 		this.logged = false;
@@ -78,15 +76,7 @@ public class User {
 	public void sendFriendRequest(User friend){
 		this.friendsRequests.add(friend);
 	}
-	
-	public void addCouple(User couple){
-		this.couple = couple;
-	}
-	
-	public void deleteCouple(){
-		this.couple = null;
-	}
-	
+
 	public void deleteFriend(User friend){
 		this.friends.remove(friend);
 		friend.getFriends().remove(this);
@@ -118,9 +108,6 @@ public class User {
 	//Getters & Setters
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public User getCouple(){
-		return this.couple;
-	}
 	
 	public Profile getProfile() {
 		return profile;
@@ -194,7 +181,4 @@ public class User {
 		return this.profile.getLimitAmount();
 	}
 
-	public void setCouple(User couple) {
-		this.couple = couple;
-	}
 }

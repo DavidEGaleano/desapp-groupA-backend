@@ -18,7 +18,7 @@ public class BetterHalfSearch extends SearchStrategy {
 		//ArrayList<Event> events = bd.getEventsForTypes(typeMusic,typeFilm,typeFood);
 		ArrayList<Event> events = this.userEventPreferences(this.user, this.events);
 		//cerrar conexion
-		events = this.userEventPreferences(this.user.getCouple(), events);
+		//events = this.userEventPreferences(this.user.getCouple(), events);
 		return events;
 	}
 

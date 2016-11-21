@@ -14,8 +14,6 @@
 		
 		<property name="mail" column="mail" type="string"/>	
 		
-		<!-- <one-to-one name="couple" class="model.User" foreign-key="ID_couple" lazy="false"/> -->
-		
 		<one-to-one name="profile" class="model.Profile" foreign-key="ID_user_profile" lazy="false"/>
 	
 		<bag name="events" table="events" lazy="false">
