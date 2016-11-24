@@ -2,9 +2,7 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
-       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	<!-- beans de spring -->
 	<bean id="services.general" class="persistance.services.GeneralService">
@@ -30,31 +28,31 @@
 	
 	<!-- WebService REST Profile -->
 	
-	<bean id="WebServiceProfileRest" class="webservice.WebServiceProfileRest">
+	<bean id="WebServiceProfileRest" class="webservice.ProfileRest">
 		<property name="profileService" ref="services.profile" />
 	</bean>
 	
 	<!-- WebService REST Event -->
 	
-	<bean id="WebServiceEventRest" class="webservice.WebServiceEventRest">
+	<bean id="WebServiceEventRest" class="webservice.EventRest">
 		<property name="eventService" ref="services.event" />
 	</bean>
 	
 	<!-- WebService REST User -->
 	
-	<bean id="WebServiceUserRest" class="webservice.WebServiceUserRest">
+	<bean id="WebServiceUserRest" class="webservice.UserRest">
 		<property name="userService" ref="services.user" />
 	</bean>
 	
 	<!-- WebService REST Search -->
 	
-	<bean id="WebServiceSearchRest" class="webservice.WebServiceSearchRest">
+	<bean id="WebServiceSearchRest" class="webservice.SearchRest">
 		<property name="searcher" ref="Searcher" />
 	</bean>
 	
 	<!--  BD initializer service -->
 	
-	<bean id="BDBuilderService" class="builders.BDBuilder">
+	<bean id="BDBuilderService" class="builders.BDBuilder" init-method="createEntities">
 		<property name="eventservice" ref="services.event" /> 
 		<property name="userservive" ref="services.user" />
 	</bean>

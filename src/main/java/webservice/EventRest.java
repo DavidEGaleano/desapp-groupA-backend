@@ -16,7 +16,7 @@ import persistance.services.EventService;
 import utils.ResponseGenerator;
 
 @Path("/event")
-public class WebServiceEventRest extends ResponseGenerator{
+public class EventRest extends ResponseGenerator{
 
 	public EventService eventService;
 

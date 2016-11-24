@@ -18,7 +18,7 @@ import utils.ResponseGenerator;
 
 
 @Path("/user")
-public class WebServiceUserRest extends ResponseGenerator{
+public class UserRest extends ResponseGenerator{
 	
 	private UserService userService;
 	

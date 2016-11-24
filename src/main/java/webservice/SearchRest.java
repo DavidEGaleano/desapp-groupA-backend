@@ -12,7 +12,7 @@ import model.Event;
 import model.Searcher;
 
 @Path("/search")
-public class WebServiceSearchRest{
+public class SearchRest{
 	
 	public Searcher searcher;
 

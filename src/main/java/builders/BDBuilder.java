@@ -2,6 +2,8 @@ package builders;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.context.annotation.DependsOn;
+
 import kind.DayMoment;
 import kind.Kind;
 import model.Event;
@@ -31,6 +33,7 @@ public class BDBuilder {
 	}
 
 	@PostConstruct
+	@DependsOn("org.springframework.context.config.internalBeanConfigurerAspect")
 	public void createEntities(){
 
 		User user1 = new UserBuilder()

@@ -17,7 +17,7 @@ import utils.ResponseGenerator;
 
 
 @Path("/profile")
-public class WebServiceProfileRest extends ResponseGenerator{
+public class ProfileRest extends ResponseGenerator{
 
 	private ProfileService profileService;
 	
