@@ -32,7 +32,7 @@ public class EventRest extends ResponseGenerator{
 	@PUT
 	@Path("/create")
 	@Produces("application/json")
-	public Response setProfile(@PathParam("address") String address){
+	public Response setProfile(){
 		Event event = new EventBuilder().build();
 		try {
 			this.eventService.save(event);

@@ -10,9 +10,10 @@ import javax.ws.rs.Produces;
 
 import model.Event;
 import model.Searcher;
+import utils.ResponseGenerator;
 
 @Path("/search")
-public class SearchRest{
+public class SearchRest extends ResponseGenerator{
 	
 	public Searcher searcher;
 
