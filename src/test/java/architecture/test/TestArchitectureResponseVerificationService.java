@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
 
 import org.junit.Assert;
