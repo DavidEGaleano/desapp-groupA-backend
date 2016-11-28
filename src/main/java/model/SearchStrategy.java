@@ -14,6 +14,7 @@ public abstract class SearchStrategy {
 	protected EventService eventservice;
 	protected ArrayList<Kind> types;
 	protected ArrayList<Event> events;
+	private int limitofpersons;
 	
 	public SearchStrategy(User user, UserService puserservice, EventService peventservice){
 		this.user = user;
@@ -68,6 +69,14 @@ public abstract class SearchStrategy {
 	
 	public void setEvents (ArrayList<Event> events){
 		this.events = events;
+	}
+
+	public int getLimitofpersons() {
+		return limitofpersons;
+	}
+
+	public void setLimitofpersons(int limitofpersons) {
+		this.limitofpersons = limitofpersons;
 	}
 	
 }

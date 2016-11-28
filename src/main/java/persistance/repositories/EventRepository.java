@@ -28,6 +28,19 @@ public class EventRepository extends HibernateGenericDAO<Event> implements Gener
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
+    public List<Event> obtainEventsWithLimitOfPersons(final int limit) {
+        return (List<Event>) this.getHibernateTemplate().execute(new HibernateCallback() {
+            
+            public List<Event> doInHibernate(final Session session) throws HibernateException {
+                Criteria criteria = session.createCriteria(Event.class);
+                criteria.add(Restrictions.between("limitOfPersons",limit,9999));
+                return criteria.list();
+            }
+
+        });
+    }
+    
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public List<Event> obtainEventsForTypesEvents( List<Kind> listofkinds) {
         return (List<Event>) this.getHibernateTemplate().execute(new HibernateCallback() {
 

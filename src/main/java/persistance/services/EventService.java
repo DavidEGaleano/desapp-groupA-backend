@@ -31,5 +31,10 @@ public class EventService extends GenericService<Event>{
 		 return	this.eventrepository.obtainEventsForTypesEvents(listTypes);
 	}
 	
+	@Transactional
+	public List<Event> obtainEventsWithLimitOfPersons(int limit){
+		return this.eventrepository.obtainEventsWithLimitOfPersons(limit);
+	}
+	
 }
 

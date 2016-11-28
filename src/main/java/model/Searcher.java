@@ -20,6 +20,11 @@ public class Searcher {
 		this.search = search;
 	}
 	
+	public List<Event> forLimitOfPersons(int idUser, int limit){
+		search.limitOfPersonsMode(idUser,limit);
+		return search.doSearch();
+	}
+	
 	
 	public List<Event> economicTour(int idUser){
 		search.economicMode(idUser);
@@ -33,11 +38,6 @@ public class Searcher {
 	
 	public void saturdayNightFever(int idUser){
 		search.saturdayNightFeverMode(idUser);
-		search.doSearch();
-	}
-	
-	public void betterHalf(int idUser){
-		search.betterHalfMode(idUser);
 		search.doSearch();
 	}
 	

@@ -43,15 +43,16 @@ public class SearchRest extends ResponseGenerator{
 		}
 	}
 	
+	
 	@GET
-	@Path("/withFriends/{id_user}")
+	@Path("/withLimitOfPersons/{id_user}/{limit}")
 	@Produces("application/json")
-	public List<Event> withFriends(@PathParam("id_user") final Integer id_user) {
+	public List<Event> withLimitOfPersons(@PathParam("id_user") final Integer id_user,@PathParam("limit") final Integer limit) {
 		
 		List<Event> list = new ArrayList<Event>();
 		
 		try {
-			list = this.searcher.tourWithFriends(id_user);
+			list = this.searcher.forLimitOfPersons(id_user, limit);
 			return list;
 		} catch (Exception e) {
 			return list;

@@ -12,7 +12,8 @@
   			WEB-INF/beans.xml,
   			classpath*:/META-INF/spring-persistence-context.xml,
 			classpath*:/META-INF/spring-services-context.xml,
-			classpath*:/META-INF/log-aspect-context.xml
+			classpath*:/META-INF/log-aspect-context.xml,
+			classpath*:/META-INF/spring-bdinitializer-service.xml
 			
 	</param-value>
   </context-param>

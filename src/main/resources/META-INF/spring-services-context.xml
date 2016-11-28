@@ -50,13 +50,6 @@
 		<property name="searcher" ref="Searcher" />
 	</bean>
 	
-	<!--  BD initializer service -->
-	
-	<bean id="BDBuilderService" class="builders.BDBuilder" init-method="createEntities">
-		<property name="eventservice" ref="services.event" /> 
-		<property name="userservive" ref="services.user" />
-	</bean>
-	
 	<!-- Search Injections -->
 	
 	<bean id="SearchMode" class="model.SearchMode">

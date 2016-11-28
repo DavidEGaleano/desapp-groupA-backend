@@ -23,9 +23,15 @@ public class SearchMode {
 	public EventService getEventservice() {
 		return eventservice;
 	}
+	
 
 	public void setEventservice(EventService eventservice) {
 		this.eventservice = eventservice;
+	}
+	
+	public void limitOfPersonsMode(int idUser, int limit) {
+		this.mode = new LimitOfPersonsSearch(userservice.getById(idUser),userservice,eventservice);
+		this.mode.setLimitofpersons(limit); 
 	}
 
 	public void economicMode(int idUser) {
@@ -41,7 +47,7 @@ public class SearchMode {
 	}
 
 	public void betterHalfMode(int idUser) {
-		this.mode = new BetterHalfSearch(userservice.getById(idUser),userservice,eventservice);
+		this.mode = new LimitOfPersonsSearch(userservice.getById(idUser),userservice,eventservice);
 	}
 
 	public void surpriseMeMode(int idUser) {
