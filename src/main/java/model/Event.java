@@ -19,6 +19,7 @@ public class Event {
 	public double lat;
 	public double lng;
 	public int limitOfPersons;
+	public List<Integer> idPeopleWhoAttended = new ArrayList<Integer>();
 	public List<Event> suggestions;
 	
 	public Event(){
@@ -92,5 +93,17 @@ public class Event {
 	
 	public void addType(Kind type){
 		this.types.add(type);
+	}
+	
+	public void addAttendId(Integer id){
+		this.idPeopleWhoAttended.add(id);
+	}
+	
+	public void removeAttendId(Integer id){
+		this.idPeopleWhoAttended.remove(id);
+	}
+	
+	public boolean hasAttendId(Integer id){
+		return this.idPeopleWhoAttended.contains(id);
 	}
 }

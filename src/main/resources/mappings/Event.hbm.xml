@@ -42,6 +42,10 @@
     		<one-to-many class="model.Event"/>
   		</bag>
 
+  		<bag name="idPeopleWhoAttended" table="id_People_Who_Attended" lazy="false" cascade="all">
+    		<key column="ID_peopole" />
+    		<element column="ids" type="integer"/>
+  		</bag>
   		
 	</class>
 </hibernate-mapping>
