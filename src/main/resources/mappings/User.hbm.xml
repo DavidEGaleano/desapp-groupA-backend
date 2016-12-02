@@ -10,6 +10,8 @@
 		
 		<property name="userName" column="user_name" type="string"/>
 		
+		<property name="token" column="token" type="string"/>
+		
 		<property name="password" column="password" type="string"/>
 		
 		<property name="mail" column="mail" type="string"/>	

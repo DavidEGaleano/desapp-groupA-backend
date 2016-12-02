@@ -11,6 +11,7 @@ import kind.KindOfTour;
 public class User {
 	
 	public int id;
+	public String token;
 	public String userName;
 	public String password;
 	public String mail;
@@ -180,5 +181,12 @@ public class User {
 	public int getLimitAmount(){
 		return this.profile.getLimitAmount();
 	}
+	
+	public String getToken() {
+		return token;
+	}
 
+	public void setToken(String token) {
+		this.token = token;
+	}
 }

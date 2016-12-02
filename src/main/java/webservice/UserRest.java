@@ -13,6 +13,7 @@ import javax.ws.rs.core.Response;
 import builders.UserBuilder;
 import dto.UserDTO;
 import model.User;
+import persistance.services.EventService;
 import persistance.services.UserService;
 import utils.ResponseGenerator;
 
@@ -32,22 +33,39 @@ public class UserRest extends ResponseGenerator{
 	}
 
 	
-	@PUT
-	@Path("/create")
+	@GET
+	@Path("setUser/{name}/{email}/{token}")
 	@Produces("application/json")
-	public Response profileTest() {
-		User user = new UserBuilder().build();		
+	public Response addorupdateuser(@PathParam("name") final String name,@PathParam("email") final String email,@PathParam("token") final String token) {
 		try {
-			this.userService.save(user);
+		if(!userService.hasUserWithEmail(email)){
+			User newuser = new UserBuilder().withUserName(name).withMail(email).build();
+			this.userService.save(newuser);
+		}else{
+			User useractual = userService.getUserWithEmail(email);
+			this.userService.update(useractual);
+
+		}
+		return responseOK("{ \"Action\":\"User added\","
+				+"\"ID\": "+ 0 +","
+				+"\"Status\":\"ok\"}");
+			
 		}catch(Exception e){
-			return responseBadRequest("{Error: Can't create a user ,"
-							+ "Status: FAIL}");
+			return responseBadRequest("{ \"Error\":\"Can't update event or invalid ID\","
+					+"\"Status\":\"FAIL\"}");
 		}
 		
-		return responseOK("{Action:"+"User Created"+","
-						   	  +"ID:"+ user.id+","
-						   	  +"Status"+": "+"OK"+"}");
+
 		
+	}
+	
+	@GET
+	@Path("/getUserWithEmail/{email}")
+	@Produces("application/json")
+	public User getUser(@PathParam("email") final String email) {
+		
+		return this.userService.getUserWithEmail(email);
+
 	}
 	
 	@GET

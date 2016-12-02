@@ -30,4 +30,28 @@ public class UserRepository extends HibernateGenericDAO<User> implements Generic
     protected Class<User> getDomainClass() {
         return User.class;
     }
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public List<User> obtainUserWithToken(String token) {
+        return (List<User>) this.getHibernateTemplate().execute(new HibernateCallback() {
+            
+            public List<User> doInHibernate(final Session session) throws HibernateException {
+                Criteria criteria = session.createCriteria(User.class);
+                criteria.add(Restrictions.eq("token", token));
+                return criteria.list();
+            }
+        });
+    }
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public List<User> obtainUserWithEmail(String email) {
+        return (List<User>) this.getHibernateTemplate().execute(new HibernateCallback() {
+            
+            public List<User> doInHibernate(final Session session) throws HibernateException {
+                Criteria criteria = session.createCriteria(User.class);
+                criteria.add(Restrictions.eq("mail", email));
+                return criteria.list();
+            }
+        });
+    }
 }

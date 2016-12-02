@@ -14,6 +14,7 @@ public class UserBuilder {
 	
 	private String userName = "aName";
 	private String password = "aPassword";
+	private String token = null;
 	private String mail = "aMail";
 	private System system = new System(new LogSystem()); 
 	private Profile profile = new Profile(Kind.COMEDY,Kind.CLASSIC,Kind.SUSHI,1000);
@@ -35,7 +36,13 @@ public class UserBuilder {
 		user.setFriendsRequests(friendsRequests);
 		user.setProfile(profile);
 		user.setLogged(logged);
+		user.setToken(token);
 		return user;
+	}
+	
+	public UserBuilder withToken(String ptoken){
+		token = ptoken;
+		return this;
 	}
 	
 	public UserBuilder withLogged(Boolean aLogState){

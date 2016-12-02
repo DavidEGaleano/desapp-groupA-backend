@@ -22,6 +22,7 @@
 	
 	<bean id="services.user" class="persistance.services.UserService">
 		<property name="repository" ref="persistence.userrepository" />
+		<property name="userrepository" ref="persistence.userrepository" />
 	</bean>
 	
 	
