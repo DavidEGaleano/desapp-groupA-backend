@@ -2,7 +2,7 @@ package utils;
 
 import javax.ws.rs.core.Response;
 
-public class ResponseGenerator {
+public class ResponseGenerator  {
 	
 	public Response responseOK(String message){
 		Response response = Response.status(Response.Status.OK)
@@ -17,4 +17,5 @@ public class ResponseGenerator {
 	 			.build();
 		return response;
 	}
+	
 }

@@ -134,23 +134,51 @@ public class EventRest extends ResponseGenerator{
 	@GET
 	@Path("/setAssisAnEvent/{iduser}/{idevent}")
 	@Produces("application/json")
-	public Response setAssisAnEvent(@PathParam("idevent") final Integer idevent, @PathParam("iduser") final Integer iduser) {
+	public Response setAssistAnEvent(@PathParam("idevent") final Integer idevent, @PathParam("iduser") final Integer iduser) {
+		
 		try {
 			Event event = this.eventService.getById(idevent);
 			if(! event.hasAttendId(iduser)){
 				event.addAttendId(iduser);
 				this.eventService.update(event);
-				return responseOK("{ Action:"+"Person added"+","
-						+"ID:"+idevent+","
-						+"Status"+": "+"NO CHANGE"+"}");
+				return responseOK("{ \"Action\":\"Person added\","
+						+"\"ID\": "+idevent+","
+						+"\"Status\":\"NO CHANGE\"}");
 			}else{
-				return responseOK("{ Action:"+"Person allready exist"+","
-						+"ID:"+idevent+","
-						+"Status"+": "+"NO CHANGE"+"}");
+				return responseOK("{ \"Action\":\"Person allready exist\","
+						+"\"ID\": "+idevent+","
+						+"\"Status\":\"NO CHANGE\"}");
 			}
 		} catch (Exception e) {
-			return responseBadRequest("{Error: Can't update event or invalid ID,"
-					  + "Status: FAIL}");
+			return responseBadRequest("{ \"Error\":\"Can't update event or invalid ID\","
+					+"\"Status\":\"FAIL\"}");
+
+		}
+
+	}
+	
+	@GET
+	@Path("/removeAssisAnEvent/{iduser}/{idevent}")
+	@Produces("application/json")
+	public Response removeAssistAnEvent(@PathParam("idevent") final Integer idevent, @PathParam("iduser") final Integer iduser) {
+		
+		try {
+			Event event = this.eventService.getById(idevent);
+			if(event.hasAttendId(iduser)){
+				event.removeAttendId(iduser);
+				this.eventService.update(event);
+				return responseOK("{ \"Action\":\"Person removed\","
+						+"\"ID\": "+idevent+","
+						+"\"Status\":\"OK\"}");
+			}else{
+				return responseOK("{ \"Action\":\"Person wasn't regitered to that event\","
+						+"\"ID\": "+idevent+","
+						+"\"Status\":\"NO CHANGE\"}");
+			}
+		} catch (Exception e) {
+			return responseBadRequest("{ \"Error\":\"Can't update event or invalid ID\","
+					+"\"Status\":\"FAIL\"}");
+
 		}
 
 	}
@@ -162,19 +190,20 @@ public class EventRest extends ResponseGenerator{
 		try {
 			Event event = this.eventService.getById(id);
 			if(! event.hasAttendId(id)){
-				return responseOK("{Action:"+"Person allready registered at event"+","
-						+"ID:"+id+","
-						+"value:"+"true ,"
-						+"Status"+": "+"OK"+"}");
+				return responseOK("{ \"Action\":\"Person allready registered at event\","
+						+"\"ID\": "+idevent+","
+						+"\"Value\": "+"true"+","
+						+"\"Status\":\"OK\"}"						
+						);
 			}else{
-				return responseOK("{Action:"+"Person i'nt registered at event"+","
-						+"ID:"+id+","
-						+"value:"+"false ,"
-						+"Status"+": "+"OK"+"}");
+				return responseOK("{ \"Action\":\"Person isn't registered at event\","
+						+"\"ID\": "+idevent+","
+						+"\"Value\": "+"true"+","
+						+"\"Status\":\"OK\"}");
 			}
 		} catch (Exception e) {
-			return responseBadRequest("{Error: Can't update event or invalid ID,"
-					  + "Status: FAIL}");
+			return responseBadRequest("{ \"Error\":\"Can't update event or invalid ID\","
+					+"\"Status\":\"FAIL\"}");
 		}
 	}
 	
