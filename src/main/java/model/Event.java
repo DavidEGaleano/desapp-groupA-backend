@@ -11,10 +11,13 @@ public class Event {
 	
 	public int id;
 	public List<Kind> types;
+	public String name;
 	public Date date;
 	public DayMoment dayMoment;
 	public String address;
 	public int amount;
+	public double lat;
+	public double lng;
 	public int limitOfPersons;
 	public List<Event> suggestions;
 	
@@ -22,7 +25,7 @@ public class Event {
 		
 	}
 	
-	public Event(List<Kind> types, Date date, DayMoment dayMoment, String address, int amount, int limitOfPersons){
+	public Event(List<Kind> types, Date date, DayMoment dayMoment, String address, int amount, int limitOfPersons, double lat, double lng, String name){
 		this.types = types;
 		this.date = date;
 		this.dayMoment = dayMoment;
@@ -30,6 +33,9 @@ public class Event {
 		this.amount = amount;
 		this.limitOfPersons = limitOfPersons;
 		this.suggestions = new ArrayList<Event>();
+		this.lat = lat;
+		this.lng = lng;
+		this.name = name;
 	}
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////

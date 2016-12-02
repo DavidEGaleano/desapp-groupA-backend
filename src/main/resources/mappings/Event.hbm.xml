@@ -14,6 +14,8 @@
 		
 		<property name="address" column="address" type="string"/>
 		
+		<property name="name" column="name" type="string"/>
+		
 		<bag name="types" table="types" lazy="false">
         	<key column="ID_types" />
         	<element column="type" type="kind"/>
@@ -30,6 +32,10 @@
 		<property name="amount" column="amount" type="int"/>
 		
 		<property name="limitOfPersons" column="limit_of_persons" type="int"/>	
+		
+		<property name="lng" column="latitude" type="double"/>	
+		
+		<property name="lat" column="longitude" type="double"/>	
 				
 		<bag name="suggestions" table="suggestions" lazy="false" cascade="all">
     		<key column="ID_suggestions" />

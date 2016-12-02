@@ -1,0 +1,1186 @@
+[
+ {
+   "X": "-58,3638362",
+   "Y": "-34,6014943",
+   "NOMBRE": "ACQUA LOUNGE",
+   "DIRECCION": "MANSO JUANA 305",
+   "CAPACIDAD": 214,
+   "AMOUNT": 250
+ },
+ {
+   "X": "-58,4235576",
+   "Y": "-34,5986898",
+   "NOMBRE": "AMERIKA",
+   "DIRECCION": "GASCON 1036",
+   "CAPACIDAD": 2450,
+   "AMOUNT": 270
+ },
+ {
+   "X": "-58,4698726",
+   "Y": "-34,6299368",
+   "NOMBRE": "AMNESIA",
+   "DIRECCION": "NAZCA AV. 55",
+   "CAPACIDAD": 778,
+   "AMOUNT": 290
+ },
+ {
+   "X": "-58,3981149",
+   "Y": "-34,601096",
+   "NOMBRE": "ANGEL S DISCO",
+   "DIRECCION": "VIAMONTE 2168",
+   "CAPACIDAD": 425,
+   "AMOUNT": 310
+ },
+ {
+   "X": "-58,4716613",
+   "Y": "-34,6311475",
+   "NOMBRE": "ASBURY ROCK",
+   "DIRECCION": "RIVADAVIA AV. 7523",
+   "CAPACIDAD": 216,
+   "AMOUNT": 330
+ },
+ {
+   "X": "-58,3640371",
+   "Y": "-34,6059385",
+   "NOMBRE": "ASIA DE CUBA",
+   "DIRECCION": "COSSETTINI, OLGA 751",
+   "CAPACIDAD": 622,
+   "AMOUNT": 350
+ },
+ {
+   "X": "-58,4122339",
+   "Y": "-34,6041812",
+   "NOMBRE": "AZUCAR ABASTO",
+   "DIRECCION": "CORRIENTES AV. 3328",
+   "CAPACIDAD": 622,
+   "AMOUNT": 370
+ },
+ {
+   "X": "-58,4563024",
+   "Y": "-34,5626766",
+   "NOMBRE": "AZUCAR BELGRANO",
+   "DIRECCION": "CABILDO AV. 2040",
+   "CAPACIDAD": 521,
+   "AMOUNT": 390
+ },
+ {
+   "X": "-58,425774",
+   "Y": "-34,5966136",
+   "NOMBRE": "AZUCAR PALERMO",
+   "DIRECCION": "CORDOBA AV. 4175",
+   "CAPACIDAD": 350,
+   "AMOUNT": 410
+ },
+ {
+   "X": "-58,3717424",
+   "Y": "-34,6019519",
+   "NOMBRE": "BAHREIN",
+   "DIRECCION": "LAVALLE 343",
+   "CAPACIDAD": 880,
+   "AMOUNT": 430
+ },
+ {
+   "X": "-58,5038092",
+   "Y": "-34,5642522",
+   "NOMBRE": "BELLA ROMA",
+   "DIRECCION": "YRURTIA, ROGELIO 6020",
+   "CAPACIDAD": 900,
+   "AMOUNT": 450
+ },
+ {
+   "X": "-58,4701644",
+   "Y": "-34,6309589",
+   "NOMBRE": "BELLAKEO NIGHT",
+   "DIRECCION": "RIVADAVIA AV. 7428",
+   "CAPACIDAD": 1260,
+   "AMOUNT": 470
+ },
+ {
+   "X": "-58,435425",
+   "Y": "-34,5860135",
+   "NOMBRE": "BK",
+   "DIRECCION": "JUSTO, JUAN B. AV. 1574",
+   "CAPACIDAD": 961,
+   "AMOUNT": 490
+ },
+ {
+   "X": "-58,3893467",
+   "Y": "-34,5877762",
+   "NOMBRE": "BLACK",
+   "DIRECCION": "AYACUCHO 1981",
+   "CAPACIDAD": 210,
+   "AMOUNT": 510
+ },
+ {
+   "X": "-58,4401674",
+   "Y": "-34,5860447",
+   "NOMBRE": "BLOW",
+   "DIRECCION": "VEGA, NICETO, CNEL. AV. 5699",
+   "CAPACIDAD": 333,
+   "AMOUNT": 530
+ },
+ {
+   "X": "-58,3746738",
+   "Y": "-34,6141925",
+   "NOMBRE": "BOUTIQUE",
+   "DIRECCION": "PERU 535",
+   "CAPACIDAD": 1950,
+   "AMOUNT": 550
+ },
+ {
+   "X": "-58,3818932",
+   "Y": "-34,6290623",
+   "NOMBRE": "BRONCO",
+   "DIRECCION": "O'BRIEN 1160",
+   "CAPACIDAD": 1646,
+   "AMOUNT": 570
+ },
+ {
+   "X": "-58,4300173",
+   "Y": "-34,5884755",
+   "NOMBRE": "BRUJAS",
+   "DIRECCION": "BORGES, JORGE LUIS 1640",
+   "CAPACIDAD": 264,
+   "AMOUNT": 590
+ },
+ {
+   "X": "-58,398998",
+   "Y": "-34,5700423",
+   "NOMBRE": "CAIX",
+   "DIRECCION": "OBLIGADO RAFAEL, AV.COSTANERA Y SALGUERO, JERONIMO",
+   "CAPACIDAD": 1764,
+   "AMOUNT": 610
+ },
+ {
+   "X": "-58,3937434",
+   "Y": "-34,6050272",
+   "NOMBRE": "CASTELBAMBA",
+   "DIRECCION": "RIOBAMBA 345",
+   "CAPACIDAD": 428,
+   "AMOUNT": 630
+ },
+ {
+   "X": "-58,3799004",
+   "Y": "-34,5973239",
+   "NOMBRE": "CATTOS",
+   "DIRECCION": "SUIPACHA 930",
+   "CAPACIDAD": 100,
+   "AMOUNT": 650
+ },
+ {
+   "X": "-58,3797673",
+   "Y": "-34,6095093",
+   "NOMBRE": "CIRCUS",
+   "DIRECCION": "YRIGOYEN, HIPOLITO 947",
+   "CAPACIDAD": 400,
+   "AMOUNT": 670
+ },
+ {
+   "X": "-58,5019399",
+   "Y": "-34,5860321",
+   "NOMBRE": "CITY HALL",
+   "DIRECCION": "MOSCONI GENERAL AV. 2885",
+   "CAPACIDAD": 1434,
+   "AMOUNT": 690
+ },
+ {
+   "X": "-58,3945882",
+   "Y": "-34,5890761",
+   "NOMBRE": "CLOCHE",
+   "DIRECCION": "URIBURU JOSE E., PRES. 1721",
+   "CAPACIDAD": 588,
+   "AMOUNT": 710
+ },
+ {
+   "X": "-58,4477824",
+   "Y": "-34,5470229",
+   "NOMBRE": "CLUB 74",
+   "DIRECCION": "FIGUEROA ALCORTA, PRES. AV. 7474",
+   "CAPACIDAD": 180,
+   "AMOUNT": 730
+ },
+ {
+   "X": "-58,3758676",
+   "Y": "-34,6191389",
+   "NOMBRE": "CLUB 947",
+   "DIRECCION": "CHACABUCO 947",
+   "CAPACIDAD": 1702,
+   "AMOUNT": 750
+ },
+ {
+   "X": "-58,4162868",
+   "Y": "-34,586513",
+   "NOMBRE": "CLUB ARAOZ",
+   "DIRECCION": "ARAOZ 2422",
+   "CAPACIDAD": 1030,
+   "AMOUNT": 770
+ },
+ {
+   "X": "-58,3796727",
+   "Y": "-34,6106958",
+   "NOMBRE": "CLUB ONE",
+   "DIRECCION": "ALSINA, ADOLFO 940",
+   "CAPACIDAD": 1900,
+   "AMOUNT": 790
+ },
+ {
+   "X": "-58,3884421",
+   "Y": "-34,5896224",
+   "NOMBRE": "CLUB SHAMPOO",
+   "DIRECCION": "QUINTANA, MANUEL, PRES. 362",
+   "CAPACIDAD": 220,
+   "AMOUNT": 810
+ },
+ {
+   "X": "-58,3789338",
+   "Y": "-34,6083092",
+   "NOMBRE": "COCOLICHE",
+   "DIRECCION": "RIVADAVIA AV. 878",
+   "CAPACIDAD": 268,
+   "AMOUNT": 830
+ },
+ {
+   "X": "-58,3919724",
+   "Y": "-34,59611",
+   "NOMBRE": "CONTRAMANO",
+   "DIRECCION": "RODRIGUEZ PE??A 1082",
+   "CAPACIDAD": 335,
+   "AMOUNT": 850
+ },
+ {
+   "X": "-58,4228098",
+   "Y": "-34,5715334",
+   "NOMBRE": "CROBAR",
+   "DIRECCION": "DEL LIBERTADOR AV. 3883",
+   "CAPACIDAD": 2258,
+   "AMOUNT": 870
+ },
+ {
+   "X": "-58,4652551",
+   "Y": "-34,5523538",
+   "NOMBRE": "DISCO SIX",
+   "DIRECCION": "CABILDO AV. 3241",
+   "CAPACIDAD": 900,
+   "AMOUNT": 890
+ },
+ {
+   "X": "-58,4734559",
+   "Y": "-34,5417455",
+   "NOMBRE": "DOME",
+   "DIRECCION": "CABILDO AV. 4665",
+   "CAPACIDAD": 1297,
+   "AMOUNT": 910
+ },
+ {
+   "X": "-58,3633068",
+   "Y": "-34,6229635",
+   "NOMBRE": "DORSIA",
+   "DIRECCION": "MOREAU DE JUSTO, ALICIA AV. 2092",
+   "CAPACIDAD": 679,
+   "AMOUNT": 930
+ },
+ {
+   "X": "-58,4761204",
+   "Y": "-34,6323003",
+   "NOMBRE": "ECLIPTICO",
+   "DIRECCION": "RIVADAVIA AV. 7927",
+   "CAPACIDAD": 743,
+   "AMOUNT": 950
+ },
+ {
+   "X": "-58,411723",
+   "Y": "-34,6038349",
+   "NOMBRE": "EL FOGON",
+   "DIRECCION": "AGUERO 512",
+   "CAPACIDAD": 274,
+   "AMOUNT": 970
+ },
+ {
+   "X": "-58,4149393",
+   "Y": "-34,6040222",
+   "NOMBRE": "EL PICAFLOR",
+   "DIRECCION": "CORRIENTES AV. 3530",
+   "CAPACIDAD": 662,
+   "AMOUNT": 990
+ },
+ {
+   "X": "-58,3776792",
+   "Y": "-34,6046931",
+   "NOMBRE": "EL TEATRITO",
+   "DIRECCION": "SARMIENTO 777",
+   "CAPACIDAD": 538,
+   "AMOUNT": 1010
+ },
+ {
+   "X": "-58,4361464",
+   "Y": "-34,5861228",
+   "NOMBRE": "ESPERANTO",
+   "DIRECCION": "JUSTO, JUAN B. AV. 1625",
+   "CAPACIDAD": 572,
+   "AMOUNT": 1030
+ },
+ {
+   "X": "-58,4702376",
+   "Y": "-34,6307609",
+   "NOMBRE": "EVELYN",
+   "DIRECCION": "RIVADAVIA AV. 7425",
+   "CAPACIDAD": 452,
+   "AMOUNT": 1050
+ },
+ {
+   "X": "-58,4153475",
+   "Y": "-34,610724",
+   "NOMBRE": "FANTASTICO",
+   "DIRECCION": "RIVADAVIA AV. 3469",
+   "CAPACIDAD": 1270,
+   "AMOUNT": 1070
+ },
+ {
+   "X": "-58,4430224",
+   "Y": "-34,5814924",
+   "NOMBRE": "FRIDA",
+   "DIRECCION": "DORREGO 1735",
+   "CAPACIDAD": 187,
+   "AMOUNT": 1090
+ },
+ {
+   "X": "-58,3707078",
+   "Y": "-34,6149058",
+   "NOMBRE": "FRODO S",
+   "DIRECCION": "BALCARCE 605",
+   "CAPACIDAD": 425,
+   "AMOUNT": 1110
+ },
+ {
+   "X": "-58,4095436",
+   "Y": "-34,5970061",
+   "NOMBRE": "GLAM",
+   "DIRECCION": "CABRERA, JOSE A. 3046",
+   "CAPACIDAD": 489,
+   "AMOUNT": 1130
+ },
+ {
+   "X": "-58,3785022",
+   "Y": "-34,5960039",
+   "NOMBRE": "GOLDEN",
+   "DIRECCION": "ESMERALDA 1040",
+   "CAPACIDAD": 408,
+   "AMOUNT": 1150
+ },
+ {
+   "X": "-58,4351293",
+   "Y": "-34,5583568",
+   "NOMBRE": "GOLF DE PALERMO",
+   "DIRECCION": "TORNQUIST, ERNESTO AV. 6385",
+   "CAPACIDAD": 950,
+   "AMOUNT": 1170
+ },
+ {
+   "X": "-58,3760433",
+   "Y": "-34,5988372",
+   "NOMBRE": "GONG",
+   "DIRECCION": "CORDOBA AV. 634",
+   "CAPACIDAD": 100,
+   "AMOUNT": 1190
+ },
+ {
+   "X": "-58,3729449",
+   "Y": "-34,5976277",
+   "NOMBRE": "GREAT CITY",
+   "DIRECCION": "RECONQUISTA 878",
+   "CAPACIDAD": 208,
+   "AMOUNT": 1210
+ },
+ {
+   "X": "-58,4232387",
+   "Y": "-34,5796533",
+   "NOMBRE": "GROOVE",
+   "DIRECCION": "SANTA FE AV. 4389",
+   "CAPACIDAD": 1685,
+   "AMOUNT": 1230
+ },
+ {
+   "X": "-58,3785215",
+   "Y": "-34,6094188",
+   "NOMBRE": "HIPOLITO CLUB",
+   "DIRECCION": "YRIGOYEN, HIPOLITO 851",
+   "CAPACIDAD": 958,
+   "AMOUNT": 1250
+ },
+ {
+   "X": "-58,43643123",
+   "Y": "-34,58555594",
+   "NOMBRE": "HOLLYGOOD",
+   "DIRECCION": "GORRITI 5516",
+   "CAPACIDAD": 205,
+   "AMOUNT": 1270
+ },
+ {
+   "X": "-58,4357379",
+   "Y": "-34,5845289",
+   "NOMBRE": "HONDURAS HOLLYWOOD",
+   "DIRECCION": "HONDURAS 5535",
+   "CAPACIDAD": 356,
+   "AMOUNT": 1290
+ },
+ {
+   "X": "-58,439579",
+   "Y": "-34,586455",
+   "NOMBRE": "INK",
+   "DIRECCION": "VEGA, NICETO, CNEL. AV. 5635",
+   "CAPACIDAD": 409,
+   "AMOUNT": 1310
+ },
+ {
+   "X": "-58,4361507",
+   "Y": "-34,5866746",
+   "NOMBRE": "INPUT",
+   "DIRECCION": "JUSTO, JUAN B. AV. 1658",
+   "CAPACIDAD": 742,
+   "AMOUNT": 1330
+ },
+ {
+   "X": "-58,4714355",
+   "Y": "-34,6313083",
+   "NOMBRE": "IVANOFF",
+   "DIRECCION": "RIVADAVIA AV. 7518",
+   "CAPACIDAD": 323,
+   "AMOUNT": 1350
+ },
+ {
+   "X": "-58,4380604",
+   "Y": "-34,5877017",
+   "NOMBRE": "JAGER",
+   "DIRECCION": "VEGA, NICETO, CNEL. AV. 5422",
+   "CAPACIDAD": 950,
+   "AMOUNT": 1370
+ },
+ {
+   "X": "-58,4094218",
+   "Y": "-34,5981739",
+   "NOMBRE": "JANNOY",
+   "DIRECCION": "CORDOBA AV. 2988",
+   "CAPACIDAD": 448,
+   "AMOUNT": 1390
+ },
+ {
+   "X": "-58,4179482",
+   "Y": "-34,5545115",
+   "NOMBRE": "JET",
+   "DIRECCION": "OBLIGADO RAFAEL, AV.COSTANERA 4801",
+   "CAPACIDAD": 688,
+   "AMOUNT": 1410
+ },
+ {
+   "X": "-58,433326",
+   "Y": "-34,5864319",
+   "NOMBRE": "KIKA",
+   "DIRECCION": "HONDURAS 5339",
+   "CAPACIDAD": 1100,
+   "AMOUNT": 1430
+ },
+ {
+   "X": "-58,429976",
+   "Y": "-34,5769501",
+   "NOMBRE": "KIMIA",
+   "DIRECCION": "SANTA FE AV. 4999",
+   "CAPACIDAD": 958,
+   "AMOUNT": 1450
+ },
+ {
+   "X": "-58,3985709",
+   "Y": "-34,5958673",
+   "NOMBRE": "KUMA CLUB",
+   "DIRECCION": "URIBURU JOSE E., PRES. 1073",
+   "CAPACIDAD": 508,
+   "AMOUNT": 1470
+ },
+ {
+   "X": "-58,3798184",
+   "Y": "-34,5984515",
+   "NOMBRE": "LA CAPILLA",
+   "DIRECCION": "SUIPACHA 842",
+   "CAPACIDAD": 220,
+   "AMOUNT": 1490
+ },
+ {
+   "X": "-58,461551",
+   "Y": "-34,5782156",
+   "NOMBRE": "LA CITY",
+   "DIRECCION": "ALVAREZ THOMAS AV. 1391",
+   "CAPACIDAD": 940,
+   "AMOUNT": 1510
+ },
+ {
+   "X": "-58,4102966",
+   "Y": "-34,558371",
+   "NOMBRE": "LA DIOSA-VIDU",
+   "DIRECCION": "OBLIGADO RAFAEL, AV.COSTANERA 3731",
+   "CAPACIDAD": 1558,
+   "AMOUNT": 1530
+ },
+ {
+   "X": "-58,3901503",
+   "Y": "-34,6055327",
+   "NOMBRE": "LA FRANCE",
+   "DIRECCION": "SARMIENTO 1656",
+   "CAPACIDAD": 1372,
+   "AMOUNT": 1550
+ },
+ {
+   "X": "-58,3674711",
+   "Y": "-34,600006",
+   "NOMBRE": "LA MADELEINE",
+   "DIRECCION": "MOREAU DE JUSTO, ALICIA AV. 102",
+   "CAPACIDAD": 205,
+   "AMOUNT": 1570
+ },
+ {
+   "X": "-58,3706194",
+   "Y": "-34,6127411",
+   "NOMBRE": "LA VENTANA",
+   "DIRECCION": "BALCARCE 431",
+   "CAPACIDAD": 449,
+   "AMOUNT": 1590
+ },
+ {
+   "X": "-58,4384684",
+   "Y": "-34,5874222",
+   "NOMBRE": "LARC",
+   "DIRECCION": "VEGA, NICETO, CNEL. AV. 5452",
+   "CAPACIDAD": 980,
+   "AMOUNT": 1610
+ },
+ {
+   "X": "-58,4089639",
+   "Y": "-34,6096129",
+   "NOMBRE": "LATINO 11",
+   "DIRECCION": "ECUADOR 60",
+   "CAPACIDAD": 1540,
+   "AMOUNT": 1630
+ },
+ {
+   "X": "-58,3937175",
+   "Y": "-34,6093673",
+   "NOMBRE": "LE CLICK",
+   "DIRECCION": "RIVADAVIA AV. 1910",
+   "CAPACIDAD": 990,
+   "AMOUNT": 1650
+ },
+ {
+   "X": "-58,5017401",
+   "Y": "-34,5949712",
+   "NOMBRE": "LE PRIVE",
+   "DIRECCION": "SAN MARTIN AV. 6101",
+   "CAPACIDAD": 68,
+   "AMOUNT": 1670
+ },
+ {
+   "X": "-58,4153575",
+   "Y": "-34,5854383",
+   "NOMBRE": "LIQUID",
+   "DIRECCION": "SANTA FE AV. 3651",
+   "CAPACIDAD": 576,
+   "AMOUNT": 1690
+ },
+ {
+   "X": "-58,3913037",
+   "Y": "-34,6215061",
+   "NOMBRE": "LO DE CELIA",
+   "DIRECCION": "HUMBERTO 1?? 1783",
+   "CAPACIDAD": 150,
+   "AMOUNT": 1710
+ },
+ {
+   "X": "-58,393625",
+   "Y": "-34,5889216",
+   "NOMBRE": "LOCOS X EL FUTBOL",
+   "DIRECCION": "LOPEZ, VICENTE 2056",
+   "CAPACIDAD": 300,
+   "AMOUNT": 1730
+ },
+ {
+   "X": "-58,4973452",
+   "Y": "-34,5969889",
+   "NOMBRE": "LOOP",
+   "DIRECCION": "BEIRO, FRANCISCO AV. 3128",
+   "CAPACIDAD": 247,
+   "AMOUNT": 1750
+ },
+ {
+   "X": "-58,436305",
+   "Y": "-34,553096",
+   "NOMBRE": "LOW",
+   "DIRECCION": "SUCRE, ANTONIO JOSE DE, MCAL. 646",
+   "CAPACIDAD": 479,
+   "AMOUNT": 1770
+ },
+ {
+   "X": "-58,3798195",
+   "Y": "-34,609024",
+   "NOMBRE": "LP",
+   "DIRECCION": "DE MAYO AV. 948",
+   "CAPACIDAD": 200,
+   "AMOUNT": 1790
+ },
+ {
+   "X": "-58,3950931",
+   "Y": "-34,587533",
+   "NOMBRE": "MADAHOS",
+   "DIRECCION": "AZCUENAGA 1902",
+   "CAPACIDAD": 396,
+   "AMOUNT": 1810
+ },
+ {
+   "X": "-58,5180013",
+   "Y": "-34,6390024",
+   "NOMBRE": "MAGICO",
+   "DIRECCION": "RIVADAVIA AV. 10925",
+   "CAPACIDAD": 1320,
+   "AMOUNT": 1830
+ },
+ {
+   "X": "-58,3664535",
+   "Y": "-34,6096144",
+   "NOMBRE": "MAGNOLIA",
+   "DIRECCION": "MOREAU DE JUSTO, ALICIA AV. 1007",
+   "CAPACIDAD": 100,
+   "AMOUNT": 1850
+ },
+ {
+   "X": "-58,4675991",
+   "Y": "-34,6329906",
+   "NOMBRE": "MAIS- UM",
+   "DIRECCION": "ALBERDI, JUAN BAUTISTA AV. 2829",
+   "CAPACIDAD": 504,
+   "AMOUNT": 1870
+ },
+ {
+   "X": "-58,3911759",
+   "Y": "-34,605603",
+   "NOMBRE": "MALUCO BELEZA",
+   "DIRECCION": "SARMIENTO 1728",
+   "CAPACIDAD": 1076,
+   "AMOUNT": 1890
+ },
+ {
+   "X": "-58,4019368",
+   "Y": "-34,5679187",
+   "NOMBRE": "MANDARINE",
+   "DIRECCION": "OBLIGADO RAFAEL, AV.COSTANERA Y SARMIENTO AV.",
+   "CAPACIDAD": 1613,
+   "AMOUNT": 1910
+ },
+ {
+   "X": "-58,3827358",
+   "Y": "-34,6281631",
+   "NOMBRE": "MBURUKUJA",
+   "DIRECCION": "SALTA 1748",
+   "CAPACIDAD": 1140,
+   "AMOUNT": 1930
+ },
+ {
+   "X": "-58,3707331",
+   "Y": "-34,6143635",
+   "NOMBRE": "MOD",
+   "DIRECCION": "BALCARCE 563",
+   "CAPACIDAD": 586,
+   "AMOUNT": 1950
+ },
+ {
+   "X": "-58,3938397",
+   "Y": "-34,5827629",
+   "NOMBRE": "MODENA DESIGN",
+   "DIRECCION": "FIGUEROA ALCORTA, PRES. AV. 2270",
+   "CAPACIDAD": 581,
+   "AMOUNT": 1970
+ },
+ {
+   "X": "-58,3705292",
+   "Y": "-34,6155689",
+   "NOMBRE": "MOLIERE",
+   "DIRECCION": "BALCARCE 682",
+   "CAPACIDAD": 819,
+   "AMOUNT": 1990
+ },
+ {
+   "X": "-58,3926242",
+   "Y": "-34,6157153",
+   "NOMBRE": "MONTECARLO",
+   "DIRECCION": "MEXICO 1863",
+   "CAPACIDAD": 460,
+   "AMOUNT": 2010
+ },
+ {
+   "X": "-58,4672811",
+   "Y": "-34,6299815",
+   "NOMBRE": "MORENA",
+   "DIRECCION": "RIVADAVIA AV. 7217",
+   "CAPACIDAD": 922,
+   "AMOUNT": 2030
+ },
+ {
+   "X": "-58,3781239",
+   "Y": "-34,6015286",
+   "NOMBRE": "MUNDO LATINO",
+   "DIRECCION": "ESMERALDA 565",
+   "CAPACIDAD": 300,
+   "AMOUNT": 2050
+ },
+ {
+   "X": "-58,3746738",
+   "Y": "-34,6141925",
+   "NOMBRE": "MUSEUM",
+   "DIRECCION": "PERU 529",
+   "CAPACIDAD": 1952,
+   "AMOUNT": 2070
+ },
+ {
+   "X": "-58,4500161",
+   "Y": "-34,5887479",
+   "NOMBRE": "NEO CLUB",
+   "DIRECCION": "DUMONT, SANTOS 4060",
+   "CAPACIDAD": 500,
+   "AMOUNT": 2090
+ },
+ {
+   "X": "-58,4232387",
+   "Y": "-34,5796533",
+   "NOMBRE": "NEW METROPOLIS",
+   "DIRECCION": "SANTA FE AV. 4389",
+   "CAPACIDAD": 1602,
+   "AMOUNT": 2110
+ },
+ {
+   "X": "-58,3927757",
+   "Y": "-34,5890979",
+   "NOMBRE": "NEW PORT",
+   "DIRECCION": "JUNIN 1715",
+   "CAPACIDAD": 295,
+   "AMOUNT": 2130
+ },
+ {
+   "X": "-58,4387298",
+   "Y": "-34,587241",
+   "NOMBRE": "NICETO CLUB",
+   "DIRECCION": "VEGA, NICETO, CNEL. AV. 5508",
+   "CAPACIDAD": 1118,
+   "AMOUNT": 2150
+ },
+ {
+   "X": "-58,3761441",
+   "Y": "-34,6046001",
+   "NOMBRE": "NON SERVIAM",
+   "DIRECCION": "SARMIENTO 667",
+   "CAPACIDAD": 1100,
+   "AMOUNT": 2170
+ },
+ {
+   "X": "-58,4999498",
+   "Y": "-34,5986007",
+   "NOMBRE": "ONE MORE CLUB",
+   "DIRECCION": "BEIRO, FRANCISCO AV. 3334",
+   "CAPACIDAD": 480,
+   "AMOUNT": 2190
+ },
+ {
+   "X": "-58,3657446",
+   "Y": "-34,598277",
+   "NOMBRE": "OPERA BAY",
+   "DIRECCION": "GRIERSON, CECILIA 225",
+   "CAPACIDAD": 1239,
+   "AMOUNT": 2210
+ },
+ {
+   "X": "-58,4365385",
+   "Y": "-34,5863965",
+   "NOMBRE": "OPIUM GARDEN",
+   "DIRECCION": "JUSTO, JUAN B. AV. 1675",
+   "CAPACIDAD": 626,
+   "AMOUNT": 2230
+ },
+ {
+   "X": "-58,3894022",
+   "Y": "-34,6049093",
+   "NOMBRE": "OYE CHICO",
+   "DIRECCION": "MONTEVIDEO 310",
+   "CAPACIDAD": 200,
+   "AMOUNT": 2250
+ },
+ {
+   "X": "-58,4289496",
+   "Y": "-34,5510112",
+   "NOMBRE": "PACHA / PACHA BS AS",
+   "DIRECCION": "COST Y PAMPA/AV.OBLIGADO 6151",
+   "CAPACIDAD": 1942,
+   "AMOUNT": 2270
+ },
+ {
+   "X": "-58,394638",
+   "Y": "-34,588375",
+   "NOMBRE": "PAGANA",
+   "DIRECCION": "LOPEZ, VICENTE 2134",
+   "CAPACIDAD": 364,
+   "AMOUNT": 2290
+ },
+ {
+   "X": "-58,4214631",
+   "Y": "-34,5823671",
+   "NOMBRE": "PALERMO CLUB",
+   "DIRECCION": "BORGES, JORGE LUIS 2450",
+   "CAPACIDAD": 650,
+   "AMOUNT": 2310
+ },
+ {
+   "X": "-58,4274891",
+   "Y": "-34,6241528",
+   "NOMBRE": "PHUKET",
+   "DIRECCION": "LA PLATA AV. 735",
+   "CAPACIDAD": 1593,
+   "AMOUNT": 2330
+ },
+ {
+   "X": "-58,3923866",
+   "Y": "-34,5884321",
+   "NOMBRE": "PISO 1",
+   "DIRECCION": "JUNIN 1787",
+   "CAPACIDAD": 150,
+   "AMOUNT": 2350
+ },
+ {
+   "X": "-58,4297059",
+   "Y": "-34,5505107",
+   "NOMBRE": "PIZZA BANANA",
+   "DIRECCION": "OBLIGADO RAFAEL, AV.COSTANERA 6201",
+   "CAPACIDAD": 1143,
+   "AMOUNT": 2370
+ },
+ {
+   "X": "-58,4051387",
+   "Y": "-34,6087526",
+   "NOMBRE": "POPULARISIMO",
+   "DIRECCION": "MITRE, BARTOLOME 2737",
+   "CAPACIDAD": 200,
+   "AMOUNT": 2390
+ },
+ {
+   "X": "-58,3707331",
+   "Y": "-34,6143635",
+   "NOMBRE": "POR VOS BS AS",
+   "DIRECCION": "BALCARCE 563",
+   "CAPACIDAD": 586,
+   "AMOUNT": 2410
+ },
+ {
+   "X": "-58,4264741",
+   "Y": "-34,5920278",
+   "NOMBRE": "PORTO SOHO",
+   "DIRECCION": "SCALABRINI ORTIZ, RAUL AV. 1425",
+   "CAPACIDAD": 604,
+   "AMOUNT": 2430
+ },
+ {
+   "X": "-58,4094556",
+   "Y": "-34,5690088",
+   "NOMBRE": "POUND",
+   "DIRECCION": "SARMIENTO AV. Y CASARES AV.",
+   "CAPACIDAD": 894,
+   "AMOUNT": 2450
+ },
+ {
+   "X": "-58,3980095",
+   "Y": "-34,5705363",
+   "NOMBRE": "PRIVILEGE BA",
+   "DIRECCION": "OBLIGADO RAFAEL, AV.COSTANERA 1221",
+   "CAPACIDAD": 2966,
+   "AMOUNT": 2470
+ },
+ {
+   "X": "-58,3830902",
+   "Y": "-34,6291079",
+   "NOMBRE": "RADIO STUDIO",
+   "DIRECCION": "O'BRIEN 1232",
+   "CAPACIDAD": 3050,
+   "AMOUNT": 2490
+ },
+ {
+   "X": "-58,3798195",
+   "Y": "-34,609024",
+   "NOMBRE": "REQUIEM GOTIC",
+   "DIRECCION": "DE MAYO AV. 948",
+   "CAPACIDAD": 186,
+   "AMOUNT": 2510
+ },
+ {
+   "X": "-58,4747558",
+   "Y": "-34,632231",
+   "NOMBRE": "RETRO",
+   "DIRECCION": "RIVADAVIA AV. 7806",
+   "CAPACIDAD": 1872,
+   "AMOUNT": 2530
+ },
+ {
+   "X": "-58,3747191",
+   "Y": "-34,6120026",
+   "NOMBRE": "REY CASTRO",
+   "DIRECCION": "PERU 342",
+   "CAPACIDAD": 901,
+   "AMOUNT": 2550
+ },
+ {
+   "X": "-58,4927341",
+   "Y": "-34,6363277",
+   "NOMBRE": "RIVADAVIA 9131",
+   "DIRECCION": "RIVADAVIA AV. 9131",
+   "CAPACIDAD": 120,
+   "AMOUNT": 2570
+ },
+ {
+   "X": "-58,42452474",
+   "Y": "-34,59051193",
+   "NOMBRE": "ROOM",
+   "DIRECCION": "SCALABRINI ORTIZ, RAUL AV. 1648",
+   "CAPACIDAD": 784,
+   "AMOUNT": 2590
+ },
+ {
+   "X": "-58,4345076",
+   "Y": "-34,5855668",
+   "NOMBRE": "ROSEBAR",
+   "DIRECCION": "HONDURAS 5445",
+   "CAPACIDAD": 1370,
+   "AMOUNT": 2610
+ },
+ {
+   "X": "-58,39609543",
+   "Y": "-34,58890237",
+   "NOMBRE": "RUANO",
+   "DIRECCION": "AZCUENAGA 1775",
+   "CAPACIDAD": 254,
+   "AMOUNT": 2630
+ },
+ {
+   "X": "-58,4354816",
+   "Y": "-34,5531005",
+   "NOMBRE": "RUMI",
+   "DIRECCION": "FIGUEROA ALCORTA, PRES. AV. 6442",
+   "CAPACIDAD": 765,
+   "AMOUNT": 2650
+ },
+ {
+   "X": "-58,392669",
+   "Y": "-34,5889154",
+   "NOMBRE": "SAHARA",
+   "DIRECCION": "JUNIN 1735",
+   "CAPACIDAD": 870,
+   "AMOUNT": 2670
+ },
+ {
+   "X": "-58,4162599",
+   "Y": "-34,6447749",
+   "NOMBRE": "SALON ROCK SUR",
+   "DIRECCION": "SAENZ AV. 459",
+   "CAPACIDAD": 2346,
+   "AMOUNT": 2710
+ },
+ {
+   "X": "-58,4570337",
+   "Y": "-34,6263559",
+   "NOMBRE": "SEU DISCO",
+   "DIRECCION": "BOYACA AV. 28",
+   "CAPACIDAD": 186,
+   "AMOUNT": 2730
+ },
+ {
+   "X": "-58,4250748",
+   "Y": "-34,5968787",
+   "NOMBRE": "SITGES",
+   "DIRECCION": "CORDOBA AV. 4119",
+   "CAPACIDAD": 203,
+   "AMOUNT": 2750
+ },
+ {
+   "X": "-58,3955266",
+   "Y": "-34,5874165",
+   "NOMBRE": "SODOMA",
+   "DIRECCION": "LOPEZ, VICENTE 2233",
+   "CAPACIDAD": 300,
+   "AMOUNT": 2770
+ },
+ {
+   "X": "-58,3914651",
+   "Y": "-34,6056279",
+   "NOMBRE": "SUDACA",
+   "DIRECCION": "SARMIENTO 1752",
+   "CAPACIDAD": 980,
+   "AMOUNT": 2790
+ },
+ {
+   "X": "-58,4722769",
+   "Y": "-34,6318002",
+   "NOMBRE": "TABASCO PUB",
+   "DIRECCION": "MARTI, JOSE 17",
+   "CAPACIDAD": 999,
+   "AMOUNT": 2810
+ },
+ {
+   "X": "-58,450837",
+   "Y": "-34,5801354",
+   "NOMBRE": "TEATRO VORTERIX",
+   "DIRECCION": "LACROZE, FEDERICO AV. 3453",
+   "CAPACIDAD": 1584,
+   "AMOUNT": 2830
+ },
+ {
+   "X": "-58,4297596",
+   "Y": "-34,5504702",
+   "NOMBRE": "TEQUILA",
+   "DIRECCION": "OBLIGADO RAFAEL, AV.COSTANERA 6211",
+   "CAPACIDAD": 335,
+   "AMOUNT": 2850
+ },
+ {
+   "X": "-58,4019368",
+   "Y": "-34,5679187",
+   "NOMBRE": "TERRAZAS DEL ESTE",
+   "DIRECCION": "OBLIGADO RAFAEL, AV.COSTANERA Y SARMIENTO AV.",
+   "CAPACIDAD": 2028,
+   "AMOUNT": 2870
+ },
+ {
+   "X": "-58,4118583",
+   "Y": "-34,6046523",
+   "NOMBRE": "THE FLOWER",
+   "DIRECCION": "AGUERO 445",
+   "CAPACIDAD": 405,
+   "AMOUNT": 2890
+ },
+ {
+   "X": "-58,3921347",
+   "Y": "-34,5946254",
+   "NOMBRE": "THE SHAMROCK",
+   "DIRECCION": "RODRIGUEZ PE??A 1220",
+   "CAPACIDAD": 396,
+   "AMOUNT": 2910
+ },
+ {
+   "X": "-58,3749276",
+   "Y": "-34,5986165",
+   "NOMBRE": "THE SUB",
+   "DIRECCION": "CORDOBA AV. 543",
+   "CAPACIDAD": 415,
+   "AMOUNT": 2930
+ },
+ {
+   "X": "-58,3951476",
+   "Y": "-34,5880148",
+   "NOMBRE": "TIRO LOCO",
+   "DIRECCION": "LOPEZ, VICENTE 2188",
+   "CAPACIDAD": 177,
+   "AMOUNT": 2950
+ },
+ {
+   "X": "-58,4539406",
+   "Y": "-34,552259",
+   "NOMBRE": "UGARTE",
+   "DIRECCION": "UGARTE, MANUEL 1640",
+   "CAPACIDAD": 992,
+   "AMOUNT": 2970
+ },
+ {
+   "X": "-58,4122276",
+   "Y": "-34,6027131",
+   "NOMBRE": "UNI CLUB",
+   "DIRECCION": "GUARDIA VIEJA 3360",
+   "CAPACIDAD": 630,
+   "AMOUNT": 2990
+ },
+ {
+   "X": "-58,4382578",
+   "Y": "-34,5649715",
+   "NOMBRE": "VELVET FRERE",
+   "DIRECCION": "OLLEROS AV. 1775",
+   "CAPACIDAD": 650,
+   "AMOUNT": 3010
+ },
+ {
+   "X": "-58,4349531",
+   "Y": "-34,6088245",
+   "NOMBRE": "VIEJO CORREO",
+   "DIRECCION": "DIAZ VELEZ AV. 4820",
+   "CAPACIDAD": 300,
+   "AMOUNT": 3030
+ },
+ {
+   "X": "-58,4482132",
+   "Y": "-34,5569465",
+   "NOMBRE": "VIPER",
+   "DIRECCION": "JURAMENTO 1543",
+   "CAPACIDAD": 238,
+   "AMOUNT": 3050
+ },
+ {
+   "X": "-58,434011",
+   "Y": "-34,5860281",
+   "NOMBRE": "VITA",
+   "DIRECCION": "HONDURAS 5450",
+   "CAPACIDAD": 756,
+   "AMOUNT": 3070
+ },
+ {
+   "X": "-58,3800388",
+   "Y": "-34,609591",
+   "NOMBRE": "VOX",
+   "DIRECCION": "YRIGOYEN, HIPOLITO 968",
+   "CAPACIDAD": 532,
+   "AMOUNT": 3090
+ },
+ {
+   "X": "-58,435646",
+   "Y": "-34,5866852",
+   "NOMBRE": "WANNA",
+   "DIRECCION": "DARWIN 1574 / AV. J. B. JUSTO 1634",
+   "CAPACIDAD": 478,
+   "AMOUNT": 3110
+ },
+ {
+   "X": "-58,4484344",
+   "Y": "-34,5469248",
+   "NOMBRE": "WESTERN",
+   "DIRECCION": "FIGUEROA ALCORTA, PRES. AV. 7536",
+   "CAPACIDAD": 320,
+   "AMOUNT": 3130
+ },
+ {
+   "X": "-58,4388565",
+   "Y": "-34,5871527",
+   "NOMBRE": "WET CLUB",
+   "DIRECCION": "VEGA, NICETO, CNEL. AV. 5534",
+   "CAPACIDAD": 272,
+   "AMOUNT": 3150
+ },
+ {
+   "X": "-58,3643275",
+   "Y": "-34,6010273",
+   "NOMBRE": "WHO",
+   "DIRECCION": "DE LA BARRA,  EMMA 333",
+   "CAPACIDAD": 490,
+   "AMOUNT": 3170
+ },
+ {
+   "X": "-58,5079265",
+   "Y": "-34,592908",
+   "NOMBRE": "XEL - HA",
+   "DIRECCION": "SAN MARTIN AV. 6628",
+   "CAPACIDAD": 692,
+   "AMOUNT": 3190
+ },
+ {
+   "X": "-58,3796189",
+   "Y": "-34,6015235",
+   "NOMBRE": "YOUR CLUB",
+   "DIRECCION": "SUIPACHA 586",
+   "CAPACIDAD": 520,
+   "AMOUNT": 3210
+ }
+]

@@ -1,7 +1,11 @@
 package builders;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.annotation.PostConstruct;
 
+import org.json.simple.parser.ParseException;
 import org.springframework.context.annotation.DependsOn;
 
 import kind.DayMoment;
@@ -34,8 +38,10 @@ public class BDBuilder {
 
 	@PostConstruct
 	@DependsOn("org.springframework.context.config.internalBeanConfigurerAspect")
-	public void createEntities(){
-
+	public void createEntities() throws IOException, ParseException{
+		
+		
+		
 		User user1 = new UserBuilder()
 					.withUserName("UserTestOne")
 					.withMail("UTO@test.com")
@@ -96,7 +102,12 @@ public class BDBuilder {
 		event3.addType(Kind.GRILL);
 		event3.addType(Kind.PASTA);
 		
+		ArrayList<Event> events = new EventBuilder().fromJson("./src/main/resources/dataGBA/BailablesData.json");
 		
+		
+		for(Event event:events){
+			this.eventservice.save(event);
+		}
 		
 		this.eventservice.save(event1);
 		this.eventservice.save(event2);
