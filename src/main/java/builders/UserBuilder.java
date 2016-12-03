@@ -17,7 +17,7 @@ public class UserBuilder {
 	private String token = null;
 	private String mail = "aMail";
 	private System system = new System(new LogSystem()); 
-	private Profile profile = new Profile(Kind.COMEDY,Kind.CLASSIC,Kind.SUSHI,1000);
+	private Profile profile = new Profile(Kind.COMEDY,Kind.CLASSIC,Kind.SUSHI,1000,10);
 	private ArrayList<Tour> tours = new ArrayList<Tour>();
 	private ArrayList<Event> events = new ArrayList <Event>();
 	private ArrayList<User> friends = new ArrayList<User>();

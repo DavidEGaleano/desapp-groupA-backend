@@ -28,6 +28,8 @@
 		</property>
 		
 		<property name="limitAmount" column="limit_amount" type="int"/>	
+		
+		<property name="limitPeople" column="limit_people" type="int"/>	
 			
 	</class>
 </hibernate-mapping>

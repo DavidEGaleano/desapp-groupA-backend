@@ -189,4 +189,8 @@ public class User {
 	public void setToken(String token) {
 		this.token = token;
 	}
+	
+	public void setUserName(String name){
+		this.userName = name;
+	}
 }

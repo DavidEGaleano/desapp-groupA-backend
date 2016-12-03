@@ -9,13 +9,14 @@ public class ProfileBuilder {
 	public Kind typeOfMusic= Kind.ROCK;
 	public Kind typeOfFood = Kind.SUSHI;
 	public int limitAmount = 1200;
+	public int limitPeople = 10;
 	
 	public static ProfileBuilder anEvent(){
 		return new ProfileBuilder();
 	}
 	
 	public Profile build(){
-		Profile profile = new Profile(typeOfFilm,typeOfMusic,typeOfFood,limitAmount);
+		Profile profile = new Profile(typeOfFilm,typeOfMusic,typeOfFood,limitAmount,limitPeople);
 		return profile;
 	}
 	
@@ -36,6 +37,11 @@ public class ProfileBuilder {
 	
 	public ProfileBuilder withLimitAmount(int amount){
 		limitAmount = amount;
+		return this;
+	}
+	
+	public ProfileBuilder withLimitPeople(int amount){
+		limitPeople = amount;
 		return this;
 	}
 	

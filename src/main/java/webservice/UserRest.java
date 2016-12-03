@@ -2,8 +2,10 @@ package webservice;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -13,7 +15,6 @@ import javax.ws.rs.core.Response;
 import builders.UserBuilder;
 import dto.UserDTO;
 import model.User;
-import persistance.services.EventService;
 import persistance.services.UserService;
 import utils.ResponseGenerator;
 
@@ -61,6 +62,25 @@ public class UserRest extends ResponseGenerator{
 	}
 	
 	@GET
+	@Path("/update/{jsonuser}")
+	@Consumes("application/json")
+	public Response updateUser(@PathParam("jsonuser") UserDTO user){
+		try {
+			User bduser = this.userService.getById(user.id);
+			bduser.userName = user.userName;
+			bduser.mail = user.mail;
+			this.userService.update(bduser);
+		} catch (Exception e) {
+			return responseBadRequest("{ \"Error\":\"Can't update event or invalid ID\","
+					+"\"Status\":\"FAIL\"}");
+
+		}
+		return responseOK("{ \"Action\":\"User updated\","
+				+"\"ID\": "+ user.id +","
+				+"\"Status\":\"ok\"}");
+	}
+	
+	@GET
 	@Path("/getUserWithEmail/{email}")
 	@Produces("application/json")
 	public User getUser(@PathParam("email") final String email) {
@@ -82,7 +102,7 @@ public class UserRest extends ResponseGenerator{
 	@Produces("application/json")
 	public Response deleteProfile(@PathParam("id") final Integer id) {		
 		try {
-			User user = this.getUserService().getById(id);
+			User user = this.userService.getById(id);
 			this.userService.delete(user);
 		} catch (Exception e) {
 			return responseBadRequest("{Error: Can't delete user or invalid ID,"
@@ -94,31 +114,50 @@ public class UserRest extends ResponseGenerator{
 							+"Status"+": "+"OK"+"}");
 	}
 	
-	@PUT
-	@Path("/update/password/{user_id}/{password}")
+	@POST
+	@Path("/updateUser/{user_id}/{username}/{email}")
 	@Produces("application/json")
-	public Response updateUserPassword(@PathParam("user_id") final Integer id, @PathParam("password") final String password){
+	public Response updateUserPassword(@PathParam("user_id") final Integer id, @PathParam("username") final String name,@PathParam("email") final String mail){
 		try{
-			User user = this.getUserService().getById(id);
-			user.setPassword(password);
+			User user = this.userService.getById(id);
+			user.setUserName(name);
+			user.setMail(mail);
 			this.userService.update(user);
 		}catch (Exception e){
-			return responseBadRequest("{Error: Can't update user passoword or invalid ID,"
-								+ "Status: FAIL}");
+			return responseBadRequest("{ \"Error\":\"Can't update event or invalid ID\","
+					+"\"Status\":\"FAIL\"}");
 		}
-		return responseOK("{Action:"+"User Password updated"+","
-							+"ID:"+id+","
-							+"Status"+": "+"OK"+"}");
+		return responseOK("{ \"Action\":\"User updated\","
+				+"\"ID\": "+ id +","
+				+"\"Status\":\"ok\"}");
 	}
 	
 	
-	@PUT
+	@POST
 	@Path("/update/email/{user_id}/{email}")
 	@Produces("application/json")
 	public Response updateUserEmail(@PathParam("user_id") final Integer id, @PathParam("email") final String email){
 		try{
 			User user = this.getUserService().getById(id);
 			user.setMail(email);
+			this.userService.update(user);
+		}catch (Exception e){
+			return responseBadRequest("{Error: Can't update user email or invalid ID,"
+									  + "Status: FAIL}");
+		}
+		return responseOK("{Action:"+"User email updated"+","
+							+"ID:"+id+","
+							+"Status"+": "+"OK"+"}");
+	}
+	
+	
+	@PUT
+	@Path("/update/username/{user_id}/{name}")
+	@Produces("application/json")
+	public Response updateUsername(@PathParam("user_id") final Integer id, @PathParam("name") final String name){
+		try{
+			User user = this.getUserService().getById(id);
+			user.setMail(name);
 			this.userService.update(user);
 		}catch (Exception e){
 			return responseBadRequest("{Error: Can't update user email or invalid ID,"

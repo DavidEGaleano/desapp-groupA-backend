@@ -8,17 +8,19 @@ public class Profile {
 	public Kind typeOfMusic;
 	public Kind typeOfFood;
 	public int limitAmount;
+	public int limitPeople;
 	public int id;
 	
 	public Profile(){
 		
 	}
 	
-	public Profile(Kind typeOfFilm, Kind typeOfMusic, Kind typeOfFood, int limitAmount){
+	public Profile(Kind typeOfFilm, Kind typeOfMusic, Kind typeOfFood, int limitAmount, int limitPeople){
 		this.typeOfFilm = typeOfFilm;
 		this.typeOfMusic = typeOfMusic;
 		this.typeOfFood = typeOfFood;
 		this.limitAmount = limitAmount;
+		this.limitPeople = limitPeople;
 	}
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
