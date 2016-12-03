@@ -38,16 +38,17 @@ public class UserRest extends ResponseGenerator{
 	@Produces("application/json")
 	public Response addorupdateuser(@PathParam("name") final String name,@PathParam("email") final String email,@PathParam("token") final String token) {
 		try {
+		User user;
 		if(!userService.hasUserWithEmail(email)){
-			User newuser = new UserBuilder().withUserName(name).withMail(email).build();
-			this.userService.save(newuser);
+			 user = new UserBuilder().withUserName(name).withMail(email).build();
+			this.userService.save(user);
 		}else{
-			User useractual = userService.getUserWithEmail(email);
-			this.userService.update(useractual);
+			 user = userService.getUserWithEmail(email);
+			this.userService.update(user);
 
 		}
 		return responseOK("{ \"Action\":\"User added\","
-				+"\"ID\": "+ 0 +","
+				+"\"ID\": "+ user.id +","
 				+"\"Status\":\"ok\"}");
 			
 		}catch(Exception e){
