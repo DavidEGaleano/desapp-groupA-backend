@@ -1,5 +1,7 @@
 package persistance.test;
 
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,7 +29,28 @@ public class TestUserService {
     	userService.save(anUser2);
     	Assert.assertEquals(anUser.id, userService.getById(anUser.id).id);
     } 
-	
+    
+    @Test
+    public void shouldBeGetAUserByEmail(){
+    	User anUser = new UserBuilder().withMail("test@gmail.com").build();
+    	User anUser2 = new UserBuilder().withMail("test2@gmail.com").build();
+    	userService.save(anUser);
+    	userService.save(anUser2);
+    	List<User> list = userService.getUserWithEmail("test@gmail.com");
+    	Assert.assertEquals(1, list.size());
+    	Assert.assertEquals(anUser.mail, list.get(0).mail);
+    }
+    
+    @Test
+    public void shouldBeNotGetAUserByEmailNotRegistered(){
+    	User anUser = new UserBuilder().withMail("test@gmail.com").build();
+    	User anUser2 = new UserBuilder().withMail("test2@gmail.com").build();
+    	userService.save(anUser);
+    	userService.save(anUser2);
+    	Assert.assertEquals(0, userService.getUserWithEmail("notmail@gmail.com").size());
+    }
+    
+    
     @After
     public void drop(){
     	userService.deleteAll();

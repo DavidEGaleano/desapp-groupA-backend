@@ -31,6 +31,7 @@ public class TestEventService {
     	Assert.assertEquals(eventService.getById(event.id).suggestions.size(),1);
     }
     
+    
     @Test
     public void shouldEventGetTypes() {
     	ArrayList<Kind> types = new ArrayList<Kind>();
@@ -49,7 +50,33 @@ public class TestEventService {
     	Assert.assertEquals(event.id, eventService.getById(event.id).id);
     } 
     
-	
+    @Test
+    public void shouldBeGet2EventsBasedOnLimitOfPersons(){
+    	Event event = new EventBuilder().withLimitOfPersons(50).build();
+    	Event event2 = new EventBuilder().withLimitOfPersons(60).build();
+    	eventService.save(event);
+    	eventService.save(event2);
+    	Assert.assertEquals(2, eventService.obtainEventsWithLimitOfPersons(40).size());
+    } 
+    
+    @Test
+    public void shouldBeGet1EventsBasedOnLimitOfPersons(){
+    	Event event = new EventBuilder().withLimitOfPersons(50).build();
+    	Event event2 = new EventBuilder().withLimitOfPersons(20).build();
+    	eventService.save(event);
+    	eventService.save(event2);
+    	Assert.assertEquals(1, eventService.obtainEventsWithLimitOfPersons(40).size());
+    } 
+    
+    @Test
+    public void shouldBeGet0EventsBasedOnLimitOfPersons(){
+    	Event event = new EventBuilder().withLimitOfPersons(50).build();
+    	Event event2 = new EventBuilder().withLimitOfPersons(20).build();
+    	eventService.save(event);
+    	eventService.save(event2);
+    	Assert.assertEquals(0, eventService.obtainEventsWithLimitOfPersons(100).size());
+    } 
+
     @After
     public void drop(){
     	eventService.deleteAll();

@@ -13,17 +13,19 @@ public class LoggerAspect {
 
 	    public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
 	    	
-	    	MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+	    	MethodSignature signature = (MethodSignature) joinPoint.getSignature();	   
 	    	String name = signature.getMethod().getName();
 	    	String arguments = Arrays.toString(joinPoint.getArgs());
+	    	log.info("*******************************************");
 	    	log.info(" Method " + name + " has started");
 	    	log.info(" Arguments are: " + arguments + "");
 	    	Long startTime = System.currentTimeMillis();
 	    	Object response = joinPoint.proceed(); 
 	    	Long finishTime = System.currentTimeMillis();
 	    	Long completionTime = finishTime - startTime;
-	    	log.info("Method " + name + " has ended");
-	    	log.info("CompletionTime : "+ completionTime +" (ms)");
+	    	log.info(" Method " + name + " has ended");
+	    	log.info(" CompletionTime : "+ completionTime +" (ms)");
+	    	log.info("*******************************************");
 	    	return response;
 	    	
 	   }

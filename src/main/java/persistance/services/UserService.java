@@ -21,24 +21,7 @@ public class UserService extends GenericService<User>{
 	}
 	
 	@Transactional
-	public boolean hasUserWithEmail(String email){		
-		List<User> users= this.userrepository.obtainUserWithEmail(email);
-		return (users.size() > 0);
-	}
-	
-	@Transactional
-	public User getUserWithEmail(String email){		
-		return this.userrepository.obtainUserWithEmail(email).get(0);
-	}
-	
-	
-	@Transactional
-	public Boolean hasUserWithToken(String token){		
-		return this.userrepository.obtainUserWithToken(token).size() > 0;
-	}
-	
-	@Transactional
-	public User getUserWithToken(String token){		
-		return this.userrepository.obtainUserWithToken(token).get(0);
+	public List<User> getUserWithEmail(String email){		
+		return this.userrepository.obtainUserWithEmail(email);
 	}
 }

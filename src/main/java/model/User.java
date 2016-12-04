@@ -67,9 +67,6 @@ public class User {
 		this.friends.add(friend);
 	}
 	
-	//Deberia tirar Exception en un futuro
-	//¿Es necesario que usuario tenga buscar amigo, si lo delega a system?
-	//si es "search friend" mejor que sea a si mismo, si tiene los amigos.
 	public User searchFriend(User user){
 		return this.system.searchFriend(user);
 	}

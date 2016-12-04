@@ -19,7 +19,7 @@ import persistance.services.UserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({ "/META-INF/spring-persistence-context.xml", "/META-INF/spring-services-context.xml" })
-public class TestWithLimitOfPersons {
+public class TestWithLimitOfPersonsSearch {
 	private User aUser;
 	@Autowired
 	private Searcher search;
