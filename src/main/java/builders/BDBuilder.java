@@ -8,7 +8,6 @@ import javax.annotation.PostConstruct;
 import org.json.simple.parser.ParseException;
 import org.springframework.context.annotation.DependsOn;
 
-import kind.DayMoment;
 import kind.Kind;
 import model.Event;
 import model.User;
@@ -40,82 +39,13 @@ public class BDBuilder {
 	@DependsOn("org.springframework.context.config.internalBeanConfigurerAspect")
 	public void createEntities() throws IOException, ParseException{
 		
-		
-		
-		User user1 = new UserBuilder()
-					.withUserName("UserTestOne")
-					.withMail("UTO@test.com")
-					.withPassword("UTOpass")
-					.withProfile(new ProfileBuilder()
-						    	.withLimitAmount(500)
-						    	.withTypeOfMusic(Kind.ELECTRONIC)
-						    	.withTypeOfFood(Kind.PIZZA)
-						    	.build())
-					.build();
-		User user2 = new UserBuilder()
-					.withUserName("UserTestTwo")
-					.withMail("UTTw@test.com")
-					.withPassword("UTTpass")
-					.withProfile(new ProfileBuilder()
-					    	.withLimitAmount(1000)
-					    	.withTypeOfMusic(Kind.ELECTRONIC)
-					    	.withTypeOfFood(Kind.PIZZA)
-					    	.build())
-					.build();
-		User user3 = new UserBuilder()
-					.withUserName("UserTestThree")
-					.withMail("UTTh@test.com")
-					.withPassword("UTThpass")
-					.withProfile(new ProfileBuilder()
-								.withLimitAmount(2000)
-								.withTypeOfFilm(Kind.ACTION)
-								.withTypeOfFood(Kind.FAST_FOOD)
-								.build())
-					.build();
-		
-		user2.addFriend(user1);
-		
-		Event event1 = new EventBuilder()
-					  .withAddress("Address I test")
-					  .withAmount(1000)
-					  .withLimitOfPersons(80)
-					  .withScheduler(DayMoment.AFTERNOON)
-					  .build();
-		
-		event1.addType(Kind.ACTION);
-		event1.addType(Kind.FAST_FOOD);
-		Event event2 = new EventBuilder()
-				      .withAddress("Address II test")
-				      .withAmount(2000)
-				      .withLimitOfPersons(40)
-				      .withScheduler(DayMoment.NIGHT)
-				      .build();
-		event2.addType(Kind.ELECTRONIC);
-		event2.addType(Kind.PIZZA);
-		
-		Event event3 = new EventBuilder()
-				      .withAddress("Address III test")
-				      .withAmount(3000)
-				      .withLimitOfPersons(50)
-				      .withScheduler(DayMoment.NIGHT)
-				      .build();
-		event3.addType(Kind.GRILL);
-		event3.addType(Kind.PASTA);
-		
+
 		ArrayList<Event> events = new EventBuilder().fromJson("./src/main/resources/dataGBA/BailablesData.json");
 		
 		
 		for(Event event:events){
 			this.eventservice.save(event);
 		}
-		
-		this.eventservice.save(event1);
-		this.eventservice.save(event2);
-		this.eventservice.save(event3);
-		
-		this.userservive.save(user1);
-		this.userservive.save(user2);
-		this.userservive.save(user3);
-		
+
 	}
 }

@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.ws.rs.DELETE;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 
 import org.junit.Assert;
@@ -38,6 +39,20 @@ public class TestArchitectureResponseVerificationService {
 		for(Object oClass:classes){
 			Object instance = instanceClass(oClass);
 			List<Method> methods = getMethodsAnnotatedWith(instance.getClass(),PUT.class);
+			for (Method method:methods){
+				Assert.assertEquals(method.getReturnType().getSimpleName(),"Response");
+			}
+		}
+	}
+	
+	@Test
+	public void testPOSThouldReturnAResponse() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		String pack = "webservice"; 
+		
+		Object[] classes = this.getAllClassesWith(ResponseGenerator.class,pack);
+		for(Object oClass:classes){
+			Object instance = instanceClass(oClass);
+			List<Method> methods = getMethodsAnnotatedWith(instance.getClass(),POST.class);
 			for (Method method:methods){
 				Assert.assertEquals(method.getReturnType().getSimpleName(),"Response");
 			}

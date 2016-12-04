@@ -34,10 +34,10 @@ public class UserRest extends ResponseGenerator{
 	}
 
 	
-	@GET
-	@Path("setUser/{name}/{email}/{token}")
+	@POST
+	@Path("setUser/{name}/{email}")
 	@Produces("application/json")
-	public Response addorupdateuser(@PathParam("name") final String name,@PathParam("email") final String email,@PathParam("token") final String token) {
+	public Response addorupdateuser(@PathParam("name") final String name,@PathParam("email") final String email) {
 		try {
 		User user;
 		if(!userService.hasUserWithEmail(email)){
@@ -45,7 +45,7 @@ public class UserRest extends ResponseGenerator{
 			this.userService.save(user);
 		}else{
 			 user = userService.getUserWithEmail(email);
-			this.userService.update(user);
+			 this.userService.update(user);
 
 		}
 		return responseOK("{ \"Action\":\"User added\","

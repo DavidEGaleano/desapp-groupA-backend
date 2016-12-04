@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -26,23 +27,6 @@ public class EventRest extends ResponseGenerator{
 
 	public void setEventService( EventService eventService) {
 		this.eventService = eventService;
-	}
-	
-	
-	@PUT
-	@Path("/create")
-	@Produces("application/json")
-	public Response setProfile(){
-		Event event = new EventBuilder().build();
-		try {
-			this.eventService.save(event);
-		}catch(Exception e){
-			return responseBadRequest("{Error: Can't create Event,"
-										+ "Status: FAIL}");
-		}
-		return responseOK("{Action:"+"Event Created"+","
-						  +"ID:"+ event.id+","
-						  +"Status"+": "+"OK"+"}");
 	}
 	
 	@GET
@@ -69,7 +53,7 @@ public class EventRest extends ResponseGenerator{
 						  +"Status"+": "+"OK"+"}");
 	}
 	
-	@PUT
+	@POST
 	@Path("/update/address/{event_id}/{address}")
 	@Produces("application/json")
 	public Response updateAddress(@PathParam("event_id") final Integer id, @PathParam("address") final String address){
@@ -86,7 +70,7 @@ public class EventRest extends ResponseGenerator{
 						  +"Status"+": "+"OK"+"}");
 	}
 	
-	@PUT
+	@POST
 	@Path("/update/limitofpersons/{event_id}/{limit}")
 	@Produces("application/json")
 	public Response updateLimitOfPersons(@PathParam("event_id") final Integer id, @PathParam("limit") final Integer limit){
@@ -103,7 +87,7 @@ public class EventRest extends ResponseGenerator{
 							+"Status"+": "+"OK"+"}");
 	}
 	
-	@PUT
+	@POST
 	@Path("/update/amount/{event_id}/{amount}")
 	@Produces("application/json")
 	public Response updateAmount(@PathParam("event_id") final Integer id, @PathParam("amount") final Integer amount){
@@ -131,7 +115,7 @@ public class EventRest extends ResponseGenerator{
 		}
 	}
 	
-	@GET
+	@POST
 	@Path("/setAssisAnEvent/{iduser}/{idevent}")
 	@Produces("application/json")
 	public Response setAssistAnEvent(@PathParam("idevent") final Integer idevent, @PathParam("iduser") final Integer iduser) {
@@ -157,7 +141,7 @@ public class EventRest extends ResponseGenerator{
 
 	}
 	
-	@GET
+	@POST
 	@Path("/removeAssisAnEvent/{iduser}/{idevent}")
 	@Produces("application/json")
 	public Response removeAssistAnEvent(@PathParam("idevent") final Integer idevent, @PathParam("iduser") final Integer iduser) {

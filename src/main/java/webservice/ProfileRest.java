@@ -33,22 +33,6 @@ public class ProfileRest extends ResponseGenerator{
 		this.profileService = profileService;
 	}
 	
-	@PUT
-	@Path("/create")
-	@Produces("application/json")
-	public Response profileTest() {
-		Profile profile = new ProfileBuilder().build();
-		try {
-			this.profileService.save(profile);
-		}catch(Exception e){
-			return responseBadRequest("{Error: Can't create a profile ,"
-					+ "Status: FAIL}");
-		}
-		return responseOK("{Action:"+"Profile Created"+","
-				+"ID:"+ profile.id+","
-				+"Status"+": "+"OK"+"}");
-	}
-	
 	@GET
 	@Path("/profiles")
 	@Produces("application/json")
@@ -85,6 +69,7 @@ public class ProfileRest extends ResponseGenerator{
 			profile.typeOfFilm = film;
 			profile.typeOfFood = food;
 			profile.typeOfMusic = music;
+			profile.limitPeople = limitpeople;
 			this.profileService.update(profile);
 		}catch (Exception e){
 			return responseBadRequest("{ \"Error\":\"Can't update Profile or invalid ID\","

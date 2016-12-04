@@ -49,14 +49,6 @@ public class TestEventService {
     	Assert.assertEquals(event.id, eventService.getById(event.id).id);
     } 
     
-    //@Test
-    public void shouldBeGetEventsByTypes(){
-    	ArrayList<Kind> types = new ArrayList<Kind>();
-    	types.add(Kind.ACTION);
-    	Event event = new EventBuilder().withTypes(types).build();
-    	eventService.save(event);
-    	Assert.assertEquals(eventService.getEventsForTypes(types).size(),3);
-    } 
 	
     @After
     public void drop(){
