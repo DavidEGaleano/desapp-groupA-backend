@@ -68,3 +68,34 @@ NOTES:
 
 **Implementar login de usuario via google auth0.
 **traer eventos de las bases de datos expuestas de Buenos Aires Ciudad.
+
+--------------------------------------------------------------------
+TAG ENTREGA 4 1.3
+--------------------------------------------------------------------
+
+NEW FEATURES:
+
+**Paginacion Client Side de pantalla de busqueda de eventos funcionando con datos de Bs As Data.
+**Se agregó Auth0 con Google.
+**Se agregó el CRUD de perfiles.
+**Se agregó el feedback al usuario por medio de mensajes.
+**Se agregó el mapa para ver la posición del evento.
+**Se agregó 2 busquedas basadas en el perfil, economica y por cupo.
+**Se agregó la función "asistire" a los eventos listados.
+**Se agrego la funcion "detalle" a los eventos listados.
+
+*Servicios:
+**Se agregaron los servicios correspondientes para el CRUD de perfiles.
+**Se agregaron los servicios correspondientes para el "Asistire".
+
+*Logs
+**Se agrego el log con aspectos pasa servicios.
+
+*Test
+**Se agrego un test de arquitectura para servicios.
+
+NOTES:
+*Tareas que no se llegaron a implentar*
+** Creación de eventos propios.
+** Sistema de Amigos.
+** Test de Arquitectura del servicio de transaccionalidad.
